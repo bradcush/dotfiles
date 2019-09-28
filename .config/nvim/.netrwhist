@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/bradleycushing/Documents/repos/extension/typings-custom'
+let g:netrw_dirhist_2='/Users/bradleycushing/Documents/repos/messaging-interface-definition'
+let g:netrw_dirhist_1='/Users/bradleycushing/Documents/repos/extension/common/background/communication/bridge/runtime/openApplication'

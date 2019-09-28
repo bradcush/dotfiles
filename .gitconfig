@@ -1,0 +1,21 @@
+[core]
+	excludesfile = /Users/bradleycushing/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Bradley Cushing
+	email = bradley.cushing@dashlane.com
+	signingkey = B658D37EFBBEC01CC72039351E7C6E6FCC789C07
+[commit]
+	gpgsign = true
+	template = /Users/bradleycushing/.stCommitMsg
+[tag]
+	forceSignAnnotated = true
+
+[rebase]
+	autoaquash = true
+	autosquash = true

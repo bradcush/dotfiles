@@ -1,0 +1,11 @@
+{
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.suggest.autoImports": true,
+    "diagnostic.warningSign": "⚠️",
+    "diagnostic.errorSign": "❌",
+    "diagnostic.hintSign": "📎",
+    "diagnostic.infoSign": "💁",
+    "codeLens.enable": true,
+    "suggest.enablePreview": true,
+    "suggest.maxCompleteItemCount": 10
+}

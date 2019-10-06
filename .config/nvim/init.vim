@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim' " Bundle manager
 
 Plugin 'vim-airline/vim-airline' " The status bar
 Plugin 'vim-airline/vim-airline-themes' " Theme for status bar
-Plugin 'zivyangll/git-blame.vim' " Git blame in status bar
 
 Plugin 'junegunn/fzf.vim' " Cool search
 
@@ -25,7 +24,7 @@ Plugin 'gko/vim-coloresque' " Color preview
 " Plugin 'vim-syntastic/syntastic' " Syntax checker
 Plugin 'HerringtonDarkholme/yats.vim' " TS Highlight syntax
 Plugin 'othree/yajs.vim' " JS Equivalent highlight syntax
-Plugin 'scrooloose/nerdcommenter' " Comment multiline
+" Plugin 'scrooloose/nerdcommenter' " Comment multiline
 Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
 Plugin 'ianks/vim-tsx' " Syntax highlights for tsx
 
@@ -33,37 +32,28 @@ Plugin 'prettier/vim-prettier' " Prettier garbage for projects
 Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for moustache and handlebars
 
 Plugin 'tpope/vim-fugitive' " Git embedded in vim
-Plugin 'airblade/vim-gitgutter' " Shows vim status in gutter
 Plugin 'tpope/vim-repeat' " Repeate last action
+Plugin 'tpope/vim-surround' " Delete, change, and add surroundings
+Plugin 'tpope/vim-commentary' " Commenting support
+" Plugin 'airblade/vim-gitgutter' " Shows vim status in gutter
+" Plugin 'zivyangll/git-blame.vim' " Git blame in status bar
 
-" Plugin 'ervandew/supertab' " Allow to use <Tab> for all insert completion Not needed because of neoclide/coc.vim
 Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
-" To install coc plugins
-  " :PluginInstall
-  " :call coc#util#build()
-  " :CocInstall coc-json coc-css coc-tsserver
-  " coc-html coc-highlight coc-emmet coc-snippets coc-tslint coc-eslint coc-css coc-svg
-  " :CocList extensions (:CocList)
-  " https://www.npmjs.com/search?q=keywords%3Acoc.nvim
-
 Plugin 'Yggdroot/vim-mark' " Mark words with color
 
-" Defx is not working Usung vimfiler for know
-" Plugin 'Shougo/defx.nvim', {
-              " \'do': ':UpdateRemotePlugins' }   " Browse Files. Replace VimFiler
 " Plugin 'mhartington/defx-devicons'
 " Plugin 'kristijanhusak/defx-git'
 Plugin 'Shougo/vimfiler'
 Plugin 'Shougo/unite.vim'
-Plugin 'scrooloose/nerdtree' " Another popular File Browser
-Plugin 'ryanoasis/vim-devicons' " Icons for NerdTree and airline
 Plugin 'webdevel/tabulous' " Enhance Tabline
 
-Plugin 'vim-scripts/grep.vim' " Grep
-
-Plugin 'tpope/vim-surround' " Delete, change, and add surroundings
+Plugin 'vim-scripts/grep.vim' " Grep functionality
 Plugin 'mhinz/vim-sayonara' " Delete buffer without killing the window
-Plugin 'tpope/vim-commentary' " Commenting support
+
+Plugin 'michaeljsmith/vim-indent-object' " Indent text objects
+Plugin 'kana/vim-textobj-user' " Required dep for entire/line
+Plugin 'kana/vim-textobj-entire' " Entire file text objects
+Plugin 'kana/vim-textobj-line' " Line text objects
 
 " Plugin 'leafgarland/typescript-vim
 " Plugin 'Valloric/YouCompleteMe'
@@ -71,9 +61,8 @@ Plugin 'tpope/vim-commentary' " Commenting support
 " Plugin 'Quramy/vim-js-pretty-template'
 " Plugin 'jason0x43/vim-js-indent'
 " Plugin 'Chiel92/vim-autoformat'
-" Plugin 'ryanoasis/vim-devicons'
 
-" Themes
+" Color themes
 "Plugin /kristijanhusak/vim-hybrid-material'
 "Plugin 'drewtempelmeyer/palenight.vim'
 "Plugin 'rainglow/vim'
@@ -166,10 +155,22 @@ set t_ut=
 colorscheme base16-onedark
 let base16colorspace=256 " Access 256 colorspace
 set termguicolors
-set guifont=Hack\ Regular\ Nerd\ Font\ Complete
 """ yats " Not sure exactly
 let g:yats_host_keyword = 1
+
+" netrw options for viewing
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+" Automatically open netwr on start
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore
+" augroup END
 
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/coc-config.vim
 source $HOME/.config/nvim/fugitive.vim
+source $HOME/.config/nvim/fzf.vim

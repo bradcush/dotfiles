@@ -7,7 +7,7 @@ eval "$(rbenv init -)"
 # export VAULT_ADDR="<VAULT_ADDR>"
 
 alias vim="nvim"
-export EDITOR="nvim"
+# export EDITOR="nvim"
 
 export BAT_THEME="base16"
 

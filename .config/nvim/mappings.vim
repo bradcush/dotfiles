@@ -2,7 +2,8 @@ map pp :VimFilerBufferDir<CR>
 map vf :VimFiler<CR>
 
 " Copy selection outside
-vmap yo "+y
+" vmap yo "+y
+" vmap yo "*y
 
 " Buffers
 map nb :new<CR>
@@ -18,7 +19,8 @@ map bov :bo vsplit<CR>
 nmap lex :Lexplore<CR>
 nmap ex :Explore<CR>
 
-map qq :Sayonara<CR>
+" Sayonara
+" map qq :Sayonara<CR>
 
 " Tabs
 nmap nt :tabnew<CR>

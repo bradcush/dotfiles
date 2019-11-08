@@ -161,6 +161,14 @@ set termguicolors
 """ yats " Not sure exactly
 let g:yats_host_keyword = 1
 
+" Spell checking
+" Must place after colorscheme
+set spell
+set spell spelllang=en_us
+" cterm ctermbg ctermfg gui guibg guifg guisp
+" undercurl and guisp not working properly
+" hi SpellBad cterm=underline guifg=red
+
 " netrw options for viewing
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3

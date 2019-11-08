@@ -28,6 +28,9 @@ Plugin 'othree/yajs.vim' " JS Equivalent highlight syntax
 Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
 Plugin 'ianks/vim-tsx' " Syntax highlights for tsx
 
+" npm install -g import-js Required dependency
+Plugin 'Galooshi/vim-import-js' "JS import help
+
 Plugin 'prettier/vim-prettier' " Prettier garbage for projects
 Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for moustache and handlebars
 

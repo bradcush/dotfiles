@@ -3,6 +3,7 @@
 # root level dotfile symbolic links
 ln -s ~/Documents/repos/dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/Documents/repos/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/Documents/repos/dotfiles/.importjs.js ~/.importjs.js
 
 # nvim config symbolic links
 ln -s ~/Documents/repos/dotfiles/.config/nvim/coc-config.vim ~/.config/nvim/coc-config.vim

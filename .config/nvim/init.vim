@@ -19,12 +19,8 @@ Plugin 'junegunn/fzf.vim' " Cool search
 Plugin 'mattn/emmet-vim' " Expending abbreviation for HTML
 Plugin 'gko/vim-coloresque' " Color preview
 
-" Plugin 'Quramy/tsuquyomi' " Typescript server
-" Plugin 'Shougo/vimproc.vim' " Needed for tsuquyomi
-" Plugin 'vim-syntastic/syntastic' " Syntax checker
 Plugin 'HerringtonDarkholme/yats.vim' " TS Highlight syntax
 Plugin 'othree/yajs.vim' " JS Equivalent highlight syntax
-" Plugin 'scrooloose/nerdcommenter' " Comment multiline
 Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
 Plugin 'ianks/vim-tsx' " Syntax highlights for tsx
 
@@ -32,20 +28,16 @@ Plugin 'ianks/vim-tsx' " Syntax highlights for tsx
 Plugin 'Galooshi/vim-import-js' "JS import help
 
 Plugin 'prettier/vim-prettier' " Prettier garbage for projects
-Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for moustache and handlebars
+Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
 
 Plugin 'tpope/vim-fugitive' " Git embedded in vim
-Plugin 'tpope/vim-repeat' " Repeate last action
+Plugin 'tpope/vim-repeat' " Expanding repeat last action
 Plugin 'tpope/vim-surround' " Delete, change, and add surroundings
 Plugin 'tpope/vim-commentary' " Commenting support
-" Plugin 'airblade/vim-gitgutter' " Shows vim status in gutter
-" Plugin 'zivyangll/git-blame.vim' " Git blame in status bar
 
 Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
 Plugin 'Yggdroot/vim-mark' " Mark words with color
 
-" Plugin 'mhartington/defx-devicons'
-" Plugin 'kristijanhusak/defx-git'
 Plugin 'Shougo/vimfiler'
 Plugin 'Shougo/unite.vim'
 Plugin 'webdevel/tabulous' " Enhance Tabline
@@ -58,6 +50,12 @@ Plugin 'kana/vim-textobj-user' " Required dep for entire/line
 Plugin 'kana/vim-textobj-entire' " Entire file text objects
 Plugin 'kana/vim-textobj-line' " Line text objects
 
+" Plugin 'vim-syntastic/syntastic' " Syntax checker
+" Plugin 'Shougo/vimproc.vim' " Needed for tsuquyomi
+" Plugin 'Quramy/tsuquyomi' " Typescript server
+" Plugin 'zivyangll/git-blame.vim' " Git blame in status bar
+" Plugin 'mhartington/defx-devicons'
+" Plugin 'kristijanhusak/defx-git'
 " Plugin 'leafgarland/typescript-vim
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'tomasiser/vim-code-dark'
@@ -166,8 +164,9 @@ let g:yats_host_keyword = 1
 set spell
 set spell spelllang=en_us
 " cterm ctermbg ctermfg gui guibg guifg guisp
-" undercurl and guisp not working properly
-" hi SpellBad cterm=underline guifg=red
+" undercurl and guisp not supported
+" hi clear SpellBad
+" hi SpellBad gui=underline guifg=red
 
 " netrw options for viewing
 let g:netrw_banner = 0

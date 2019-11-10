@@ -10,3 +10,5 @@ alias vim="nvim"
 # export EDITOR="nvim"
 
 export BAT_THEME="base16"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

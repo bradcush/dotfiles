@@ -1,4 +1,5 @@
 module.exports = {
+    danglingCommas: false,
     environments: [
         'browser',
         'builtin',
@@ -6,6 +7,15 @@ module.exports = {
         'mocha',
         'node'
     ],
-    danglingCommas: false,
+    excludes: [
+        '**/node_modules/**/*',
+        '**/Popup/meta/chrome.js'
+    ],
+    globals: [
+        'chrome',
+        'key',
+        'runtime',
+        'T'
+    ],
     useRelativePaths: false
 }

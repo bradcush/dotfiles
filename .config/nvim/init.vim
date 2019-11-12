@@ -24,9 +24,6 @@ Plugin 'othree/yajs.vim' " JS Equivalent highlight syntax
 Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
 Plugin 'ianks/vim-tsx' " Syntax highlights for tsx
 
-" npm install -g import-js Required dependency
-Plugin 'Galooshi/vim-import-js' "JS import help
-
 Plugin 'prettier/vim-prettier' " Prettier garbage for projects
 Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
 
@@ -34,6 +31,7 @@ Plugin 'tpope/vim-fugitive' " Git embedded in vim
 Plugin 'tpope/vim-repeat' " Expanding repeat last action
 Plugin 'tpope/vim-surround' " Delete, change, and add surroundings
 Plugin 'tpope/vim-commentary' " Commenting support
+Plugin 'tpope/vim-vinegar' " No need for the project drawer
 
 Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
 Plugin 'Yggdroot/vim-mark' " Mark words with color
@@ -169,11 +167,11 @@ set spell spelllang=en_us
 " hi SpellBad gui=underline guifg=red
 
 " netrw options for viewing
-let g:netrw_banner = 0
+" let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
+" let g:netrw_browse_split = 4
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 25
 " Automatically open netwr on start
 " augroup ProjectDrawer
 "   autocmd!

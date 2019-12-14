@@ -14,7 +14,8 @@ Plugin 'VundleVim/Vundle.vim' " Bundle manager
 Plugin 'vim-airline/vim-airline' " The status bar
 Plugin 'vim-airline/vim-airline-themes' " Theme for status bar
 
-Plugin 'junegunn/fzf.vim' " Cool search
+Plugin 'junegunn/fzf.vim' " Fuzzy finder search files and word occurrence
+Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
 
 Plugin 'mattn/emmet-vim' " Expending abbreviation for HTML
 Plugin 'gko/vim-coloresque' " Color preview
@@ -23,8 +24,6 @@ Plugin 'HerringtonDarkholme/yats.vim' " TS Highlight syntax
 Plugin 'othree/yajs.vim' " JS Equivalent highlight syntax
 Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
 Plugin 'ianks/vim-tsx' " Syntax highlights for tsx
-
-Plugin 'prettier/vim-prettier' " Prettier garbage for projects
 Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
 
 Plugin 'tpope/vim-fugitive' " Git embedded in vim
@@ -33,23 +32,24 @@ Plugin 'tpope/vim-surround' " Delete, change, and add surroundings
 Plugin 'tpope/vim-commentary' " Commenting support
 Plugin 'tpope/vim-vinegar' " No need for the project drawer
 
-Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
 Plugin 'Yggdroot/vim-mark' " Mark words with color
-
-Plugin 'Shougo/vimfiler'
-Plugin 'Shougo/unite.vim'
-Plugin 'webdevel/tabulous' " Enhance Tabline
-
+Plugin 'webdevel/tabulous' " Enhance the tabline
 Plugin 'vim-scripts/grep.vim' " Grep functionality
-Plugin 'mhinz/vim-sayonara' " Delete buffer without killing the window
 
 Plugin 'michaeljsmith/vim-indent-object' " Indent text objects
 Plugin 'kana/vim-textobj-user' " Required dep for entire/line
 Plugin 'kana/vim-textobj-entire' " Entire file text objects
 Plugin 'kana/vim-textobj-line' " Line text objects
 
+" Plugin 'scrooloose/nerdtree' " Another popular file browser
+" Plugin 'ryanoasis/vim-devicons' " Icons for NERDTree and Airline
+
+" Plugin 'Shougo/unite.vim' " Search and information display
+" Plugin 'prettier/vim-prettier' " Prettier garbage for projects
 " Plugin 'vim-syntastic/syntastic' " Syntax checker
+" Plugin 'mhinz/vim-sayonara' " Delete buffer without killing the window
 " Plugin 'Shougo/vimproc.vim' " Needed for tsuquyomi
+" Plugin 'Shougo/vimfiler'
 " Plugin 'Quramy/tsuquyomi' " Typescript server
 " Plugin 'zivyangll/git-blame.vim' " Git blame in status bar
 " Plugin 'mhartington/defx-devicons'

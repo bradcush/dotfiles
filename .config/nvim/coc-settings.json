@@ -1,11 +1,18 @@
 {
-    "typescript.preferences.quoteStyle": "single",
-    "typescript.suggest.autoImports": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "javascriptreact",
+        "json",
+        "typescript",
+        "typescriptreact"
+    ],
+    "codeLens.enable": true,
     "diagnostic.warningSign": "⚠️",
     "diagnostic.errorSign": "❌",
     "diagnostic.hintSign": "📎",
     "diagnostic.infoSign": "💁",
-    "codeLens.enable": true,
     "suggest.enablePreview": true,
-    "suggest.maxCompleteItemCount": 10
+    "suggest.maxCompleteItemCount": 10,
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.suggest.autoImports": true
 }

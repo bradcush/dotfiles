@@ -1,2 +1,2 @@
 source ~/Documents/repos/dotfiles/shell.sh
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

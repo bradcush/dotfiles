@@ -3,7 +3,9 @@
 # root level dotfile symbolic links
 ln -s ~/Documents/repos/dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/Documents/repos/dotfiles/.bashrc ~/.bashrc
+ln -s ~/Documents/repos/dotfiles/.zshrc ~/.zshrc
 ln -s ~/Documents/repos/dotfiles/.fzf.bash ~/.fzf.bash
+ln -s ~/Documents/repos/dotfiles/.fzf.zsh ~/.fzf.zsh
 ln -s ~/Documents/repos/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/Documents/repos/dotfiles/.importjs.js ~/.importjs.js
 

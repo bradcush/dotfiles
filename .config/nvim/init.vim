@@ -150,7 +150,8 @@ let g:enable_bold_font = 1
 let g:enable_italic_font = 1
 set t_Co=256
 set t_ut=
-" colorscheme dracula
+
+" Colors
 colorscheme base16-onedark
 let base16colorspace=256 " Access 256 colorspace
 set termguicolors

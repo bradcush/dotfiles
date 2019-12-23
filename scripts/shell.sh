@@ -1,6 +1,7 @@
 export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 
+# Init rbenv for picking Ruby versions
 eval "$(rbenv init -)"
 
 # export NPM_TOKEN="<NPM_TOKEN>"

@@ -41,6 +41,9 @@ Plugin 'kana/vim-textobj-user' " Required dep for entire/line
 Plugin 'kana/vim-textobj-entire' " Entire file text objects
 Plugin 'kana/vim-textobj-line' " Line text objects
 
+Plugin 'rbgrouleff/bclose.vim' " Dependency required for ranger
+Plugin 'francoiscabrol/ranger.vim' " Ranger file manager integration for vim
+
 " Plugin 'scrooloose/nerdtree' " Another popular file browser
 " Plugin 'ryanoasis/vim-devicons' " Icons for NERDTree and Airline
 

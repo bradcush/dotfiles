@@ -16,3 +16,6 @@ ln -s ~/Documents/repos/dotfiles/.config/nvim/fugitive.vim ~/.config/nvim/fugiti
 ln -s ~/Documents/repos/dotfiles/.config/nvim/fzf.vim ~/.config/nvim/fzf.vim
 ln -s ~/Documents/repos/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s ~/Documents/repos/dotfiles/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
+
+# ranger config symbolic links
+ln -s ~/Documents/repos/dotfiles/.config/ranger/rifle.conf ~/.config/ranger/rifle.conf

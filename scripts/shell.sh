@@ -7,7 +7,8 @@ eval "$(rbenv init -)"
 # export NPM_TOKEN="<NPM_TOKEN>"
 # export VAULT_ADDR="<VAULT_ADDR>"
 
-alias vim="nvim"
+export VIM_EDITOR="nvim"
+alias vim=${VIM_EDITOR}
 # export EDITOR="nvim"
 
 export BAT_THEME="base16"

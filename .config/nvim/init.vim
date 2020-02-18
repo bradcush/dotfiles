@@ -74,6 +74,8 @@ filetype on " Detect the file type.
 filetype plugin indent on " File type auto indent
 syntax on
 
+set hidden " Hidden buffers with preserved undo/marks
+
 set autoread " Autorefresh file when it has been edited somewhere else
 au CursorHold,CursorHoldI * checktime
 au FocusGained,BufEnter * checktime

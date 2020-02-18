@@ -17,14 +17,14 @@ Plugin 'vim-airline/vim-airline-themes' " Theme for status bar
 Plugin 'junegunn/fzf.vim' " Fuzzy finder search files and word occurrence
 Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
 
-Plugin 'mattn/emmet-vim' " Expending abbreviation for HTML
 Plugin 'gko/vim-coloresque' " Color preview
-
-Plugin 'HerringtonDarkholme/yats.vim' " TS Highlight syntax
-Plugin 'othree/yajs.vim' " JS Equivalent highlight syntax
+Plugin 'HerringtonDarkholme/yats.vim' " TS highlight syntax
+Plugin 'othree/yajs.vim' " JS equivalent highlight syntax
 Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
-Plugin 'ianks/vim-tsx' " Syntax highlights for tsx
+" Plugin 'ianks/vim-tsx' " Syntax highlights for tsx
+Plugin 'maxmellon/vim-jsx-pretty' " Replaces ianks/vim-tsx potentially
 Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
+Plugin 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
 
 Plugin 'tpope/vim-fugitive' " Git embedded in vim
 Plugin 'tpope/vim-repeat' " Expanding repeat last action
@@ -43,18 +43,18 @@ Plugin 'kana/vim-textobj-line' " Line text objects
 
 " Plugin 'scrooloose/nerdtree' " Another popular file browser
 " Plugin 'ryanoasis/vim-devicons' " Icons for NERDTree and Airline
+" Plugin 'Shougo/vimfiler' "Project drawer
 
+" Plugin 'mattn/emmet-vim' " Expending abbreviation for HTML
 " Plugin 'Shougo/unite.vim' " Search and information display
-" Plugin 'prettier/vim-prettier' " Prettier garbage for projects
 " Plugin 'vim-syntastic/syntastic' " Syntax checker
 " Plugin 'mhinz/vim-sayonara' " Delete buffer without killing the window
 " Plugin 'Shougo/vimproc.vim' " Needed for tsuquyomi
-" Plugin 'Shougo/vimfiler'
 " Plugin 'Quramy/tsuquyomi' " Typescript server
-" Plugin 'zivyangll/git-blame.vim' " Git blame in status bar
+" Plugin 'leafgarland/typescript-vim
+" Plugin 'zivyangll/git-blame.vim' " Git blame in the status bar
 " Plugin 'mhartington/defx-devicons'
 " Plugin 'kristijanhusak/defx-git'
-" Plugin 'leafgarland/typescript-vim
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'tomasiser/vim-code-dark'
 " Plugin 'Quramy/vim-js-pretty-template'

@@ -157,8 +157,9 @@ set t_ut=
 colorscheme base16-onedark
 let base16colorspace=256 " Access 256 colorspace
 set termguicolors
-""" yats " Not sure exactly
 let g:yats_host_keyword = 1
+" Fix syntax highlighting by referencing start of file
+autocmd BufEnter *.ts :syntax sync fromstart
 
 " Spell checking
 " Must place after colorscheme

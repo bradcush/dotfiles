@@ -122,7 +122,7 @@ set wildoptions=pum "Not sure exactly
 set wildmode=longest,full "Style of the menu
 set pumblend=20 "Not sure exactly
 
-set mouse=a
+" set mouse=a
 set list
 set listchars=space:.,trail:~,precedes:<
 set backspace=2

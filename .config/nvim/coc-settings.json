@@ -11,6 +11,7 @@
     "diagnostic.errorSign": "❌",
     "diagnostic.hintSign": "📎",
     "diagnostic.infoSign": "💁",
+    "prettier.requireConfig": true,
     "suggest.enablePreview": true,
     "suggest.maxCompleteItemCount": 10,
     "typescript.preferences.quoteStyle": "single",

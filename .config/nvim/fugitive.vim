@@ -1,5 +1,3 @@
-set statusline+=%{FugitiveStatusline()}
-
-"map gs :Gstatus<CR>
-map gd :Gvdiff<CR>
-map gb :Gblame<CR>
+" map gs :Gstatus<CR>
+" map gd :Gvdiff<CR>
+" map gb :Gblame<CR>

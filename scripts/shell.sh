@@ -1,18 +1,21 @@
 # Use vi/vim mode in the shell
 set -o vi
 
+# Init for nvm node version manager
 export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 
-# Init rbenv for picking Ruby versions
+# Init for rbenv Ruby version manager
 eval "$(rbenv init -)"
 
+# npm and vault globals
 # export NPM_TOKEN="<NPM_TOKEN>"
 # export VAULT_ADDR="<VAULT_ADDR>"
 
-export VIM_EDITOR="nvim"
+# Launch nvim instead of vim
+VIM_EDITOR="nvim"
 alias vim=${VIM_EDITOR}
-# export EDITOR="nvim"
+# export EDITOR=${VIM_EDITOR}
 
 # Base16 Shell setup
 # BASE16_SHELL="$HOME/.config/base16-shell/"

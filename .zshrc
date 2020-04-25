@@ -59,7 +59,3 @@ source $ZSH/oh-my-zsh.sh
 # Important to source other files after "oh-my-zsh.sh" to avoid overwriting
 source ~/Documents/repos/dotfiles/scripts/shell.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Source and run base16 shell functionality and theme
-source ~/.config/base16-shell/base16-shell.plugin.zsh
-base16_default-dark

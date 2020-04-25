@@ -1,4 +1,4 @@
 # Create symlinks for dotfiles
-.PHONY: symlink_dotfiles
+.PHONY: symlink
 symlink_dotfiles:
-	@./scripts/symlink-dotfiles.sh
+	@./scripts/symlink.sh

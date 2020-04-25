@@ -1,11 +1,8 @@
-set nocompatible " Make vim easier to use
+set nocompatible " Ensure enhancements from Vi IMproved
 filetype off " Detect the file type.(Set to on after Vundle)
-set termguicolors " Use terminal colors
 
-" Set the runtime path to include fzf
-set rtp+=/usr/local/opt/fzf
-" Set the runtime path to include vundle
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf " Set the runtime path to include fzf
+set rtp+=~/.vim/bundle/Vundle.vim " Set the runtime path to include vundle
 
 call vundle#begin()
 " Let Vundle manage Vundle, required
@@ -45,21 +42,19 @@ Plugin 'kana/vim-textobj-line' " Line text objects
 Plugin 'chriskempson/base16-vim'
 call vundle#end()
 
-
+" General
 filetype on " Detect the file type.
 filetype plugin indent on " File type auto indent
-syntax on
-
+syntax on " Enable syntax highlighting
 set hidden " Hidden buffers with preserved undo/marks
-
 set autoread " Autorefresh file when it has been edited somewhere else
 au CursorHold,CursorHoldI * checktime
 au FocusGained,BufEnter * checktime
 
 " Cursor lines
-set cursorline " Apparently this causes slowness.
-set cursorcolumn " This too.
-set colorcolumn=120 " Set print width indication line
+set cursorline " Highlight cursor line (Causes slowness)
+set cursorcolumn " Highlights cursor column (Causes slowness)
+set colorcolumn=80 " Set print width indication line
 
 " Indentation
 set expandtab " Use spaces instead of <TAB>
@@ -75,14 +70,15 @@ set relativenumber " Show relative line numbers
 " set numberwith=4 "Number width for lines
 set ruler " Show cursor position
 set wrap " Wrap lines
+set scrolloff=2 " Scroll offset from edge to cursor
 
 " General
+" set mouse=a " Enable mouse scrolling
 set showcmd " Show command in bottom bar
-set scrolloff=2 " Scroll offset from edge to cursor
-set lazyredraw " Not sure exactly
+set lazyredraw " Redraw the screen less often
+set backspace=2 " Backspace set two 2 chars
 set autowrite " Autosave the file when loading another buffer
 autocmd BufWritePre * :%s/\s\+$//e " Auto remove trailing on save
-" autocmd TextChanged,TextChangedI <buffer> silent write " Autosave file on writing
 
 " Searching
 set ignorecase " Ignore when searching
@@ -90,7 +86,6 @@ set smartcase " Override ignorecase when search pattern contains uppercase
 set hlsearch " Highlight all search result matches
 set incsearch " Highlight all search matches when typing
 set showmatch " Show matching ( [ {
-noremap <leader><space> :noh<cr>:call clearmatches()<cr>
 
 " Wildmenu
 set wildmenu "Completion enhanced
@@ -98,67 +93,37 @@ set wildoptions=pum "Not sure exactly
 set wildmode=longest,full "Style of the menu
 set pumblend=20 "Not sure exactly
 
-" set mouse=a
-set list
-set listchars=space:.,trail:~,precedes:<
-set backspace=2
-
-" Automatic tag closing
-"inoremap <> <><Left>
-"inoremap () ()<Left>
-"inoremap {} {}<Left>
-"inoremap [] []<Left>
-"inoremap "" ""<Left>
-"inoremap '' ''<Left>
-"inoremap `` ``<Left>
-
-" Autoformat files with vim-autoformat
-"au BufWrite * :Autoformat
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
-
-" augroup AutoFormat
-  " autocmd!
-  " autocmd! BufWritePre *ts norm! gg=G
-" augroup END
-
-" Fonts
-let g:enable_bold_font = 1
-let g:enable_italic_font = 1
-set t_Co=256
-set t_ut=
-
 " Colors
-colorscheme base16-onedark
-let base16colorspace=256 " Access 256 colorspace
-set termguicolors
-let g:yats_host_keyword = 1
+colorscheme base16-onedark " Theme requires base16-vim
+let base16colorspace=256 " Access colors in 256 colorspace for base16-vim
+set termguicolors " Enable 24-bit RGB color in the TUI
+
+" Highlighting
+set list " List mode showing tabs, space, and trail
+set listchars=space:.,trail:~,precedes:<
 " Fix syntax highlighting by referencing start of file
 autocmd BufEnter * :syntax sync fromstart
+" Set whitespace character highlight
+" hi Whitespace ctermfg=grey guifg=grey
+" hi NonText ctermfg=grey guifg=grey
 
 " Spell checking
-" Must place after colorscheme
-set spell
-set spell spelllang=en_us
+" Must place after colorscheme for highlighting
+set spell spelllang=en_us " Enable spellcheck with en_us dictionary
 " cterm ctermbg ctermfg gui guibg guifg guisp
 " undercurl and guisp not supported
 " hi clear SpellBad
 " hi SpellBad gui=underline guifg=red
 
-" netrw options for viewing
-" let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-" let g:netrw_browse_split = 4
-" let g:netrw_altv = 1
-" let g:netrw_winsize = 25
-" Automatically open netwr on start
-" augroup ProjectDrawer
-"   autocmd!
-"   autocmd VimEnter * :Vexplore
-" augroup END
+" Split windows
+set splitbelow splitright " New windows to the bottom/right
 
-source $HOME/.config/nvim/mappings.vim
+" netrw options for viewing
+let g:netrw_liststyle = 4 "Show contents of current folder
+" let g:netrw_liststyle = 3 "Show contents of entire tree
+
 source $HOME/.config/nvim/coc-config.vim
 source $HOME/.config/nvim/fugitive.vim
 source $HOME/.config/nvim/fzf.vim
+source $HOME/.config/nvim/lightline.vim
+source $HOME/.config/nvim/mappings.vim

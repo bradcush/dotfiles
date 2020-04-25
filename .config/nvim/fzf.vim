@@ -1,12 +1,9 @@
 "File find and file search
-nmap gf :call fzf#vim#gitfiles('', fzf#vim#with_preview({'down': '40%'}, 'up:60%'))<CR>
-nmap ff :call fzf#vim#files('', fzf#vim#with_preview({'down': '40%'}, 'up:60%'))<CR>
-nmap fs :call fzf#vim#ag('', fzf#vim#with_preview({'down': '40%'}, 'up:60%'))<CR>
-"nmap gf :GFiles<CR>
-"nmap ff :Files<CR>
-"nmap fs :Ag<CR>
+nmap <leader>gf :call fzf#vim#gitfiles('', fzf#vim#with_preview({'down': '40%'}, 'up:60%'))<CR>
+nmap <leader>ff :call fzf#vim#files('', fzf#vim#with_preview({'down': '40%'}, 'up:60%'))<CR>
+nmap <leader>fs :call fzf#vim#ag('', fzf#vim#with_preview({'down': '40%'}, 'up:60%'))<CR>
 
-" Narrow ag results using quickfix
+" Narrow ag results using quickfix w/ tab
 function! s:ag_to_qf(line)
   let parts = split(a:line, ':')
   return {'filename': parts[0], 'lnum': parts[1], 'col': parts[2],

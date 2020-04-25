@@ -1,4 +1,4 @@
-" Use <tab> for AutoCompletion with a characters ahead and navigate
+" Use tab for trigger completion with characters ahead and navigate
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -34,7 +34,7 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Remap for rename current word
+" Symbol renaming across documents
 nmap <leader>rn <Plug>(coc-rename)
 
 " Using CocList

@@ -21,3 +21,6 @@ ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/lightline.vim ~/.config/nvim/lightlin
 
 # bat config symbolic links
 ln -s ${DOTFILES_CONFIG_PATH}/.config/bat/themes/ ~/.config/bat/
+
+# zsh custom symbolic links
+ln -s ${DOTFILES_CONFIG_PATH}/.oh-my-zsh/custom/themes/bundles.zsh-theme ~/.oh-my-zsh/custom/themes/bundles.zsh-theme

@@ -1,2 +1,2 @@
-source ~/Documents/repos/dotfiles/scripts/shell.sh
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Source .bashrc to be consistent
+source ~/Documents/repos/dotfiles/.bashrc

@@ -3,19 +3,27 @@ let g:lightline = {
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'spell', 'gitbranch' ],
-    \             [ 'readonly', 'filename', 'modified' ] ],
+    \             [ 'readonly', 'fileinfo', 'modified' ] ],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'cocstatus', 'percent' ],
     \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
     \ },
     \ 'component_function': {
+    \   'fileinfo': 'DynamicFileInfo',
     \   'gitbranch': 'DynamicFugitiveHead',
     \   'cocstatus': 'CocStatusDiagnostic'
     \ },
 \ }
 
+function! DynamicFileInfo()
+    if expand('%:t') ==# ''
+      return '[No Name]'
+    endif
+    return winwidth(0) > 130 ? expand('%:f') :expand('%:t')
+endfunction
+
 function! DynamicFugitiveHead()
-    return winwidth(0) > 120 ? FugitiveHead() : ''
+    return winwidth(0) > 130 ? FugitiveHead() : ''
 endfunction
 
 " Custom diagnostics integrated with Coc

@@ -13,6 +13,7 @@ Plugin 'itchyny/lightline.vim' " Lighter status bar
 Plugin 'junegunn/fzf.vim' " Fuzzy finder search files and word occurrence
 Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
 
+Plugin 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
 Plugin 'gko/vim-coloresque' " Inline color preview
 Plugin 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
 Plugin 'HerringtonDarkholme/yats.vim' " TS highlight syntax
@@ -123,6 +124,7 @@ let g:netrw_liststyle = 4 "Show contents of current folder
 " let g:netrw_liststyle = 3 "Show contents of entire tree
 
 source $HOME/.config/nvim/coc-config.vim
+source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fugitive.vim
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/lightline.vim

@@ -12,6 +12,7 @@ ln -s ${DOTFILES_CONFIG_PATH}/.gitconfig ~/.gitconfig
 
 # nvim config symbolic links
 ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/coc-config.vim ~/.config/nvim/coc-config.vim
+ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/editorconfig.vim ~/.config/nvim/editorconfig.vim
 ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/fugitive.vim ~/.config/nvim/fugitive.vim
 ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/fzf.vim ~/.config/nvim/fzf.vim

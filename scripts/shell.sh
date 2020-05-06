@@ -31,3 +31,6 @@ alias vim=${VIM_EDITOR}
 # Theme for bat syntax highlighting
 # export BAT_THEME="base16-onedark"
 export BAT_THEME="base16"
+
+# For clangd and other llvm related binaries
+export PATH="/usr/local/opt/llvm/bin:$PATH"

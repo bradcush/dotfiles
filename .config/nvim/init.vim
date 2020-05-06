@@ -22,6 +22,7 @@ Plugin 'maxmellon/vim-jsx-pretty' " Replaces ianks/vim-tsx potentially
 Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
 Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
 Plugin 'iamcco/markdown-preview.nvim' " Markdown preview in the browser
+Plugin 'jackguo380/vim-lsp-cxx-highlight' " C syntax highlighting
 
 Plugin 'tpope/vim-fugitive' " Git embedded in vim
 Plugin 'tpope/vim-repeat' " Expanding repeat last action

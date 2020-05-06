@@ -2,8 +2,9 @@
 set -o vi
 
 # Init for nvm node version manager
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Init for rbenv Ruby version manager
 eval "$(rbenv init -)"

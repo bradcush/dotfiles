@@ -75,6 +75,10 @@ set ruler " Show cursor position
 set wrap " Wrap lines
 set scrolloff=2 " Scroll offset from edge to cursor
 
+" Coc recommended
+set updatetime=300 " For a better user experience
+set signcolumn=yes " Always show signcolumn to prevent shifting
+
 " General
 " set mouse=a " Enable mouse scrolling
 set showcmd " Show command in bottom bar

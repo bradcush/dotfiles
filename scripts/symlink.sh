@@ -20,6 +20,8 @@ ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
 ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/lightline.vim ~/.config/nvim/lightline.vim
 
+# terminal configuration symbolic links
+ln -s ${DOTFILES_CONFIG_PATH}/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 # bat config symbolic links
 ln -s ${DOTFILES_CONFIG_PATH}/.config/bat/themes/ ~/.config/bat/
 

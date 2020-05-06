@@ -5,10 +5,11 @@ DOTFILES_CONFIG_PATH="${HOME}/Documents/repos/dotfiles"
 # root level dotfile symbolic links
 ln -s ${DOTFILES_CONFIG_PATH}/.bash_profile ~/.bash_profile
 ln -s ${DOTFILES_CONFIG_PATH}/.bashrc ~/.bashrc
-ln -s ${DOTFILES_CONFIG_PATH}/.zshrc ~/.zshrc
 ln -s ${DOTFILES_CONFIG_PATH}/.fzf.bash ~/.fzf.bash
 ln -s ${DOTFILES_CONFIG_PATH}/.fzf.zsh ~/.fzf.zsh
 ln -s ${DOTFILES_CONFIG_PATH}/.gitconfig ~/.gitconfig
+ln -s ${DOTFILES_CONFIG_PATH}/.zshrc ~/.zshrc
+ln -s ${DOTFILES_CONFIG_PATH}/.tmux.conf ~/.tmux.conf
 
 # nvim config symbolic links
 ln -s ${DOTFILES_CONFIG_PATH}/.config/nvim/coc-config.vim ~/.config/nvim/coc-config.vim

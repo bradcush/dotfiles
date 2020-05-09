@@ -10,35 +10,29 @@ export FZF_BASE=/usr/local/bin/fzf
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bradleycushing/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
+# Set ZSH theme by name
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="bundles"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+# Display red dots while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
-# Would you like to use another custom folder than $ZSH/custom?
+# Use another custom folder besides $ZSH/custom
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
+# Plugins to be loaded
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
     zsh-autosuggestions
-    # Conflicts with "COMPLETION_WAITING_DOTS" setting
-    fzf
+    fzf # Conflicts with waiting dots
     git
 )
 
-# Seems to be safest to be declared last before user config
+# Declare last but before user config
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -56,6 +50,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Important to source other files after "oh-my-zsh.sh" to avoid overwriting
+# Source other files after "oh-my-zsh.sh" to avoid overwriting
 source ~/Documents/repos/dotfiles/scripts/shell.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

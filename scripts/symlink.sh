@@ -21,8 +21,12 @@ ln -s ${DOTFILES_PATH}/.config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/lightline.vim ~/.config/nvim/lightline.vim
 
+## lightline custom symbolic links
+ln -s ${DOTFILES_PATH}/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/one_bradley.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/one_bradley.vim
+
 # terminal configuration symbolic links
 ln -s ${DOTFILES_PATH}/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s ${DOTFILES_PATH}/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 # bat config symbolic links
 ln -s ${DOTFILES_PATH}/.config/bat/themes/ ~/.config/bat/

@@ -9,14 +9,16 @@
         "typescript",
         "typescriptreact"
     ],
-    "codeLens.enable": true,
-    "diagnostic.warningSign": "⚠️",
-    "diagnostic.errorSign": "❌",
+    "codeLens.enable": true, // Contextual information
+    "diagnostic.errorSign": "🚫",
+//  "diagnostic.errorSign": "❌",
     "diagnostic.hintSign": "📎",
     "diagnostic.infoSign": "💁",
-    "prettier.requireConfig": true,
-    "suggest.enablePreview": true,
-    "suggest.maxCompleteItemCount": 10,
-    "typescript.preferences.quoteStyle": "single",
-    "typescript.suggest.autoImports": true
+    "diagnostic.warningSign": "🔥",
+//  "diagnostic.warningSign": "⚠️",
+//  "prettier.eslintIntegration": true, // Use prettier-eslint
+    "prettier.requireConfig": true, // Require config to format
+    "suggest.enablePreview": true, // Preview for completeopt
+    "suggest.maxCompleteItemCount": 10, // Max items shown
+    "typescript.preferences.quoteStyle": "single"
 }

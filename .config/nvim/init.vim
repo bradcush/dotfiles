@@ -55,6 +55,11 @@ set autoread " Autorefresh file when it has been edited somewhere else
 au CursorHold,CursorHoldI * checktime
 au FocusGained,BufEnter * checktime
 
+" Backup
+set nobackup " Never persist a backup file
+set nowritebackup " Never write a backup file
+set noswapfile " Never use swap files
+
 " Cursor lines
 set cursorline " Highlight cursor line (Causes slowness)
 set cursorcolumn " Highlights cursor column (Causes slowness)

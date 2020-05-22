@@ -9,9 +9,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' " Bundle manager
 
 Plugin 'itchyny/lightline.vim' " Lighter status bar
-
 Plugin 'junegunn/fzf.vim' " Fuzzy finder search files and word occurrence
+
+" Requires dependencies install using yarn
 Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
+Plugin 'iamcco/markdown-preview.nvim' " Markdown preview in the browser
 
 Plugin 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
 Plugin 'gko/vim-coloresque' " Inline color preview
@@ -21,7 +23,6 @@ Plugin 'othree/yajs.vim' " JS equivalent highlight syntax
 Plugin 'maxmellon/vim-jsx-pretty' " Replaces ianks/vim-tsx potentially
 Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
 Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
-Plugin 'iamcco/markdown-preview.nvim' " Markdown preview in the browser
 Plugin 'jackguo380/vim-lsp-cxx-highlight' " C syntax highlighting
 Plugin 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
 
@@ -29,6 +30,7 @@ Plugin 'tpope/vim-fugitive' " Git embedded in vim
 Plugin 'tpope/vim-repeat' " Expanding repeat last action
 Plugin 'tpope/vim-surround' " Delete, change, and add surroundings
 Plugin 'tpope/vim-commentary' " Commenting support
+" Causing rendering issues in kitty for some reason
 Plugin 'tpope/vim-vinegar' " No need for the project drawer
 
 Plugin 'michaeljsmith/vim-indent-object' " Indent text objects

@@ -10,6 +10,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Install neovim development version
 brew install --HEAD neovim
 
+# For Python remote-plugins support
+# Check python2 and python3 in $PATH first
+# python2 -m pip install --user --upgrade pynvim
+# python3 -m pip install --user --upgrade pynvim
+# You might need to install pip for a given version
+# python2 -m ensurepip --default-pip --user --upgrade
+# For JS remote-plugins support
+# yarn global add neovim
+
 # NVM for managing node versions
 brew install nvm
 

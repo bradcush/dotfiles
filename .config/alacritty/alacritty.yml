@@ -550,7 +550,7 @@ colors:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
-#key_bindings:
+key_bindings:
   # (Windows, Linux, and BSD only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
@@ -565,6 +565,8 @@ colors:
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
 
   # (macOS only)
+  # Map CTRL-6 to CTRL-^ which isn't working by default
+  - { key: Key6, mods: Control, chars: "\x1e" }
   #- { key: Key0,   mods: Command,         action: ResetFontSize    }
   #- { key: Equals, mods: Command,         action: IncreaseFontSize }
   #- { key: Add,    mods: Command,         action: IncreaseFontSize }

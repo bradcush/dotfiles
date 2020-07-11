@@ -122,9 +122,10 @@ autocmd BufEnter * :syntax sync fromstart
 " Must place after colorscheme for highlighting
 set spell spelllang=en_us " Enable spellcheck with en_us dictionary
 " cterm ctermbg ctermfg gui guibg guifg guisp
-" undercurl and guisp not supported
-" hi clear SpellBad
-" hi SpellBad gui=underline guifg=red
+" undercurl and guisp not supported in some terminals
+hi SpellBad gui=underline guisp=NONE
+" Enable italic comments
+hi Comment cterm=italic gui=italic
 
 " Split windows
 set splitbelow splitright " New windows to the bottom/right

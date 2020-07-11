@@ -35,8 +35,13 @@ brew cask install alacritty
 # Install kitty GPU terminal emulator
 brew cask install kitty
 
-# Hack Nerd Font only for NERDTree
+# Hack Nerd Font for NERDTree and other
+# plugins that might use glyphs
 brew cask install font-hack-nerd-font
+
+# Other nice fonts
+brew cask install font-hack
+brew cask install font-ubuntumono-nerd-font
 
 # Terminal multiplexer
 brew install tmux

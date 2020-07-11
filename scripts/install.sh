@@ -11,6 +11,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # To upgrade HEAD run "brew reinstall neovim"
 brew install --HEAD neovim
 
+# Download plug.vim and put it in the "autoload"
+# directory for use with "vim-plug" plugin manager
+# https://github.com/junegunn/vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 # For Python remote-plugins support
 # Check python2 and python3 in $PATH first
 # python2 -m pip install --user --upgrade pynvim

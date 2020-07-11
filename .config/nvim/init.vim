@@ -1,52 +1,48 @@
-set nocompatible " Ensure enhancements from Vi IMproved
-filetype off " Detect the file type.(Set to on after Vundle)
-
-set rtp+=/usr/local/opt/fzf " Set the runtime path to include fzf
-set rtp+=~/.vim/bundle/Vundle.vim " Set the runtime path to include vundle
-
-call vundle#begin()
-" Let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim' " Bundle manager
-
-Plugin 'itchyny/lightline.vim' " Lighter status bar
-Plugin 'junegunn/fzf.vim' " Fuzzy finder search files and word occurrence
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim' " Lighter status bar
+Plug 'junegunn/fzf.vim' " Fuzzy finder search files and word occurrence
 
 " Requires dependencies install using yarn
-Plugin 'neoclide/coc.nvim' " AutoCompletion better than YouCompleteMe
-Plugin 'iamcco/markdown-preview.nvim' " Markdown preview in the browser
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " AutoCompletion better than YouCompleteMe
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 
-Plugin 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
-Plugin 'gko/vim-coloresque' " Inline color preview
-Plugin 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
-Plugin 'HerringtonDarkholme/yats.vim' " TS highlight syntax
-Plugin 'othree/yajs.vim' " JS equivalent highlight syntax
-Plugin 'maxmellon/vim-jsx-pretty' " Replaces ianks/vim-tsx potentially
-Plugin 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
-Plugin 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
-Plugin 'jackguo380/vim-lsp-cxx-highlight' " C syntax highlighting
-Plugin 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
+Plug 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
+Plug 'gko/vim-coloresque' " Inline color preview
+Plug 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
+Plug 'HerringtonDarkholme/yats.vim' " TS highlight syntax
+Plug 'othree/yajs.vim' " JS equivalent highlight syntax
+Plug 'maxmellon/vim-jsx-pretty' " Replaces ianks/vim-tsx potentially
+Plug 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
+Plug 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
+Plug 'jackguo380/vim-lsp-cxx-highlight' " C syntax highlighting
+Plug 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
 
-Plugin 'tpope/vim-fugitive' " Git embedded in vim
-Plugin 'tpope/vim-repeat' " Expanding repeat last action
-Plugin 'tpope/vim-surround' " Delete, change, and add surroundings
-Plugin 'tpope/vim-commentary' " Commenting support
+Plug 'tpope/vim-fugitive' " Git embedded in vim
+Plug 'tpope/vim-repeat' " Expanding repeat last action
+Plug 'tpope/vim-surround' " Delete, change, and add surroundings
+Plug 'tpope/vim-commentary' " Commenting support
 " Causing rendering issues in kitty for some reason
-Plugin 'tpope/vim-vinegar' " No need for the project drawer
+Plug 'tpope/vim-vinegar' " No need for the project drawer
 
-Plugin 'michaeljsmith/vim-indent-object' " Indent text objects
-Plugin 'kana/vim-textobj-user' " Required dep for entire/line
-Plugin 'kana/vim-textobj-entire' " Entire file text objects
-Plugin 'kana/vim-textobj-line' " Line text objects
+Plug 'michaeljsmith/vim-indent-object' " Indent text objects
+Plug 'kana/vim-textobj-user' " Required dep for entire/line
+Plug 'kana/vim-textobj-entire' " Entire file text objects
+Plug 'kana/vim-textobj-line' " Line text objects
 
-" Plugin 'vim-airline/vim-airline' " The status bar
-" Plugin 'vim-airline/vim-airline-themes' " Theme for status bar
-" Plugin 'scrooloose/nerdtree' " File browser like netrw
-" Plugin 'ryanoasis/vim-devicons' " Icons for NERDTree and Airline
-" Plugin 'Shougo/vimfiler' " Another file browser like netrw
+" Plug 'vim-airline/vim-airline' " The status bar
+" Plug 'vim-airline/vim-airline-themes' " Theme for status bar
+" Plug 'scrooloose/nerdtree' " File browser like netrw
+" Plug 'ryanoasis/vim-devicons' " Icons for NERDTree and Airline
+" Plug 'Shougo/vimfiler' " Another file browser like netrw
 
 " Color themes
-Plugin 'chriskempson/base16-vim'
-call vundle#end()
+Plug 'chriskempson/base16-vim'
+" Initialize plugin system
+call plug#end()
+
+" Set the runtime path to include fzf
+set rtp+=/usr/local/opt/fzf
 
 " General
 filetype on " Detect the file type.

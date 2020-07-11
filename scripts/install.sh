@@ -68,6 +68,9 @@ brew install vault
 # Display keys pressed on your screen
 brew install keycastr
 
+# TLDR man pages Node.js client
+npm install -g tldr
+
 # Ruby version manager
 # brew install rbenv
 

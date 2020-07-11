@@ -76,7 +76,7 @@ set number " Show line numbers
 set relativenumber " Show relative line numbers
 " set numberwith=4 "Number width for lines
 set ruler " Show cursor position
-set wrap " Wrap lines
+set nowrap " Don't wrap lines
 set scrolloff=2 " Scroll offset from edge to cursor
 
 " Coc recommended

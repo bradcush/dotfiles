@@ -8,6 +8,7 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install neovim development version
+# To upgrade HEAD run "brew reinstall neovim"
 brew install --HEAD neovim
 
 # For Python remote-plugins support

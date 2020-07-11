@@ -37,6 +37,16 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming across documents
 nmap <leader>rn <Plug>(coc-rename)
 
+" Map function and class text objects
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+
 " Using CocList
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr> " Show all diagnostics
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr> " Manage extensions

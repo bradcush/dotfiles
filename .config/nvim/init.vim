@@ -121,6 +121,12 @@ autocmd BufEnter * :syntax sync fromstart
 " hi Whitespace ctermfg=grey guifg=grey
 " hi NonText ctermfg=grey guifg=grey
 
+" Highlight yanked contents for neovim
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+augroup END
+
 " Spell checking
 " Must place after colorscheme for highlighting
 set spell spelllang=en_us " Enable spellcheck with en_us dictionary

@@ -54,12 +54,14 @@ au CursorHold,CursorHoldI * checktime
 au FocusGained,BufEnter * checktime
 
 " Backup
+" Backup files are snapshots before edits are made
+" Swap files contain changes you've made to a buffer
 set nobackup " Never persist a backup file
 set nowritebackup " Never write a backup file
-set noswapfile " Never use swap files
+set noswapfile " Never use swap files for recovery
 
 " Cursor lines
-" Causing slowness specifically navigating this file
+" Causing slowness specifically navigating some files
 set cursorline " Highlight cursor line (Causes slowness)
 set cursorcolumn " Highlights cursor column (Causes slowness)
 set colorcolumn=80 " Set print width indication line

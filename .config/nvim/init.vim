@@ -141,3 +141,4 @@ source $HOME/.config/nvim/fugitive.vim
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/lightline.vim
 source $HOME/.config/nvim/mappings.vim
+source $HOME/.config/nvim/python.vim

@@ -6,6 +6,7 @@
         "json",
         "markdown",
         "Markdown",
+        "python",
         "typescript",
         "typescriptreact"
     ],
@@ -18,6 +19,8 @@
 //  "diagnostic.warningSign": "⚠️",
 //  "prettier.eslintIntegration": true, // Use prettier-eslint
     "prettier.requireConfig": true, // Require config to format
+    "python.formatting.provider": "black",
+    "python.jediEnabled": false, // Use Microsoft PLS
     "suggest.enablePreview": true, // Preview for completeopt
     "suggest.maxCompleteItemCount": 10, // Max items shown
     "typescript.preferences.quoteStyle": "single"

@@ -9,6 +9,10 @@ export NVM_DIR="$HOME/.nvm"
 # Init for rbenv Ruby version manager
 eval "$(rbenv init -)"
 
+# Init for pyenv Python version manager
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # npm and vault globals
 # export NPM_TOKEN="<NPM_TOKEN>"
 # export VAULT_ADDR="<VAULT_ADDR>"

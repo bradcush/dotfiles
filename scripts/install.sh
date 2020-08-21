@@ -17,12 +17,14 @@ brew install --HEAD neovim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+# pyenv for managing python versions
+brew install pyenv
+
+# virtualenv for managing python environments
+brew install --HEAD pyenv-virtualenv
+
 # For Python remote-plugins support
-# Check python2 and python3 in $PATH first
-# python2 -m pip install --user --upgrade pynvim
-# python3 -m pip install --user --upgrade pynvim
-# You might need to install pip for a given version
-# python2 -m ensurepip --default-pip --user --upgrade
+# python -m pip install --user --upgrade pynvim
 # For JS remote-plugins support
 # yarn global add neovim
 
@@ -36,6 +38,9 @@ brew install yarn
 # Requires path modification in .bashrc
 # (eg. export PATH="/usr/local/opt/llvm/bin:$PATH")
 brew install llvm
+
+# Used by coc-python among others
+brew install ctags
 
 # Install Alacritty GPU terminal emulator
 brew cask install alacritty

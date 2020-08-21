@@ -18,8 +18,9 @@ ln -s ${DOTFILES_PATH}/.config/nvim/coc-settings.json ~/.config/nvim/coc-setting
 ln -s ${DOTFILES_PATH}/.config/nvim/fugitive.vim ~/.config/nvim/fugitive.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/fzf.vim ~/.config/nvim/fzf.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/init.vim ~/.config/nvim/init.vim
-ln -s ${DOTFILES_PATH}/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/lightline.vim ~/.config/nvim/lightline.vim
+ln -s ${DOTFILES_PATH}/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
+ln -s ${DOTFILES_PATH}/.config/nvim/python.vim ~/.config/nvim/python.vim
 
 ## lightline custom symbolic links
 ln -s ${DOTFILES_PATH}/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/one_bradley.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/one_bradley.vim

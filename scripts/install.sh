@@ -23,13 +23,16 @@ brew install pyenv
 # virtualenv for managing python environments
 brew install --HEAD pyenv-virtualenv
 
-# For Python remote-plugins support
+# For python remote-plugins support
 # python -m pip install --user --upgrade pynvim
 # For JS remote-plugins support
 # yarn global add neovim
 
 # NVM for managing node versions
 brew install nvm
+
+# Suggested build environment for python
+# brew install openssl readline sqlite3 xz zlib
 
 # Yarn for npm dependency mgmt
 brew install yarn

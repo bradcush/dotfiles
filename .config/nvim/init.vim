@@ -16,6 +16,7 @@ Plug 'maxmellon/vim-jsx-pretty' " Replaces ianks/vim-tsx potentially
 Plug 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
 Plug 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
 Plug 'jackguo380/vim-lsp-cxx-highlight' " C syntax highlighting
+Plug 'keith/swift.vim' " Syntax highlights for Swift
 Plug 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
 
 Plug 'tpope/vim-fugitive' " Git embedded in vim

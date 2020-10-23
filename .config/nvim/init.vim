@@ -1,7 +1,9 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim' " Lighter status bar
-Plug 'junegunn/fzf.vim' " Fuzzy finder search files and word occurrence
+" Sometimes fzf#install fails and install --all in the fzf plugin dir is needed
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder search files and word occurrence
+Plug 'junegunn/fzf.vim' "Required for FZF vim integration
 
 " Requires dependencies install using yarn
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " AutoCompletion better than YouCompleteMe

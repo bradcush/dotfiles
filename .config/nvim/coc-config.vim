@@ -37,6 +37,11 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming across documents
 nmap <leader>rn <Plug>(coc-rename)
 
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ca  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
 " Map function and class text objects
 xmap if <Plug>(coc-funcobj-i)
 omap if <Plug>(coc-funcobj-i)

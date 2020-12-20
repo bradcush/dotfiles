@@ -125,12 +125,6 @@ autocmd BufEnter * :syntax sync fromstart
 " hi Whitespace ctermfg=grey guifg=grey
 " hi NonText ctermfg=grey guifg=grey
 
-" Highlight yanked contents for neovim
-augroup highlight_yank
-    autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
-augroup END
-
 " Spell checking
 " Must place after colorscheme for highlighting
 set spell spelllang=en_us " Enable spellcheck with en_us dictionary
@@ -145,7 +139,7 @@ hi Comment cterm=italic gui=italic
 " hi clear SpellLocal " Disable SpellLocal highlighting
 
 " Split windows
-set splitbelow splitright " New windows to the bottom/right
+set splitbelow splitright " New split windows to the bottom/right
 
 " netrw options for viewing
 let g:netrw_liststyle = 4 "Show contents of current folder
@@ -158,4 +152,5 @@ source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/hardtime.vim
 source $HOME/.config/nvim/lightline.vim
 source $HOME/.config/nvim/mappings.vim
+source $HOME/.config/nvim/neovim.vim
 source $HOME/.config/nvim/python.vim

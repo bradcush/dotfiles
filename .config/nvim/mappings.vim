@@ -1,7 +1,7 @@
 " Source nvim init file
 nmap <leader>so :source ~/.config/nvim/init.vim<CR>
 
-" Windows
+" Window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k

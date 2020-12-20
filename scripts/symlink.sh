@@ -21,6 +21,7 @@ ln -s ${DOTFILES_PATH}/.config/nvim/hardtime.vim ~/.config/nvim/hardtime.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/lightline.vim ~/.config/nvim/lightline.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
+ln -s ${DOTFILES_PATH}/.config/nvim/neovim.vim ~/.config/nvim/neovim.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/python.vim ~/.config/nvim/python.vim
 
 ## lightline custom symbolic links

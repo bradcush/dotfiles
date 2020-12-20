@@ -5,6 +5,9 @@ Plug 'itchyny/lightline.vim' " Lighter status bar
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder search files and word occurrence
 Plug 'junegunn/fzf.vim' "Required for FZF vim integration
 
+Plug 'dstein64/vim-startuptime' " Startup event timing information
+Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
+
 " Requires dependencies install using yarn
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " AutoCompletion better than YouCompleteMe
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
@@ -33,11 +36,8 @@ Plug 'kana/vim-textobj-user' " Required dep for entire/line
 Plug 'kana/vim-textobj-entire' " Entire file text objects
 Plug 'kana/vim-textobj-line' " Line text objects
 
-" Plug 'vim-airline/vim-airline' " The status bar
-" Plug 'vim-airline/vim-airline-themes' " Theme for status bar
 " Plug 'scrooloose/nerdtree' " File browser like netrw
 " Plug 'ryanoasis/vim-devicons' " Icons for NERDTree and Airline
-" Plug 'Shougo/vimfiler' " Another file browser like netrw
 
 " Color themes
 Plug 'chriskempson/base16-vim'
@@ -150,6 +150,7 @@ source $HOME/.config/nvim/coc-config.vim
 source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fugitive.vim
 source $HOME/.config/nvim/fzf.vim
+source $HOME/.config/nvim/hardtime.vim
 source $HOME/.config/nvim/lightline.vim
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/python.vim

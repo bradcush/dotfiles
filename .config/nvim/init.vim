@@ -139,6 +139,10 @@ set spell spelllang=en_us " Enable spellcheck with en_us dictionary
 hi SpellBad gui=underline guisp=NONE
 " Enable italic comments
 hi Comment cterm=italic gui=italic
+" Hides undercurl highlighting only visible in kitty
+" hi clear SpellCap " Disable SpellCap highlighting
+" hi clear SpellRare " Disable SpellRare highlighting
+" hi clear SpellLocal " Disable SpellLocal highlighting
 
 " Split windows
 set splitbelow splitright " New windows to the bottom/right

@@ -112,6 +112,7 @@ set pumblend=20 "Not sure exactly
 
 " Colors
 colorscheme base16-onedark " Theme requires base16-vim
+" colorscheme base16-gruvbox-dark-soft " Theme requires base16-vim
 let base16colorspace=256 " Access colors in 256 colorspace for base16-vim
 set termguicolors " Enable 24-bit RGB color in the TUI
 

@@ -28,7 +28,6 @@ ln -s ${DOTFILES_PATH}/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/
 
 # terminal configuration symbolic links
 ln -s ${DOTFILES_PATH}/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-ln -s ${DOTFILES_PATH}/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 # bat config symbolic links
 ln -s ${DOTFILES_PATH}/.config/bat/themes/ ~/.config/bat/

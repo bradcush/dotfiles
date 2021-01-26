@@ -58,6 +58,15 @@ yarn global add neovim
 # Yarn for npm dependency mgmt
 brew install yarn
 
+# Language servers for neovim LSP
+npm i -g bash-language-server
+npm install -g vscode-css-languageserver-bin
+brew install efm-langserver
+npm install -g vscode-json-languageserver
+npm i -g pyright
+npm install -g typescript typescript-language-server
+npm install -g vim-language-server
+
 # Install llvm with clangd for C language support
 # Requires path modification in .bashrc
 # (eg. export PATH="/usr/local/opt/llvm/bin:$PATH")

@@ -9,9 +9,12 @@ Plug 'dstein64/vim-startuptime' " Startup event timing information
 Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 
 " Requires dependencies install using yarn
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " AutoCompletion better than YouCompleteMe
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
+" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " AutoCompletion better than YouCompleteMe
+Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
+Plug 'nvim-lua/completion-nvim' " Better auto-completion for built-in LSP
+Plug 'steelsojka/completion-buffers' " Word completion for current and listed buffers
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
 Plug 'gko/vim-coloresque' " Inline color preview
 Plug 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
@@ -145,7 +148,9 @@ set splitbelow splitright " New split windows to the bottom/right
 let g:netrw_liststyle = 4 "Show contents of current folder
 " let g:netrw_liststyle = 3 "Show contents of entire tree
 
-source $HOME/.config/nvim/coc-config.vim
+" Vim specific configurations
+" source $HOME/.config/nvim/coc-config.vim
+source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fugitive.vim
 source $HOME/.config/nvim/fzf.vim
@@ -154,3 +159,6 @@ source $HOME/.config/nvim/lightline.vim
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/neovim.vim
 source $HOME/.config/nvim/python.vim
+
+" Neovim specific configuration
+luafile $HOME/.config/nvim/lsp.lua

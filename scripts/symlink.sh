@@ -19,6 +19,7 @@ mkdir -p ~/.config/bat
 
 # nvim config symbolic links
 ln -s ${DOTFILES_PATH}/.config/nvim/coc-config.vim ~/.config/nvim/coc-config.vim
+ln -s ${DOTFILES_PATH}/.config/nvim/completion.vim ~/.config/nvim/completion.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/editorconfig.vim ~/.config/nvim/editorconfig.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 ln -s ${DOTFILES_PATH}/.config/nvim/fugitive.vim ~/.config/nvim/fugitive.vim
@@ -29,9 +30,8 @@ ln -s ${DOTFILES_PATH}/.config/nvim/lightline.vim ~/.config/nvim/lightline.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/neovim.vim ~/.config/nvim/neovim.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/python.vim ~/.config/nvim/python.vim
-
-## lightline custom symbolic links
-ln -s ${DOTFILES_PATH}/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/one_bradley.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/one_bradley.vim
+ln -s ${DOTFILES_PATH}/.config/nvim/lsp.lua ~/.config/nvim/lsp.lua
+ln -s ${DOTFILES_PATH}/.config/efm-langserver/config.yaml ~/.config/efm-langserver/config.yaml
 
 # terminal configuration symbolic links
 ln -s ${DOTFILES_PATH}/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml

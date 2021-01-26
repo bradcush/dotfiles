@@ -3,11 +3,11 @@ set -o vi
 
 # Init for nvm node version manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
 # Init for rbenv Ruby version manager
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Init for pyenv Python version manager
 eval "$(pyenv init -)"

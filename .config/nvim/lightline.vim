@@ -1,5 +1,5 @@
 let g:lightline = {
-    \ 'colorscheme': 'one_bradley',
+    \ 'colorscheme': 'one',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'spell', 'gitbranch' ],

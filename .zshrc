@@ -8,11 +8,14 @@ export FZF_BASE=/usr/local/bin/fzf
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/bradleycushing/.oh-my-zsh"
+export ZSH="/Users/bcushing/.oh-my-zsh"
 
 # Set ZSH theme by name
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="bundles"
+
+# Ignore permission issues to load completion
+ZSH_DISABLE_COMPFIX=true
 
 # Display red dots while waiting for completion
 # COMPLETION_WAITING_DOTS="true"

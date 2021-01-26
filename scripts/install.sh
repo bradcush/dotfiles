@@ -2,18 +2,40 @@
 
 # Install Homebrew package manager of macOS
 # Homebrew Cask extends Homebrew and comes with it
+# Run "brew update" afterwards for latest formulae
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install Oh My ZSH framework
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Install zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# NVM for managing node versions
+brew install nvm
+
+# A command-line fuzzy finder
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+
+# Rg and Ag for use with FZF
+brew install ripgrep
+brew install the_silver_searcher
+
 # Install neovim development version
 # To upgrade HEAD run "brew reinstall neovim"
+brew install --HEAD luajit
 brew install --HEAD neovim
+
+# Install Alacritty GPU terminal emulator
+brew install --cask alacritty
+# Install kitty GPU terminal emulator
+brew cask install --cask kitty
 
 # Download plug.vim and put it in the "autoload"
 # directory for use with "vim-plug" plugin manager
 # https://github.com/junegunn/vim-plug
+# :PlugInstall required before running neovim successfully
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
@@ -25,11 +47,10 @@ brew install --HEAD pyenv-virtualenv
 
 # For python remote-plugins support
 # python -m pip install --user --upgrade pynvim
+# python2 -m pip install --upgrade pip
+# python3 -m pip install --upgrade pip
 # For JS remote-plugins support
-# yarn global add neovim
-
-# NVM for managing node versions
-brew install nvm
+yarn global add neovim
 
 # Suggested build environment for python
 # brew install openssl readline sqlite3 xz zlib
@@ -45,18 +66,15 @@ brew install llvm
 # Used by coc-python among others
 brew install ctags
 
-# Install Alacritty GPU terminal emulator
-brew cask install alacritty
-# Install kitty GPU terminal emulator
-brew cask install kitty
+# Tap all fonts before installing
+brew tap homebrew/cask-fonts
 
 # Hack Nerd Font for NERDTree and other
 # plugins that might use glyphs
-brew cask install font-hack-nerd-font
-
+brew install --cask font-hack-nerd-font
 # Other nice fonts
-brew cask install font-hack
-brew cask install font-ubuntumono-nerd-font
+brew install --cask font-hack
+# brew install --cask font-ubuntumono-nerd-font
 
 # Terminal multiplexer
 brew install tmux
@@ -66,9 +84,6 @@ brew install vifm
 
 # bat is a better replacement for cat
 brew install bat
-
-# A command-line fuzzy finder
-brew install fzf
 
 # Neofetch for system stat in cli
 brew install neofetch
@@ -91,7 +106,7 @@ npm install -g tldr
 # Install deps for Dashlane macOS dev
 # brew install carthage
 # brew install encfs
-# brew cask install osxfuse
+# brew install --cask osxfuse
 
 # Do I need to custom install any of these?
 # brew intstall bash

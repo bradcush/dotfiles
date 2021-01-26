@@ -11,6 +11,12 @@ ln -s ${DOTFILES_PATH}/.gitconfig ~/.gitconfig
 ln -s ${DOTFILES_PATH}/.zshrc ~/.zshrc
 ln -s ${DOTFILES_PATH}/.tmux.conf ~/.tmux.conf
 
+# Create config directories before symlinking
+mkdir -p ~/.config/nvim
+mkdir -p ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme
+mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/bat
+
 # nvim config symbolic links
 ln -s ${DOTFILES_PATH}/.config/nvim/coc-config.vim ~/.config/nvim/coc-config.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/editorconfig.vim ~/.config/nvim/editorconfig.vim

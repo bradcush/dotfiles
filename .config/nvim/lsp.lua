@@ -52,20 +52,21 @@ for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
 
--- Save once after async formatting is done
--- vim.lsp.handlers['textDocument/formatting'] = function(err, _, result, _, bufnr)
---   if err ~= nil or result == nil then
---     return
---   end
---   if not vim.api.nvim_buf_get_option(bufnr, 'modified') then
---     local view = vim.fn.winsaveview()
---     vim.lsp.util.apply_text_edits(result, bufnr)
---     vim.fn.winrestview(view)
---     if bufnr == vim.api.nvim_get_current_buf() then
---       vim.api.nvim_command('noautocmd :update')
---     end
---   end
--- end
+-- Save once after async formatting is done as temp fix
+-- https://www.reddit.com/r/neovim/comments/jvisg5/lets_talk_formatting_again/
+vim.lsp.handlers['textDocument/formatting'] = function(err, _, result, _, bufnr)
+  if err ~= nil or result == nil then
+    return
+  end
+  if not vim.api.nvim_buf_get_option(bufnr, 'modified') then
+    local view = vim.fn.winsaveview()
+    vim.lsp.util.apply_text_edits(result, bufnr)
+    vim.fn.winrestview(view)
+    if bufnr == vim.api.nvim_get_current_buf() then
+      vim.api.nvim_command('noautocmd :update')
+    end
+  end
+end
 
 local efm_on_attach = function(client)
   -- Auto-format document prior to saving
@@ -73,7 +74,7 @@ local efm_on_attach = function(client)
   vim.api.nvim_exec([[
     augroup formatting
       autocmd!
-      autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)
+      autocmd BufWritePre * lua vim.lsp.buf.formatting()
     augroup END
   ]], true)
 end

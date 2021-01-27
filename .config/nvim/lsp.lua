@@ -87,6 +87,7 @@ require'lspconfig'.efm.setup {
   settings = {
     -- Require formatter configuration files to load
     rootMarkers = {
+      '.git/',
       '.eslintrc',
       '.eslintrc.json',
       '.eslintrc.js',

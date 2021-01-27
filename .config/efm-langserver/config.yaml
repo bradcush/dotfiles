@@ -18,6 +18,10 @@ tools:
   prettier: &prettier
     format-command: './node_modules/.bin/prettier'
 
+  python-black: &python-black
+    format-command: 'black --quiet -'
+    format-stdin: true
+
 languages:
   javascript:
     - <<: *eslint
@@ -30,6 +34,9 @@ languages:
   javascript.jsx:
     - <<: *eslint
     - <<: *prettier
+
+  python:
+    - <<: *python-black
 
   typescript:
     - <<: *eslint

@@ -67,6 +67,10 @@ npm i -g pyright
 npm install -g typescript typescript-language-server
 npm install -g vim-language-server
 
+# Lua language server and formatter install
+# https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
+luarocks install --server=https://luarocks.org/dev luaformatter
+
 # Install llvm with clangd for C language support
 # Requires path modification in .bashrc
 # (eg. export PATH="/usr/local/opt/llvm/bin:$PATH")

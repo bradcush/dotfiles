@@ -15,6 +15,10 @@ tools:
     root-markers:
       - .git/
 
+  lua-lua-format: &lua-lua-format
+    format-command: 'lua-format -i'
+    format-stdin: true
+
   prettier: &prettier
     format-command: './node_modules/.bin/prettier'
 
@@ -34,6 +38,9 @@ languages:
   javascript.jsx:
     - <<: *eslint
     - <<: *prettier
+
+  lua:
+    - <<: *lua-lua-format
 
   python:
     - <<: *python-black

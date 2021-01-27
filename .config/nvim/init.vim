@@ -120,6 +120,7 @@ let base16colorspace=256 " Access colors in 256 colorspace for base16-vim
 set termguicolors " Enable 24-bit RGB color in the TUI
 
 " Highlighting
+" Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)
 set list " List mode showing tabs, space, and trail
 set listchars=space:.,trail:~,precedes:<
 " Fix syntax highlighting by referencing start of file

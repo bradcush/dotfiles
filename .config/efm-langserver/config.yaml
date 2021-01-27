@@ -19,6 +19,17 @@ tools:
     format-command: 'lua-format -i'
     format-stdin: true
 
+  markdown-markdownlint: &markdown-markdownlint
+    lint-command: 'markdownlint -s'
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l %m'
+      - '%f:%l:%c %m'
+      - '%f: %l: %m'
+
+  markdown-pandoc: &markdown-pandoc
+    format-command: 'pandoc -f markdown -t gfm --tab-stop=2 --wrap=preserve'
+
   prettier: &prettier
     format-command: './node_modules/.bin/prettier'
 
@@ -41,6 +52,10 @@ languages:
 
   lua:
     - <<: *lua-lua-format
+
+  markdown:
+    - <<: *markdown-markdownlint
+    - <<: *markdown-pandoc
 
   python:
     - <<: *python-black

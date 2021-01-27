@@ -58,11 +58,13 @@ yarn global add neovim
 # Yarn for npm dependency mgmt
 brew install yarn
 
-# Language servers for neovim LSP
+# Language servers and formatters for neovim
 npm i -g bash-language-server
 npm install -g vscode-css-languageserver-bin
 brew install efm-langserver
 npm install -g vscode-json-languageserver
+brew install markdownlint-cli
+brew install pandoc
 npm i -g pyright
 npm install -g typescript typescript-language-server
 npm install -g vim-language-server

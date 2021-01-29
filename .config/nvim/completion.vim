@@ -2,7 +2,7 @@
 autocmd BufEnter * lua require'completion'.on_attach()
 
 " Matching strategy priority
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 " Specify custom chain completion
 let g:completion_chain_complete_list = [

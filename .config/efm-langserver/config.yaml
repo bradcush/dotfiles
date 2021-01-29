@@ -6,11 +6,12 @@ root-markers:
 
 tools:
   eslint: &eslint
-    lint-command: './node_modules/.bin/eslint -f unix --stdin --stdin-filename ${INPUT}'
+    lint-command: './node_modules/.bin/eslint -f visualstudio --stdin --stdin-filename ${INPUT}'
     lint-ignore-exit-code: true
     lint-stdin: true
     lint-formats:
-      - "%f:%l:%c: %m"
+      - "%f(%l,%c): %tarning %m"
+      - "%f(%l,%c): %rror %m"
     format-stdin: true
     root-markers:
       - .git/
@@ -68,6 +69,6 @@ languages:
     - <<: *eslint
     - <<: *prettier
 
-  typescript.jsx:
+  typescript.tsx:
     - <<: *eslint
     - <<: *prettier

@@ -97,6 +97,9 @@ brew install tmux
 # Vifm file explorer
 brew install vifm
 
+# lookatme terminal based presentations
+pip install lookatme
+
 # bat is a better replacement for cat
 brew install bat
 

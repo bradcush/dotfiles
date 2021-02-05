@@ -56,10 +56,12 @@ local servers = {
     'bashls',
     'cssls',
     'clangd',
+    'html',
     'jsonls',
     'pyright',
     'tsserver',
-    'vimls'
+    'vimls',
+    'yamlls'
 }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {on_attach = on_attach}

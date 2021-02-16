@@ -40,6 +40,9 @@ tools:
   css-prettier: &css-prettier
     format-command: './node_modules/.bin/prettier ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser css'
 
+  # json-prettier: &json-prettier
+  #   format-command: './node_modules/.bin/prettier ${--tab-width:tabWidth} --parser json'
+
   python-black: &python-black
     format-command: 'black --quiet -'
     format-stdin: true
@@ -62,6 +65,11 @@ languages:
   javascript.jsx:
     - <<: *eslint
     - <<: *prettier
+
+  # json:
+    # - <<: *json-jq
+    # - <<: *json-fixjson
+    # - <<: *json-prettier
 
   lua:
     - <<: *lua-lua-format

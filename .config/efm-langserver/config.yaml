@@ -66,9 +66,9 @@ languages:
   lua:
     - <<: *lua-lua-format
 
-  markdown:
-    - <<: *markdown-markdownlint
-    - <<: *markdown-pandoc
+  # markdown:
+    # - <<: *markdown-markdownlint
+    # - <<: *markdown-pandoc
 
   python:
     - <<: *python-black

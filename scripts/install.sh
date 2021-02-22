@@ -62,6 +62,8 @@ brew install yarn
 brew install efm-langserver
 brew install pandoc
 brew install markdownlint-cli
+brew install shellcheck
+brew install shfmt
 npm install -g bash-language-server
 npm install -g pyright
 npm install -g typescript typescript-language-server

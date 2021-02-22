@@ -47,6 +47,18 @@ tools:
     format-command: 'black --quiet -'
     format-stdin: true
 
+  sh-shellcheck: &sh-shellcheck
+    lint-command: 'shellcheck -f gcc -x'
+    lint-source: 'shellcheck'
+    lint-formats:
+      - '%f:%l:%c: %trror: %m'
+      - '%f:%l:%c: %tarning: %m'
+      - '%f:%l:%c: %tote: %m'
+
+  sh-shfmt: &sh-shfmt
+    format-command: 'shfmt -ci -s -bn -i 2'
+    format-stdin: true
+
 languages:
   css:
     - <<: *css-prettier
@@ -80,6 +92,10 @@ languages:
 
   python:
     - <<: *python-black
+
+  sh:
+    - <<: *sh-shellcheck
+    - <<: *sh-shfmt
 
   typescript:
     - <<: *eslint

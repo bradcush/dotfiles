@@ -1,4 +1,5 @@
 " Source nvim init file
+nmap <leader>rc :e $MYVIMRC<CR>
 nmap <leader>so :source ~/.config/nvim/init.vim<CR>
 
 " Window navigation

@@ -4,6 +4,10 @@ autocmd BufEnter * lua require'completion'.on_attach()
 " Matching strategy priority
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
+" Length sorting so capitalization doesn't come first
+" and there is better chance of an exact match
+let g:completion_sorting = 'length'
+
 " Specify custom chain completion
 let g:completion_chain_complete_list = [
     \{'complete_items': ['lsp', 'snippet']},

@@ -25,6 +25,8 @@ brew install the_silver_searcher
 # Install neovim development version
 # To upgrade HEAD run "brew reinstall neovim"
 brew install --HEAD luajit
+# Required luv to be reinstalled
+brew install luv
 brew install --HEAD neovim
 
 # Install Alacritty GPU terminal emulator

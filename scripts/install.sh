@@ -66,6 +66,10 @@ brew install pandoc
 brew install markdownlint-cli
 brew install shellcheck
 brew install shfmt
+# Globally install eslint/prettier as we to
+# not rely on one location for monorepos
+npm install -g eslint
+npm install -g prettier
 npm install -g bash-language-server
 npm install -g pyright
 npm install -g typescript typescript-language-server

@@ -22,18 +22,17 @@ local on_attach = function(client, bufnr)
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+        -- Auto-format document prior to saving
+        -- Should be sync to update before save
+        vim.api.nvim_exec([[
+        augroup formatting
+            autocmd!
+            autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 500)
+        augroup END
+    ]], true)
     elseif client.resolved_capabilities.document_range_formatting then
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
     end
-
-    -- Auto-format document prior to saving
-    -- Should be sync but currently doesn't work
-    vim.api.nvim_exec([[
-        augroup formatting
-            autocmd!
-            autocmd BufWritePre * lua vim.lsp.buf.formatting()
-        augroup END
-    ]], true)
 
     -- Set highlight autocommand based on server_capabilities
     -- if client.resolved_capabilities.document_highlight then
@@ -59,7 +58,6 @@ local servers = {
     'html',
     'jsonls',
     'pyright',
-    'tsserver',
     'vimls',
     'yamlls'
 }
@@ -67,24 +65,18 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {on_attach = on_attach}
 end
 
--- Save once after async formatting is done as temp fix
--- https://www.reddit.com/r/neovim/comments/jvisg5/lets_talk_formatting_again/
-vim.lsp.handlers['textDocument/formatting'] =
-    function(err, _, result, _, bufnr)
-        if err ~= nil or result == nil then
-            return
-        end
-        if not vim.api.nvim_buf_get_option(bufnr, 'modified') then
-            local view = vim.fn.winsaveview()
-            vim.lsp.util.apply_text_edits(result, bufnr)
-            vim.fn.winrestview(view)
-            if bufnr == vim.api.nvim_get_current_buf() then
-                vim.api.nvim_command('noautocmd :update')
-            end
-        end
+-- Ignore formatting for js and ts because it conflicts
+-- with eslint and prettier which is preferred
+nvim_lsp['tsserver'].setup {
+    on_attach = function(client, bufnr)
+        client.resolved_capabilities.document_formatting = false
+        on_attach(client, bufnr)
     end
+}
 
 -- eslint and prettier custom lsp
+-- TODO: Specify separate efm setup for formatting types
+-- we want to disable when there is no local config
 require'lspconfig'.efm.setup {
     on_attach = on_attach,
     init_options = {documentFormatting = true},

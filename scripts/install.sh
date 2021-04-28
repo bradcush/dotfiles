@@ -60,7 +60,8 @@ yarn global add neovim
 # Yarn for npm dependency mgmt
 brew install yarn
 
-# Language servers and formatters for neovim
+# Language servers and formatters used
+# with neovim LSP and efm-langserver
 brew install efm-langserver
 brew install pandoc
 brew install markdownlint-cli

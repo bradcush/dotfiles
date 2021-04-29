@@ -5,7 +5,7 @@
 # Run "brew update" afterwards for latest formulae
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# Install Oh My ZSH framework
+# Install Oh My ZSH plugin manager
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install zsh-autosuggestions
@@ -22,7 +22,7 @@ brew install fzf
 brew install ripgrep
 brew install the_silver_searcher
 
-# Install neovim development version
+# Install Neovim development version
 # To upgrade HEAD run "brew reinstall neovim"
 brew install --HEAD luajit
 # Required luv to be reinstalled
@@ -37,7 +37,7 @@ brew cask install --cask kitty
 # Download plug.vim and put it in the "autoload"
 # directory for use with "vim-plug" plugin manager
 # https://github.com/junegunn/vim-plug
-# :PlugInstall required before running neovim successfully
+# :PlugInstall required before running Neovim successfully
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
@@ -61,7 +61,7 @@ yarn global add neovim
 brew install yarn
 
 # Language servers and formatters used
-# with neovim LSP and efm-langserver
+# with Neovim LSP and efm-langserver
 brew install efm-langserver
 brew install pandoc
 brew install markdownlint-cli

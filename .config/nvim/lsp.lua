@@ -24,12 +24,15 @@ local on_attach = function(client, bufnr)
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
         -- Auto-format document prior to saving
         -- Should be sync to update before save
-        vim.api.nvim_exec([[
-        augroup formatting
-            autocmd!
-            autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 500)
-        augroup END
-    ]], true)
+        -- TODO: Formatting on save uses content from what
+        -- was previously saved thus overwrites content
+        -- previously saved buffer instead of current
+        -- vim.api.nvim_exec([[
+        --     augroup formatting
+        --         autocmd!
+        --         autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 500)
+        --     augroup END
+        -- ]], true)
     elseif client.resolved_capabilities.document_range_formatting then
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
     end

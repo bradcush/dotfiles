@@ -158,8 +158,8 @@ source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/hardtime.vim
 source $HOME/.config/nvim/lightline.vim
 source $HOME/.config/nvim/mappings.vim
-source $HOME/.config/nvim/neovim.vim
 source $HOME/.config/nvim/python.vim
 
-" Neovim specific configuration
+" Neovim specific configurations
 luafile $HOME/.config/nvim/lsp.lua
+source $HOME/.config/nvim/neovim.vim

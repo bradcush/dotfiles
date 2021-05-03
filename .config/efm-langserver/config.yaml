@@ -33,14 +33,14 @@ tools:
     format-command: 'prettier --stdin-filepath ${INPUT}'
     format-stdin: true
 
-  html-prettier: &html-prettier
-    format-command: 'prettier ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser html'
+  # html-prettier: &html-prettier
+  #   format-command: 'prettier ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser html'
 
-  css-prettier: &css-prettier
-    format-command: 'prettier ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser css'
+  # css-prettier: &css-prettier
+  #   format-command: 'prettier ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser css'
 
-  json-prettier: &json-prettier
-    format-command: 'prettier ${--tab-width:tabWidth} --parser json'
+  # json-prettier: &json-prettier
+  #   format-command: 'prettier ${--tab-width:tabWidth} --parser json'
 
   python-black: &python-black
     format-command: 'black --quiet -'
@@ -59,11 +59,11 @@ tools:
     format-stdin: true
 
 languages:
-  css:
-    - <<: *css-prettier
+  # css:
+  #   - <<: *css-prettier
 
-  html:
-    - <<: *html-prettier
+  # html:
+  #   - <<: *html-prettier
 
   javascript:
     - <<: *eslint

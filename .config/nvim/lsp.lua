@@ -27,12 +27,12 @@ local on_attach = function(client, bufnr)
         -- TODO: Formatting on save uses content from what
         -- was previously saved thus overwrites content
         -- previously saved buffer instead of current
-        -- vim.api.nvim_exec([[
-        --     augroup formatting
-        --         autocmd!
-        --         autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 500)
-        --     augroup END
-        -- ]], true)
+        vim.api.nvim_exec([[
+            augroup formatting
+                autocmd!
+                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 500)
+            augroup END
+        ]], true)
     elseif client.resolved_capabilities.document_range_formatting then
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
     end
@@ -83,21 +83,6 @@ nvim_lsp['tsserver'].setup {
 require'lspconfig'.efm.setup {
     on_attach = on_attach,
     init_options = {documentFormatting = true},
-    settings = {
-        -- Require formatter configuration files to load
-        rootMarkers = {
-            '.git/',
-            '.eslintrc',
-            '.eslintrc.json',
-            '.eslintrc.js',
-            '.prettierrc',
-            '.prettierrc.js',
-            '.prettierrc.json',
-            '.prettierrc.yml',
-            '.prettierrc.yaml',
-            '.prettier.config.js'
-        }
-    }
 }
 
 -- Set the path to the sumneko installation

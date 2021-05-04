@@ -23,10 +23,8 @@ local on_attach = function(client, bufnr)
     if client.resolved_capabilities.document_formatting then
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
         -- Auto-format document prior to saving
-        -- Should be sync to update before save
-        -- TODO: Formatting on save uses content from what
-        -- was previously saved thus overwrites content
-        -- previously saved buffer instead of current
+        -- Should be synchronous to update before save
+        -- Timeout is arbitrarily set to 500 milliseconds
         vim.api.nvim_exec([[
             augroup formatting
                 autocmd!
@@ -52,8 +50,8 @@ local on_attach = function(client, bufnr)
     -- end
 end
 
--- Use a loop to conveniently both setup defined servers
--- and map buffer local keybindings when the language server attaches
+-- Use a loop to conveniently setup defined servers and map
+-- buffer local keybindings when the language server attaches
 local servers = {
     'bashls',
     'cssls',
@@ -77,7 +75,7 @@ nvim_lsp['tsserver'].setup {
     end
 }
 
--- eslint and prettier custom lsp
+-- eslint and prettier custom lsp among others
 -- TODO: Specify separate efm setup for formatting types
 -- we want to disable when there is no local config
 require'lspconfig'.efm.setup {

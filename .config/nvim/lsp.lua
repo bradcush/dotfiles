@@ -1,4 +1,5 @@
 local nvim_lsp = require('lspconfig')
+
 local on_attach = function(client, bufnr)
     local function keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -78,16 +79,16 @@ nvim_lsp['tsserver'].setup {
 -- eslint and prettier custom lsp among others
 -- TODO: Specify separate efm setup for formatting types
 -- we want to disable when there is no local config
-require'lspconfig'.efm.setup {
+nvim_lsp['efm'].setup {
     on_attach = on_attach,
-    init_options = {documentFormatting = true},
+    init_options = {documentFormatting = true}
 }
 
 -- Set the path to the sumneko installation
 local sumneko_root_path = '/Users/bcushing/Documents/repos/lua-language-server'
 local sumneko_binary = sumneko_root_path .. '/bin/macOS/lua-language-server'
 
-require'lspconfig'.sumneko_lua.setup {
+nvim_lsp['sumneko_lua'].setup {
     on_attach = on_attach,
     cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'},
     settings = {

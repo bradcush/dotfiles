@@ -9,7 +9,6 @@
 	template = /Users/bcushing/.stCommitMsg
 [tag]
 	forceSignAnnotated = true
-
 [rebase]
 	autoaquash = true
 	autosquash = true
@@ -20,3 +19,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[pull]
+	rebase = true

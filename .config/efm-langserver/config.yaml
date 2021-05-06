@@ -28,6 +28,7 @@ tools:
 
   markdown-pandoc: &markdown-pandoc
     format-command: 'pandoc -f markdown -t gfm+smart --tab-stop=2 --wrap=preserve'
+    format-stdin: true
 
   prettier: &prettier
     format-command: 'prettier --stdin-filepath ${INPUT}'

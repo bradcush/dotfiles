@@ -1,7 +1,6 @@
 #!/bin/bash
 
 EXTENSION_MONOREPO_DIRECTORY=~/Documents/repos/extension-monorepo
-AMPHORA_DIRECTORY=~/Documents/repos/amphora
 SESSION="ext"
 VIM="vim"
 
@@ -13,10 +12,6 @@ if [[ $? != 0 ]]; then
   # Create windows for extension
   tmux new -s "$SESSION" -d
   tmux new-window -t "$SESSION"
-  tmux send-keys -t "$SESSION" "$VIM" C-m
-  # Create windows for amphora
-  tmux new-window -t "$SESSION" -c $AMPHORA_DIRECTORY
-  tmux new-window -t "$SESSION" -c $AMPHORA_DIRECTORY
   tmux send-keys -t "$SESSION" "$VIM" C-m
 else
   echo "$SESSION already exists"

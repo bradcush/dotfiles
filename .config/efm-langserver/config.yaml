@@ -6,7 +6,7 @@ root-markers:
 
 tools:
   eslint: &eslint
-    lint-command: 'eslint -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-command: 'eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}'
     lint-ignore-exit-code: true
     lint-stdin: true
     lint-formats:

@@ -13,7 +13,6 @@ ln -s ${DOTFILES_PATH}/.tmux.conf ~/.tmux.conf
 
 # Create config directories before symlinking
 mkdir -p ~/.config/nvim
-mkdir -p ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/bat
 

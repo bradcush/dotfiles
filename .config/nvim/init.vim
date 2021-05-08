@@ -11,8 +11,7 @@ Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 " Requires dependencies install using yarn
 " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " AutoCompletion better than YouCompleteMe
 Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
-Plug 'nvim-lua/completion-nvim' " Better auto-completion for built-in LSP
-Plug 'steelsojka/completion-buffers' " Word completion for current and listed buffers
+Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings

@@ -4,7 +4,6 @@ local on_attach = function(client, bufnr)
     local function keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-    require'completion'.on_attach(client)
     option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
     -- Mappings.

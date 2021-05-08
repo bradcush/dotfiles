@@ -37,9 +37,6 @@ Plug 'kana/vim-textobj-user' " Required dep for entire/line
 Plug 'kana/vim-textobj-entire' " Entire file text objects
 Plug 'kana/vim-textobj-line' " Line text objects
 
-" Plug 'scrooloose/nerdtree' " File browser like netrw
-" Plug 'ryanoasis/vim-devicons' " Icons for NERDTree and Airline
-
 " Color themes
 Plug 'chriskempson/base16-vim'
 " Initialize plugin system

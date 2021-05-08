@@ -26,21 +26,23 @@ let g:lightline = {
     \ }
 \ }
 
-" Update Lightline when diagnostics information changes
+" Update Lightline when diagnostics info changes
 autocmd User LspDiagnosticsChanged call lightline#update()
 
+" Show file information
 function! DynamicFileInfo()
     if expand('%:t') ==# ''
-      return '[No Name]'
+        return '[No Name]'
     endif
     return winwidth(0) > 130 ? expand('%:f') :expand('%:t')
 endfunction
 
+" Show branch information
 function! DynamicFugitiveHead()
     return winwidth(0) > 130 ? FugitiveHead() : ''
 endfunction
 
-" Custom diagnostics information
+" Diagnostics error information
 function! DiagnosticError() abort
     let error = luaeval("vim.lsp.diagnostic.get_count(0, [[Error]])")
     if empty(error) | return '' | endif
@@ -48,6 +50,7 @@ function! DiagnosticError() abort
     return diagnostic
 endfunction
 
+" Diagnostics warning information
 function! DiagnosticWarning() abort
     let warning = luaeval("vim.lsp.diagnostic.get_count(0, [[Warning]])")
     if empty(warning) | return '' | endif
@@ -55,6 +58,7 @@ function! DiagnosticWarning() abort
     return diagnostic
 endfunction
 
+" Diagnostics info information
 function! DiagnosticInfo() abort
     let info = luaeval("vim.lsp.diagnostic.get_count(0, [[Information]])")
     if empty(info) | return '' | endif
@@ -62,6 +66,7 @@ function! DiagnosticInfo() abort
     return diagnostic
 endfunction
 
+" Diagnostics hint information
 function! DiagnosticHint() abort
     let hint = luaeval("vim.lsp.diagnostic.get_count(0, [[Hint]])")
     if empty(hint) | return '' | endif

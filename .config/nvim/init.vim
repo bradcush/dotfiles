@@ -14,7 +14,7 @@ Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
-Plug 'gko/vim-coloresque' " Inline color preview
+Plug 'gko/vim-coloresque' " Inline color code preview
 Plug 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
 Plug 'HerringtonDarkholme/yats.vim' " TS highlight syntax
 Plug 'othree/yajs.vim' " JS equivalent highlight syntax
@@ -78,7 +78,7 @@ set smarttab " Tab inserts a tab and backspace deletes a tab
 " Lines
 set number " Show line numbers
 set relativenumber " Show relative line numbers
-" set numberwith=4 "Number width for lines
+" set numberwidth=4 "Number width for lines
 set ruler " Show cursor position
 set nowrap " Don't wrap lines
 set scrolloff=2 " Scroll offset from edge to cursor

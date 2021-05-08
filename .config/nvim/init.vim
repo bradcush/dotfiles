@@ -11,6 +11,8 @@ Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 " Requires dependencies install using yarn
 Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
 Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
+" Disabling tree-sitter temporarily while experimenting
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Native support for tree-sitter
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
@@ -157,3 +159,4 @@ source $HOME/.config/nvim/python.vim
 " Neovim specific configurations
 luafile $HOME/.config/nvim/lsp.lua
 source $HOME/.config/nvim/neovim.vim
+luafile $HOME/.config/nvim/treesitter.lua

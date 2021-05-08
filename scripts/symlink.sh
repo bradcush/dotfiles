@@ -28,6 +28,7 @@ ln -s ${DOTFILES_PATH}/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/neovim.vim ~/.config/nvim/neovim.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/python.vim ~/.config/nvim/python.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/lsp.lua ~/.config/nvim/lsp.lua
+ln -s ${DOTFILES_PATH}/.config/nvim/treesitter.lua ~/.config/nvim/treesitter.lua
 ln -s ${DOTFILES_PATH}/.config/efm-langserver/config.yaml ~/.config/efm-langserver/config.yaml
 
 # terminal configuration symbolic links

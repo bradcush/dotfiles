@@ -14,18 +14,14 @@ Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 " Disabling tree-sitter temporarily while experimenting
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Native support for tree-sitter
 
+" Fill gaps in syntax highlighting support
+Plug 'keith/swift.vim' " Syntax highlights for Swift
+Plug 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
+
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
 Plug 'gko/vim-coloresque' " Inline color code preview
 Plug 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
-Plug 'HerringtonDarkholme/yats.vim' " TS highlight syntax
-Plug 'othree/yajs.vim' " JS equivalent highlight syntax
-Plug 'maxmellon/vim-jsx-pretty' " Replaces ianks/vim-tsx potentially
-Plug 'mustache/vim-mustache-handlebars' " Syntax highlights for mustache and handlebars
-Plug 'vim-scripts/SyntaxComplete' " Syntax highlights based on OMNI completion
-Plug 'jackguo380/vim-lsp-cxx-highlight' " C syntax highlighting
-Plug 'keith/swift.vim' " Syntax highlights for Swift
-Plug 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
 
 Plug 'tpope/vim-fugitive' " Git embedded in vim
 Plug 'tpope/vim-repeat' " Expanding repeat last action

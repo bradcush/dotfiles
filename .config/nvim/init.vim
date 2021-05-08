@@ -9,7 +9,6 @@ Plug 'dstein64/vim-startuptime' " Startup event timing information
 Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 
 " Requires dependencies install using yarn
-" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " AutoCompletion better than YouCompleteMe
 Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
 Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 
@@ -87,7 +86,7 @@ set ruler " Show cursor position
 set nowrap " Don't wrap lines
 set scrolloff=2 " Scroll offset from edge to cursor
 
-" Coc recommended
+" Recommended by coc but generally good
 set updatetime=300 " For a better user experience
 set signcolumn=yes " Always show signcolumn to prevent shifting
 
@@ -149,7 +148,6 @@ let g:netrw_liststyle = 4 "Show contents of current folder
 " let g:netrw_liststyle = 3 "Show contents of entire tree
 
 " Vim specific configurations
-" source $HOME/.config/nvim/coc-config.vim
 source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fugitive.vim

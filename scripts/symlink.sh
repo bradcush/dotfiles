@@ -18,10 +18,8 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/bat
 
 # nvim config symbolic links
-ln -s ${DOTFILES_PATH}/.config/nvim/coc-config.vim ~/.config/nvim/coc-config.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/completion.vim ~/.config/nvim/completion.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/editorconfig.vim ~/.config/nvim/editorconfig.vim
-ln -s ${DOTFILES_PATH}/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 ln -s ${DOTFILES_PATH}/.config/nvim/fugitive.vim ~/.config/nvim/fugitive.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/fzf.vim ~/.config/nvim/fzf.vim
 ln -s ${DOTFILES_PATH}/.config/nvim/hardtime.vim ~/.config/nvim/hardtime.vim

@@ -19,7 +19,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # Launch nvim instead of vim
 VIM_EDITOR="nvim"
-alias vim=${VIM_EDITOR}
+alias vim='$VIM_EDITOR'
 # export EDITOR=${VIM_EDITOR}
 
 # Base16 Shell setup

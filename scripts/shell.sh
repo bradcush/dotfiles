@@ -22,17 +22,8 @@ eval "$(pyenv virtualenv-init -)"
 # Launch nvim instead of vim
 VIM_EDITOR="nvim"
 alias vim='$VIM_EDITOR'
+# Set default editor to nvim
 # export EDITOR=${VIM_EDITOR}
-
-# Base16 Shell setup
-# BASE16_SHELL="$HOME/.config/base16-shell/"
-# [ -n "$PS1" ] && \
-#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-#         eval "$("$BASE16_SHELL/profile_helper.sh")"
-
-# Set a shell theme
-# (Better to configure in terminal directly)
-# base16
 
 # Theme for bat syntax highlighting
 # export BAT_THEME="base16-onedark"

@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Use vi/vim mode in the shell
 set -o vi
 

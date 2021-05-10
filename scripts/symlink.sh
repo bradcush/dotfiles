@@ -17,6 +17,7 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/bat
 
 # nvim config symlinks
+ln -s "$DOTFILES_PATH"/.config/efm-langserver/config.yaml ~/.config/efm-langserver/config.yaml
 ln -s "$DOTFILES_PATH"/.config/nvim/completion.vim ~/.config/nvim/completion.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/editorconfig.vim ~/.config/nvim/editorconfig.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/fugitive.vim ~/.config/nvim/fugitive.vim
@@ -29,7 +30,6 @@ ln -s "$DOTFILES_PATH"/.config/nvim/neovim.vim ~/.config/nvim/neovim.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/python.vim ~/.config/nvim/python.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/lsp.lua ~/.config/nvim/lsp.lua
 ln -s "$DOTFILES_PATH"/.config/nvim/treesitter.lua ~/.config/nvim/treesitter.lua
-ln -s "$DOTFILES_PATH"/.config/efm-langserver/config.yaml ~/.config/efm-langserver/config.yaml
 
 # Miscellaneous configuration symlinks
 ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml

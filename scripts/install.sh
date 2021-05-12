@@ -52,7 +52,7 @@ brew install --HEAD pyenv-virtualenv
 # python2 -m pip install --upgrade pip
 # python3 -m pip install --upgrade pip
 # For JS remote-plugins support
-yarn global add neovim
+npm install -g neovim
 
 # Suggested build environment for python
 # brew install openssl readline sqlite3 xz zlib

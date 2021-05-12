@@ -97,11 +97,9 @@ brew install ctags
 
 # Tap all fonts before installing
 brew tap homebrew/cask-fonts
-
-# Hack Nerd Font for NERDTree and other
-# plugins that might use glyphs
+# Hack Nerd Font has strong differences between
+# similar characters and supports glyphs
 brew install --cask font-hack-nerd-font
-# Other nice fonts
 brew install --cask font-hack
 # brew install --cask font-ubuntumono-nerd-font
 
@@ -120,7 +118,7 @@ brew install bat
 # Neofetch for system stat in cli
 brew install neofetch
 
-# Diplay directories as trees
+# Display directories as trees
 brew install tree
 
 # Vault secret management
@@ -135,12 +133,7 @@ npm install -g tldr
 # Ruby version manager
 # brew install rbenv
 
-# Install deps for Dashlane macOS dev
-# brew install carthage
-# brew install encfs
-# brew install --cask osxfuse
-
-# Do I need to custom install any of these?
+# Typically default on most systems
 # brew intstall bash
 # brew install cmake
 # brew install curl

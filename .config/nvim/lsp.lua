@@ -1,6 +1,9 @@
 local nvim_lsp = require('lspconfig')
 
 local on_attach = function(client, bufnr)
+    -- ~/.cache/nvim/lsp.log for debug logs
+    -- vim.lsp.set_log_level('debug')
+
     local function keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 

@@ -71,7 +71,6 @@ brew install shfmt
 # not rely on one location for monorepos
 # Favoring eslint_d over eslint as it launches daemon
 # that kills subsequent startup times after first
-# npm install -g eslint
 npm install -g eslint_d
 npm install -g prettier
 npm install -g bash-language-server
@@ -132,8 +131,3 @@ npm install -g tldr
 
 # Ruby version manager
 # brew install rbenv
-
-# Typically default on most systems
-# brew intstall bash
-# brew install cmake
-# brew install curl

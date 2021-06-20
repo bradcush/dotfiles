@@ -19,6 +19,9 @@ brew install fzf
 brew install ripgrep
 brew install the_silver_searcher
 
+# Configurable cross-shell prompt
+brew install starship
+
 # Install Neovim development version
 # To upgrade HEAD run "brew reinstall neovim"
 brew install --HEAD luajit

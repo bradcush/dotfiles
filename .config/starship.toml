@@ -1,0 +1,8 @@
+# Remove vertical spacing
+# between shell prompts
+add_newline = false
+
+# Keep prompt on
+# the same line
+[line_break]
+disabled = true

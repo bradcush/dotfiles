@@ -34,3 +34,4 @@ ln -s "$DOTFILES_PATH"/.config/nvim/treesitter.lua ~/.config/nvim/treesitter.lua
 # Miscellaneous configuration symlinks
 ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s "$DOTFILES_PATH"/.config/bat/themes/ ~/.config/bat/
+ln -s "$DOTFILES_PATH"/.config/starship.toml ~/.config/starship.toml

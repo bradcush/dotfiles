@@ -23,7 +23,7 @@ local on_attach = function(client, bufnr)
     keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 
-    -- Set some keybinds conditional on server capabilities
+    -- Set some key bindings conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
         -- Auto-format document prior to saving should be synchronous to

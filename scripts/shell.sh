@@ -11,6 +11,13 @@ export NVM_DIR="$HOME/.nvm"
 # Init for rbenv Ruby version manager
 # eval "$(rbenv init -)"
 
+# Add pyenv executable to PATH and
+# enable shims by adding the following
+# to ~/.profile and ~/.zprofile:
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # Init for pyenv Python version manager
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

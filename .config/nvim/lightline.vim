@@ -73,4 +73,3 @@ function! DiagnosticHint() abort
     let diagnostic = 'H' . hint
     return diagnostic
 endfunction
-

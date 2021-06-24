@@ -145,7 +145,6 @@ let g:netrw_liststyle = 4 "Show contents of current folder
 " Vim specific configurations
 source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
-source $HOME/.config/nvim/fugitive.vim
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/hardtime.vim
 source $HOME/.config/nvim/lightline.vim

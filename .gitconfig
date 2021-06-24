@@ -6,7 +6,6 @@
 	signingkey = 78115DED2DCC4291E175509059F654E413DC2247
 [commit]
 	gpgSign = true
-	template = /Users/bcushing/.stCommitMsg
 [tag]
 	forceSignAnnotated = true
 [rebase]

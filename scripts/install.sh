@@ -5,11 +5,27 @@
 # Run "brew update" afterwards for latest formulae
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+# Install Alacritty GPU terminal emulator
+brew install --cask alacritty
+# Install kitty GPU terminal emulator
+# brew cask install --cask kitty
+
+# Tap all fonts before installing
+brew tap homebrew/cask-fonts
+# Hack Nerd Font has strong differences between
+# similar characters and supports glyphs
+brew install --cask font-hack-nerd-font
+brew install --cask font-hack
+# brew install --cask font-ubuntumono-nerd-font
+
+# Terminal multiplexer
+brew install tmux
+
+# Configurable cross-shell prompt
+brew install starship
+
 # Install zsh-autosuggestions
 brew install zsh-autosuggestions
-
-# NVM for managing node versions
-brew install nvm
 
 # A command-line fuzzy finder
 brew install fzf
@@ -19,20 +35,15 @@ brew install fzf
 brew install ripgrep
 brew install the_silver_searcher
 
-# Configurable cross-shell prompt
-brew install starship
+# bat is a better replacement for cat
+brew install bat
 
 # Install Neovim development version
 # To upgrade HEAD run "brew reinstall neovim"
-brew install --HEAD luajit
+# brew install --HEAD luajit
 # Required luv to be reinstalled
-brew install luv
+# brew install luv
 brew install --HEAD neovim
-
-# Install Alacritty GPU terminal emulator
-brew install --cask alacritty
-# Install kitty GPU terminal emulator
-brew cask install --cask kitty
 
 # Download plug.vim and put it in the "autoload"
 # directory for use with "vim-plug" plugin manager
@@ -41,18 +52,21 @@ brew cask install --cask kitty
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# pyenv for managing python versions
-brew install pyenv
-
-# virtualenv for managing python environments
-brew install --HEAD pyenv-virtualenv
-
 # For python remote-plugins support
 # python -m pip install --user --upgrade pynvim
 # python2 -m pip install --upgrade pip
 # python3 -m pip install --upgrade pip
 # For JS remote-plugins support
 npm install -g neovim
+
+# NVM for managing node versions
+brew install nvm
+
+# pyenv for managing python versions
+brew install pyenv
+
+# virtualenv for managing python environments
+brew install --HEAD pyenv-virtualenv
 
 # Suggested build environment for python
 # brew install openssl readline sqlite3 xz zlib
@@ -94,25 +108,17 @@ brew install llvm
 # Used by coc-python among others
 brew install ctags
 
-# Tap all fonts before installing
-brew tap homebrew/cask-fonts
-# Hack Nerd Font has strong differences between
-# similar characters and supports glyphs
-brew install --cask font-hack-nerd-font
-brew install --cask font-hack
-# brew install --cask font-ubuntumono-nerd-font
+# Vault secret management
+brew install vault
 
-# Terminal multiplexer
-brew install tmux
-
-# Vifm file explorer
-brew install vifm
+# TLDR man pages Node.js client
+npm install -g tldr
 
 # lookatme terminal based presentations
 pip install lookatme
 
-# bat is a better replacement for cat
-brew install bat
+# Display keys pressed on your screen
+brew install keycastr
 
 # Neofetch for system stat in cli
 brew install neofetch
@@ -120,14 +126,8 @@ brew install neofetch
 # Display directories as trees
 brew install tree
 
-# Vault secret management
-brew install vault
-
-# Display keys pressed on your screen
-brew install keycastr
-
-# TLDR man pages Node.js client
-npm install -g tldr
+# Vifm file explorer
+# brew install vifm
 
 # Ruby version manager
 # brew install rbenv

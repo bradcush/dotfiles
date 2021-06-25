@@ -9,7 +9,6 @@
 [tag]
 	forceSignAnnotated = true
 [rebase]
-	autoaquash = true
 	autosquash = true
 [pager]
 	branch = false

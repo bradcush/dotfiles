@@ -10,7 +10,8 @@ let g:lightline = {
     \ },
     \ 'component_function': {
     \   'fileinfo': 'DynamicFileInfo',
-    \   'gitbranch': 'DynamicFugitiveHead'
+    \   'filetype': 'DevIconsFileType',
+    \   'gitbranch': 'DynamicFugitiveHead',
     \ },
     \ 'component_expand': {
     \   'error': 'DiagnosticError',
@@ -35,6 +36,11 @@ function! DynamicFileInfo()
     return winwidth(0) > 130 ? expand('%:f') : expand('%:t')
 endfunction
 
+" File type with dev icon
+function! DevIconsFileType()
+    return strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() . ' ' . &filetype : 'no ft'
+endfunction
+"
 " Show branch information
 function! DynamicFugitiveHead()
     return winwidth(0) > 130 ? FugitiveHead() : ''

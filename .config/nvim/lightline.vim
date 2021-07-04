@@ -43,7 +43,8 @@ endfunction
 "
 " Show branch information
 function! DynamicFugitiveHead()
-    return winwidth(0) > 130 ? FugitiveHead() : ''
+    if !strlen(FugitiveHead()) | return '' | endif
+    return winwidth(0) > 130 ? "\ue725" . ' ' . FugitiveHead() : ''
 endfunction
 
 " Diagnostics error information

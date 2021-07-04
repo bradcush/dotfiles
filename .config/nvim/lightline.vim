@@ -6,7 +6,7 @@ let g:lightline = {
     \             [ 'readonly', 'fileinfo', 'modified' ] ],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent', 'error', 'warning', 'info', 'hint' ],
-    \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+    \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
     \ },
     \ 'component_function': {
     \   'fileinfo': 'DynamicFileInfo',
@@ -23,18 +23,16 @@ let g:lightline = {
     \   'warning': 'warning',
     \   'info': 'warning',
     \   'hint': 'warning',
-    \ }
+    \ },
 \ }
 
 " Update Lightline when diagnostics info changes
 autocmd User LspDiagnosticsChanged call lightline#update()
 
-" Show file information
+" Show file location information
 function! DynamicFileInfo()
-    if expand('%:t') ==# ''
-        return '[No Name]'
-    endif
-    return winwidth(0) > 130 ? expand('%:f') :expand('%:t')
+    if expand('%:t') ==# '' | return '[No Name]' | endif
+    return winwidth(0) > 130 ? expand('%:f') : expand('%:t')
 endfunction
 
 " Show branch information
@@ -44,7 +42,7 @@ endfunction
 
 " Diagnostics error information
 function! DiagnosticError() abort
-    let error = luaeval("vim.lsp.diagnostic.get_count(0, [[Error]])")
+    let error = luaeval('vim.lsp.diagnostic.get_count(0, [[Error]])')
     if empty(error) | return '' | endif
     let diagnostic = 'E' . error
     return diagnostic
@@ -52,7 +50,7 @@ endfunction
 
 " Diagnostics warning information
 function! DiagnosticWarning() abort
-    let warning = luaeval("vim.lsp.diagnostic.get_count(0, [[Warning]])")
+    let warning = luaeval('vim.lsp.diagnostic.get_count(0, [[Warning]])')
     if empty(warning) | return '' | endif
     let diagnostic = 'W' . warning
     return diagnostic
@@ -60,7 +58,7 @@ endfunction
 
 " Diagnostics info information
 function! DiagnosticInfo() abort
-    let info = luaeval("vim.lsp.diagnostic.get_count(0, [[Information]])")
+    let info = luaeval('vim.lsp.diagnostic.get_count(0, [[Information]])')
     if empty(info) | return '' | endif
     let diagnostic = 'I' . info
     return diagnostic
@@ -68,7 +66,7 @@ endfunction
 
 " Diagnostics hint information
 function! DiagnosticHint() abort
-    let hint = luaeval("vim.lsp.diagnostic.get_count(0, [[Hint]])")
+    let hint = luaeval('vim.lsp.diagnostic.get_count(0, [[Hint]])')
     if empty(hint) | return '' | endif
     let diagnostic = 'H' . hint
     return diagnostic

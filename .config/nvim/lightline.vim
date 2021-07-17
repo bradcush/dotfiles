@@ -38,7 +38,7 @@ endfunction
 
 " File type with dev icon
 function! DevIconsFileType()
-    return strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() . ' ' . &filetype : 'no ft'
+    return strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft'
 endfunction
 "
 " Show branch information

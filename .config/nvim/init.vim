@@ -45,9 +45,8 @@ call plug#end()
 set rtp+=/usr/local/opt/fzf
 
 " General
-filetype on " Detect the file type.
-filetype plugin indent on " File type auto indent
 syntax on " Enable syntax highlighting
+filetype plugin indent on " Detect file type with auto indent
 set hidden " Hidden buffers with preserved undo/marks
 set autoread " Autorefresh file when it has been edited somewhere else
 au CursorHold,CursorHoldI * checktime

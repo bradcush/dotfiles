@@ -45,7 +45,6 @@ call plug#end()
 set rtp+=/usr/local/opt/fzf
 
 " General
-syntax on " Enable syntax highlighting
 filetype plugin indent on " Detect file type with auto indent
 set hidden " Hidden buffers with preserved undo/marks
 set autoread " Autorefresh file when it has been edited somewhere else
@@ -112,7 +111,8 @@ colorscheme base16-onedark " Theme requires base16-vim
 let base16colorspace=256 " Access colors in 256 colorspace for base16-vim
 set termguicolors " Enable 24-bit RGB color in the TUI
 
-" Highlighting
+" Syntax highlighting
+syntax on " Enable syntax highlighting
 " Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)
 set list " List mode showing tabs, space, and trail
 set listchars=space:.,trail:~,precedes:<

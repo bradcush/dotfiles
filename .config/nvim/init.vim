@@ -105,7 +105,7 @@ set wildoptions=pum "Not sure exactly
 set wildmode=longest,full "Style of the menu
 set pumblend=20 "Not sure exactly
 
-" Colors
+" Colorscheme
 colorscheme base16-onedark " Theme requires base16-vim
 " colorscheme base16-gruvbox-dark-soft " Theme requires base16-vim
 let base16colorspace=256 " Access colors in 256 colorspace for base16-vim

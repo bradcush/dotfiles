@@ -122,19 +122,10 @@ autocmd BufEnter * :syntax sync fromstart
 " Set whitespace character highlight
 " hi Whitespace ctermfg=grey guifg=grey
 " hi NonText ctermfg=grey guifg=grey
-
-" Spell checking
-" Must place after colorscheme for highlighting
-set spell spelllang=en_us " Enable spellcheck with en_us dictionary
-" cterm ctermbg ctermfg gui guibg guifg guisp
-" undercurl and guisp not supported in some terminals
-hi SpellBad gui=underline guisp=NONE
 " Enable italic comments
 hi Comment cterm=italic gui=italic
-" Hides undercurl highlighting only visible in kitty
-" hi clear SpellCap " Disable SpellCap highlighting
-" hi clear SpellRare " Disable SpellRare highlighting
-" hi clear SpellLocal " Disable SpellLocal highlighting
+" set spell spelllang=en_us spelloptions=camel " Enable spellcheck with en_us dictionary
+" hi SpellBad gui=underline guisp=NONE " Underline spelling mistakes
 
 " Split windows
 set splitbelow splitright " New split windows to the bottom/right

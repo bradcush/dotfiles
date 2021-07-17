@@ -12,6 +12,7 @@ require'nvim-treesitter.configs'.setup {
         'json',
         'lua',
         'python',
+        'swift',
         'toml',
         'tsx',
         'typescript',

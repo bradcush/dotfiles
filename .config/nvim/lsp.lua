@@ -85,7 +85,21 @@ nvim_lsp['tsserver'].setup {
 -- we want to disable when there is no local config
 nvim_lsp['efm'].setup {
     on_attach = on_attach,
-    init_options = {documentFormatting = true}
+    init_options = {documentFormatting = true},
+    -- Listing filetypes explicitly as to not conflict with
+    -- other language servers that provide formatting
+    filetypes = {
+        'lua',
+        'markdown',
+        'python',
+        'javascript',
+        'javascriptreact',
+        'javascript.jsx',
+        'sh',
+        'typescript',
+        'typescriptreact',
+        'typescript.tsx'
+    }
 }
 
 -- Set the path to the sumneko installation

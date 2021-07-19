@@ -1,3 +1,10 @@
+-- Diagnostic information colors
+-- Taken from one.vim lightline theme
+vim.cmd('hi LspDiagnosticsDefaultError guifg=#be5046')
+vim.cmd('hi LspDiagnosticsDefaultWarning guifg=#e5c07b')
+vim.cmd('hi LspDiagnosticsDefaultInformation guifg=#61afef')
+vim.cmd('hi LspDiagnosticsDefaultHint guifg=#abb2bf')
+
 local nvim_lsp = require('lspconfig')
 
 local on_attach = function(client, bufnr)

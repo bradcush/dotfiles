@@ -22,8 +22,8 @@ let g:lightline = {
     \ 'component_type': {
     \   'error': 'error',
     \   'warning': 'warning',
-    \   'info': 'warning',
-    \   'hint': 'warning',
+    \   'info': 'middle',
+    \   'hint': 'middle',
     \ },
 \ }
 

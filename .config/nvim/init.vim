@@ -37,7 +37,8 @@ Plug 'kana/vim-textobj-entire' " Entire file text objects
 Plug 'kana/vim-textobj-line' " Line text objects
 
 " Color themes
-Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim' " Standard vim highlight groups
+" Plug 'RRethy/nvim-base16' " Standard nvim highlight groups
 " Initialize plugin system
 call plug#end()
 

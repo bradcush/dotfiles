@@ -106,26 +106,37 @@ set wildoptions=pum "Not sure exactly
 set wildmode=longest,full "Style of the menu
 set pumblend=20 "Not sure exactly
 
-" Colorscheme
-colorscheme base16-onedark " Theme requires base16-vim
+" Colorscheme and syntax
+" Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)
+" Using treesitter which sets syntax when needed
+" syntax on " Enable syntax highlighting
+colorscheme base16-onedark " Theme requires base16-vim or nvim-base16
 " colorscheme base16-gruvbox-dark-soft " Theme requires base16-vim
 let base16colorspace=256 " Access colors in 256 colorspace for base16-vim
 set termguicolors " Enable 24-bit RGB color in the TUI
-
-" Syntax highlighting
-syntax on " Enable syntax highlighting
-" Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)
 set list " List mode showing tabs, space, and trail
 set listchars=space:.,trail:~,precedes:<
 " Fix syntax highlighting by referencing start of file
 autocmd BufEnter * :syntax sync fromstart
-" Set whitespace character highlight
-" hi Whitespace ctermfg=grey guifg=grey
-" hi NonText ctermfg=grey guifg=grey
-" Enable italic comments
-hi Comment cterm=italic gui=italic
-" set spell spelllang=en_us spelloptions=camel " Enable spellcheck with en_us dictionary
-" hi SpellBad gui=underline guisp=NONE " Underline spelling mistakes
+
+" Highlighting
+" Invisibile characters
+" hi Whitespace guifg=grey
+" hi NonText guifg=grey
+hi Comment gui=italic
+" Underline spelling mistakes
+" hi SpellBad gui=underline guisp=NONE
+" Diagnostic information colors
+hi LspDiagnosticsDefaultError guifg=#be5046
+hi LspDiagnosticsDefaultWarning guifg=#e5c07b
+hi LspDiagnosticsDefaultInformation guifg=#61afef
+hi LspDiagnosticsDefaultHint guifg=#abb2bf
+" Redefine some treesitter groups
+" hi TSPunctBracket guifg=#abb2bf
+hi TSConditional gui=bold guifg=#c678dd
+hi TSKeyword gui=bold guifg=#c678dd
+hi TSKeywordFunction gui=bold guifg=#c678dd
+hi TSKeywordReturn gui=bold guifg=#c678dd
 
 " Split windows
 set splitbelow splitright " New split windows to the bottom/right

@@ -62,7 +62,7 @@ set noswapfile " Never use swap files for recovery
 " Cursor lines
 " Causing slowness specifically navigating some files
 set cursorline " Highlight cursor line (Causes slowness)
-set cursorcolumn " Highlights cursor column (Causes slowness)
+" set cursorcolumn " Highlights cursor column (Causes slowness)
 set colorcolumn=80 " Set print width indication line
 
 " Indentation

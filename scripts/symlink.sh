@@ -12,6 +12,7 @@ ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
 ln -s "$DOTFILES_PATH"/.tmux.conf ~/.tmux.conf
 
 # Create directories before symlinks
+mkdir -p ~/.config/efm-langserver
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/bat

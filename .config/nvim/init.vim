@@ -13,8 +13,8 @@ Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
 Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 " Disabling tree-sitter temporarily while experimenting
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Native support for tree-sitter
-Plug 'nvim-treesitter/playground' " View treesitter information
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Native support for tree-sitter
+" Plug 'nvim-treesitter/playground' " View treesitter information
 
 " Fill gaps in syntax highlighting support
 Plug 'keith/swift.vim' " Syntax highlights for Swift
@@ -39,7 +39,8 @@ Plug 'kana/vim-textobj-line' " Line text objects
 
 " Color themes
 Plug 'chriskempson/base16-vim' " Standard vim highlight groups
-" Plug 'RRethy/nvim-base16' " Standard nvim highlight groups
+" Temporary plugin development for personal base16-nvim
+" Plug '~/Documents/repos/base16-nvim' " Standard nvim highlight groups
 " Initialize plugin system
 call plug#end()
 
@@ -110,7 +111,7 @@ set pumblend=20 "Not sure exactly
 " Colorscheme and syntax
 " Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)
 " Using treesitter which sets syntax when needed
-" syntax on " Enable syntax highlighting
+syntax on " Enable syntax highlighting
 colorscheme base16-onedark " Theme requires base16-vim or nvim-base16
 " colorscheme base16-gruvbox-dark-soft " Theme requires base16-vim
 let base16colorspace=256 " Access colors in 256 colorspace for base16-vim
@@ -132,12 +133,6 @@ hi LspDiagnosticsDefaultError guifg=#be5046
 hi LspDiagnosticsDefaultWarning guifg=#e5c07b
 hi LspDiagnosticsDefaultInformation guifg=#61afef
 hi LspDiagnosticsDefaultHint guifg=#abb2bf
-" Redefine some treesitter groups
-" hi TSPunctBracket guifg=#abb2bf
-hi TSConditional gui=bold guifg=#c678dd
-hi TSKeyword gui=bold guifg=#c678dd
-hi TSKeywordFunction gui=bold guifg=#c678dd
-hi TSKeywordReturn gui=bold guifg=#c678dd
 
 " Split windows
 set splitbelow splitright " New split windows to the bottom/right

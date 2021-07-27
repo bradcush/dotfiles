@@ -5,7 +5,7 @@ let g:lightline = {
     \             [ 'spell', 'gitbranch' ],
     \             [ 'readonly', 'fileinfo', 'modified' ] ],
     \   'right': [ [ 'lineinfo' ],
-    \              [ 'percent', 'error', 'warning', 'info', 'hint' ],
+    \              [ 'percent', 'error', 'warning'],
     \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
     \ },
     \ 'component_function': {
@@ -64,17 +64,17 @@ function! DiagnosticWarning() abort
 endfunction
 
 " Diagnostics info information
-function! DiagnosticInfo() abort
-    let info = luaeval('vim.lsp.diagnostic.get_count(0, [[Information]])')
-    if empty(info) | return '' | endif
-    let diagnostic = 'I' . info
-    return diagnostic
-endfunction
+" function! DiagnosticInfo() abort
+"     let info = luaeval('vim.lsp.diagnostic.get_count(0, [[Information]])')
+"     if empty(info) | return '' | endif
+"     let diagnostic = 'I' . info
+"     return diagnostic
+" endfunction
 
 " Diagnostics hint information
-function! DiagnosticHint() abort
-    let hint = luaeval('vim.lsp.diagnostic.get_count(0, [[Hint]])')
-    if empty(hint) | return '' | endif
-    let diagnostic = 'H' . hint
-    return diagnostic
-endfunction
+" function! DiagnosticHint() abort
+"     let hint = luaeval('vim.lsp.diagnostic.get_count(0, [[Hint]])')
+"     if empty(hint) | return '' | endif
+"     let diagnostic = 'H' . hint
+"     return diagnostic
+" endfunction

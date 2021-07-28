@@ -62,19 +62,3 @@ function! DiagnosticWarning() abort
     let diagnostic = 'W' . warning
     return diagnostic
 endfunction
-
-" Diagnostics info information
-" function! DiagnosticInfo() abort
-"     let info = luaeval('vim.lsp.diagnostic.get_count(0, [[Information]])')
-"     if empty(info) | return '' | endif
-"     let diagnostic = 'I' . info
-"     return diagnostic
-" endfunction
-
-" Diagnostics hint information
-" function! DiagnosticHint() abort
-"     let hint = luaeval('vim.lsp.diagnostic.get_count(0, [[Hint]])')
-"     if empty(hint) | return '' | endif
-"     let diagnostic = 'H' . hint
-"     return diagnostic
-" endfunction

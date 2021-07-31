@@ -1,31 +1,30 @@
-let g:lightline = {
-    \ 'colorscheme': 'one',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'spell', 'gitbranch' ],
-    \             [ 'readonly', 'fileinfo', 'modified' ] ],
-    \   'right': [ [ 'lineinfo' ],
-    \              [ 'percent', 'error', 'warning'],
-    \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
-    \ },
-    \ 'component_function': {
-    \   'fileinfo': 'DynamicFileInfo',
-    \   'filetype': 'DevIconsFileType',
-    \   'gitbranch': 'DynamicFugitiveHead',
-    \ },
-    \ 'component_expand': {
-    \   'error': 'DiagnosticError',
-    \   'warning': 'DiagnosticWarning',
-    \   'info': 'DiagnosticInfo',
-    \   'hint': 'DiagnosticHint',
-    \ },
-    \ 'component_type': {
-    \   'error': 'error',
-    \   'warning': 'warning',
-    \   'info': 'middle',
-    \   'hint': 'middle',
-    \ },
-\ }
+let g:lightline = {}
+let g:lightline.colorscheme = 'one'
+
+let g:lightline.active = {
+    \ 'left': [ [ 'mode', 'paste' ],
+    \           [ 'spell', 'gitbranch' ],
+    \           [ 'readonly', 'fileinfo', 'modified' ] ],
+    \ 'right': [ [ 'lineinfo' ],
+    \            [ 'percent', 'error', 'warning'],
+    \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
+
+let g:lightline.component_function = {
+    \ 'fileinfo': 'DynamicFileInfo',
+    \ 'filetype': 'DevIconsFileType',
+    \ 'gitbranch': 'DynamicFugitiveHead' }
+
+let g:lightline.component_expand = {
+    \ 'error': 'DiagnosticError',
+    \ 'warning': 'DiagnosticWarning',
+    \ 'info': 'DiagnosticInfo',
+    \ 'hint': 'DiagnosticHint' }
+
+let g:lightline.component_type = {
+    \ 'error': 'error',
+    \ 'warning': 'warning',
+    \ 'info': 'middle',
+    \ 'hint': 'middle' }
 
 " Update Lightline when diagnostics info changes
 autocmd User LspDiagnosticsChanged call lightline#update()

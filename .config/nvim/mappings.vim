@@ -14,3 +14,9 @@ nmap <leader>nsp :set nospell<CR>
 
 " Copy from position
 nnoremap Y y$
+
+" Undo break points
+inoremap , ,<C-g>u
+inoremap . .<C-g>u
+inoremap ! !<C-g>u
+inoremap ? ?<C-g>u

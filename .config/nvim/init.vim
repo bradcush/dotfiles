@@ -113,7 +113,7 @@ set pumblend=20 "Not sure exactly
 " Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)
 " Using treesitter which sets syntax when needed
 syntax on " Enable syntax highlighting
-colorscheme base16-onedark " Theme requires base16-vim or nvim-base16
+colorscheme base16-onedark " Theme requires base16-vim
 " colorscheme base16-gruvbox-dark-soft " Theme requires base16-vim
 let base16colorspace=256 " Access colors in 256 colorspace for base16-vim
 set termguicolors " Enable 24-bit RGB color in the TUI

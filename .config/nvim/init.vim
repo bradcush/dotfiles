@@ -94,6 +94,7 @@ set lazyredraw " Redraw the screen less often
 set backspace=2 " Backspace set two 2 chars
 set autowrite " Autosave the file when loading another buffer
 autocmd BufWritePre * :%s/\s\+$//e " Auto remove trailing on save
+set showtabline=2 " Always show the tabline
 
 " Searching
 set ignorecase " Ignore when searching

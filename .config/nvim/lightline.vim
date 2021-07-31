@@ -9,6 +9,18 @@ let g:lightline.active = {
     \            [ 'percent', 'error', 'warning'],
     \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
 
+" Currently just defaults listed
+let g:lightline.tab = {
+    \ 'active': [ 'tabnum', 'filename', 'modified' ],
+    \ 'inactive': [ 'tabnum', 'filename', 'modified' ] }
+
+let g:lightline.tabline = {
+    \ 'left': [ [ 'vim_logo' ], [ 'tabs' ] ],
+    \ 'right': [ [ 'close' ] ] }
+
+let g:lightline.component = {
+    \ 'vim_logo': "\ue7c5" }
+
 let g:lightline.component_function = {
     \ 'fileinfo': 'DynamicFileInfo',
     \ 'filetype': 'DevIconsFileType',

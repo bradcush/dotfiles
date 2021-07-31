@@ -11,3 +11,6 @@ nnoremap <C-l> <C-w>l
 " Toggle spell checking
 nmap <leader>sp :set spell spelllang=en_us spelloptions=camel<CR>
 nmap <leader>nsp :set nospell<CR>
+
+" Copy from position
+nnoremap Y y$

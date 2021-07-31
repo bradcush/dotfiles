@@ -7,5 +7,19 @@ add_newline = false
 [line_break]
 disabled = true
 
+# Disable the package module
+# showing the package version
+[package]
+disabled = true
+
+# Disable showing some
+# language versions
+[lua]
+disabled = true
+[nodejs]
+disabled = true
+[python]
+disabled = true
+
 # Increase the default timeout
 command_timeout = 1000

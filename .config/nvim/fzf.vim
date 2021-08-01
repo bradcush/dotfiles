@@ -17,3 +17,5 @@ nmap <leader>gs :GFiles?<CR>
 nmap <leader>co :Commits<CR>
 " Latest buffer commits
 nmap <leader>bc :BCommits<CR>
+" Help search by tag
+nmap <leader>hp :Helptags<CR>

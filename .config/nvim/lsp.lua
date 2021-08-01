@@ -24,8 +24,7 @@ local on_attach = function(client, bufnr)
            opts)
     keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-    keymap('n', '<leader>ws', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>',
-           opts)
+    keymap('n', '<leader>ds', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
 
     -- Set some key bindings conditional on server capabilities
     if client.resolved_capabilities.document_formatting then

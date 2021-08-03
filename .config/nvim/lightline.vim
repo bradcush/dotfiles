@@ -23,6 +23,7 @@ let g:lightline.component = {
 
 let g:lightline.component_function = {
     \ 'fileinfo': 'DynamicFileInfo',
+    \ 'fileformat': 'DevIconsFileFormat',
     \ 'filetype': 'DevIconsFileType',
     \ 'gitbranch': 'DynamicFugitiveHead' }
 
@@ -45,6 +46,11 @@ autocmd User LspDiagnosticsChanged call lightline#update()
 function! DynamicFileInfo()
     if expand('%:t') ==# '' | return '[No Name]' | endif
     return winwidth(0) > 130 ? expand('%:f') : expand('%:t')
+endfunction
+
+" File format with dev icon
+function! DevIconsFileFormat()
+    return &fileformat . ' ' . WebDevIconsGetFileFormatSymbol()
 endfunction
 
 " File type with dev icon

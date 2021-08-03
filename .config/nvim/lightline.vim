@@ -51,7 +51,7 @@ endfunction
 function! DevIconsFileType()
     return strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft'
 endfunction
-"
+
 " Show branch information
 function! DynamicFugitiveHead()
     if !strlen(FugitiveHead()) | return '' | endif

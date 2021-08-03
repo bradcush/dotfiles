@@ -16,9 +16,10 @@ let g:lightline.tab = {
 
 let g:lightline.tabline = {
     \ 'left': [ [ 'vim_logo' ], [ 'tabs' ] ],
-    \ 'right': [ [ 'close' ] ] }
+    \ 'right': [ [ 'close' ], [ 'currentdir' ] ] }
 
 let g:lightline.component = {
+    \ 'currentdir': "\ue5fe %{fnamemodify(getcwd(), ':t')}",
     \ 'vim_logo': "\ue7c5" }
 
 let g:lightline.component_function = {

@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim' " Lighter status bar
 Plug 'ryanoasis/vim-devicons' " Filetype glyphs for lightline
-" Sometimes fzf#install fails and install --all in the fzf plugin dir is needed
+" Sometimes fzf#install fails and install --all in the FZF plugin dir is needed
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder search files and word occurrence
 Plug 'junegunn/fzf.vim' "Required for FZF vim integration
 
@@ -21,7 +21,7 @@ Plug 'keith/swift.vim' " Syntax highlights for Swift
 Plug 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
-Plug 'editorconfig/editorconfig-vim' " Read editorconfig filesof settings
+Plug 'editorconfig/editorconfig-vim' " Read editorconfig files for settings
 Plug 'gko/vim-coloresque' " Inline color code preview
 Plug 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
 
@@ -123,7 +123,7 @@ set listchars=space:.,trail:~,precedes:<
 autocmd BufEnter * :syntax sync fromstart
 
 " Highlighting
-" Invisibile characters
+" Invisible characters
 " hi Whitespace guifg=grey
 " hi NonText guifg=grey
 hi Comment gui=italic

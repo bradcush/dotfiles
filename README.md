@@ -21,3 +21,14 @@ Symlink all dotfiles in repository with home directory
 ``` sh
 make symlink
 ```
+
+## Sessions
+
+Start a given tmux session
+
+``` sh
+make extension
+make personal
+make presentations
+make sae
+```

@@ -2,7 +2,7 @@
 
 dotfiles and vim configuration
 
-## install
+## Install
 
 Install all dependencies for Neovim and general command-line tools. This
 script is not recommended to be run and instead should be used as a guide and
@@ -14,7 +14,7 @@ attention for a given dependency during or after install.
 make install
 ```
 
-## symlink
+## Symlink
 
 Symlink all dotfiles in repository with home directory
 

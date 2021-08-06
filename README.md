@@ -27,6 +27,7 @@ make symlink
 Start a given tmux session
 
 ``` sh
+make datalgo
 make extension
 make personal
 make presentations

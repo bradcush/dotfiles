@@ -12,6 +12,11 @@ symlink:
 extension:
 	@./scripts/sessions/extension.sh
 
+# Start datalgo session
+.PHONY: datalgo
+datalgo:
+	@./scripts/sessions/datalgo.sh
+
 # Start personal session
 .PHONY: personal
 personal:

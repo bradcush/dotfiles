@@ -2,7 +2,6 @@
 
 DOTFILES_DIRECTORY=~/Documents/repos/dotfiles
 MARK_DIRECTORY=~/Documents/repos/mark
-DATALGO_DIRECTORY=~/Documents/repos/datalgo
 SESSION="personal"
 VIM="vim"
 
@@ -18,10 +17,6 @@ if [[ $? != 0 ]]; then
   # Create windows for mark
   tmux new-window -t "$SESSION" -c $MARK_DIRECTORY
   tmux new-window -t "$SESSION" -c $MARK_DIRECTORY
-  tmux send-keys -t "$SESSION" "$VIM" C-m
-  # Create windows for datalgo
-  tmux new-window -t "$SESSION" -c $DATALGO_DIRECTORY
-  tmux new-window -t "$SESSION" -c $DATALGO_DIRECTORY
   tmux send-keys -t "$SESSION" "$VIM" C-m
 else
   echo "$SESSION already exists"

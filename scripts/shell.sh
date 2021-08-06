@@ -30,7 +30,7 @@ eval "$(pyenv virtualenv-init -)"
 VIM_EDITOR="nvim"
 alias vim='$VIM_EDITOR'
 # Set default editor to nvim
-# export EDITOR=${VIM_EDITOR}
+export EDITOR=${VIM_EDITOR}
 
 # Theme for bat syntax highlighting
 # export BAT_THEME="base16-onedark"

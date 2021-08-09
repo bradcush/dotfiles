@@ -1,6 +1,6 @@
 " Source nvim init file
-nmap <leader>rc :e $MYVIMRC<CR>
-nmap <leader>so :source ~/.config/nvim/init.vim<CR>
+nmap <leader>rc :e ~/Documents/repos/dotfiles/.config/nvim/init.vim<CR>
+nmap <leader>so :so ~/.config/nvim/init.vim<CR>
 
 " Window navigation
 nnoremap <C-h> <C-w>h

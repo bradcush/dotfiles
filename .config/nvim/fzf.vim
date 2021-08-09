@@ -13,9 +13,5 @@ nmap <leader>ff :Files<CR>
 nmap <leader>gf :GFiles<CR>
 " Git files from status
 nmap <leader>gs :GFiles?<CR>
-" Latest commits list
-nmap <leader>co :Commits<CR>
-" Latest buffer commits
-nmap <leader>bc :BCommits<CR>
 " Help search by tag
 nmap <leader>hp :Helptags<CR>

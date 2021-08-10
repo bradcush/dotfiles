@@ -12,9 +12,9 @@ let g:startify_update_oldfiles = 0
 " Disable random quotes header
 let g:startify_custom_header = []
 
-" Git modified/untracked files
+" Git modified files
 function! s:git()
-    let files = systemlist('git ls-files -mo 2>/dev/null')
+    let files = systemlist('git ls-files -m 2>/dev/null')
     return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 

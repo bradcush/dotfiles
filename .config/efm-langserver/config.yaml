@@ -31,6 +31,8 @@ tools:
     format-stdin: true
 
   prettier: &prettier
+    # Important that global version used for prettier is aligned
+    # with the version specified in the given local project
     format-command: 'prettier --stdin-filepath ${INPUT}'
     format-stdin: true
 

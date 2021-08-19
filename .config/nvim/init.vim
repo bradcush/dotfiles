@@ -24,7 +24,7 @@ Plug 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig files for settings
 Plug 'gko/vim-coloresque' " Inline color code preview
-Plug 'heavenshell/vim-jsdoc' " JSDoc integration w/ autocompletion
+Plug 'heavenshell/vim-jsdoc', { 'do': 'make install' } " JSDoc integration w/ autocompletion
 
 Plug 'tpope/vim-fugitive' " Git embedded in vim
 Plug 'tpope/vim-repeat' " Expanding repeat last action

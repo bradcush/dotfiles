@@ -1,3 +1,6 @@
+" Specify before any leader mappings
+let mapleader = "," " Map leader to comma
+
 " Source nvim init file
 nmap <leader>rc :e ~/Documents/repos/dotfiles/.config/nvim/init.vim<CR>
 nmap <leader>so :so ~/.config/nvim/init.vim<CR>

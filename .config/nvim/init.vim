@@ -143,13 +143,15 @@ set splitbelow splitright " New split windows to the bottom/right
 let g:netrw_liststyle = 4 "Show contents of current folder
 " let g:netrw_liststyle = 3 "Show contents of entire tree
 
+" Important before any other mappings as general
+" mappings like the leader key are set
+source $HOME/.config/nvim/mappings.vim
 " Vim specific configurations
 source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/hardtime.vim
 source $HOME/.config/nvim/lightline.vim
-source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/python.vim
 source $HOME/.config/nvim/startify.vim
 

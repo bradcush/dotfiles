@@ -10,7 +10,6 @@ Plug 'mhinz/vim-startify' " Start screen for vim
 Plug 'dstein64/vim-startuptime' " Startup event timing information
 Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 
-" Requires dependencies install using yarn
 Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
 Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 " Disabling tree-sitter temporarily while experimenting
@@ -98,7 +97,7 @@ autocmd BufWritePre * :%s/\s\+$//e " Auto remove trailing on save
 set showtabline=2 " Always show the tabline
 
 " Searching
-set ignorecase " Ignore when searching
+set ignorecase " Ignore case when searching
 set smartcase " Override ignorecase when search pattern contains uppercase
 set hlsearch " Highlight all search result matches
 set incsearch " Highlight all search matches when typing

@@ -1,5 +1,5 @@
 " Specify before any leader mappings
-let mapleader = "," " Map leader to comma
+let mapleader = " " " Map leader to space
 
 " Edit and source nvim init file
 nmap <leader>rc :e ~/Documents/repos/dotfiles/.config/nvim/init.vim<CR>

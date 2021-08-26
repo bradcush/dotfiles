@@ -124,6 +124,3 @@ brew install neofetch
 
 # Display directories as trees
 brew install tree
-
-# Ruby version manager
-# brew install rbenv

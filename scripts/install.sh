@@ -125,8 +125,5 @@ brew install neofetch
 # Display directories as trees
 brew install tree
 
-# Vifm file explorer
-# brew install vifm
-
 # Ruby version manager
 # brew install rbenv

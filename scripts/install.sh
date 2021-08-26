@@ -57,7 +57,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # python2 -m pip install --upgrade pip
 # python3 -m pip install --upgrade pip
 # For JS remote-plugins support
-npm install -g neovim
+yarn global -g neovim
 
 # NVM for managing node versions
 brew install nvm
@@ -85,15 +85,15 @@ brew install shfmt
 # not rely on one location for monorepos
 # Favoring eslint_d over eslint as it launches daemon
 # that kills subsequent startup times after first
-npm install -g eslint_d
-npm install -g prettier
-npm install -g bash-language-server
-npm install -g pyright
-npm install -g typescript typescript-language-server
-npm install -g vim-language-server
+yarn global add eslint_d
+yarn global add prettier
+yarn global add bash-language-server
+yarn global add pyright
+yarn global add typescript typescript-language-server
+yarn global add vim-language-server
 # Language servers for html, css, and json
-npm install -g vscode-langservers-extracted
-npm install -g yaml-language-server
+yarn global add vscode-langservers-extracted
+yarn global add yaml-language-server
 
 # Lua language server and formatter install
 # https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
@@ -111,7 +111,7 @@ brew install ctags
 brew install vault
 
 # TLDR man pages Node.js client
-npm install -g tldr
+yarn global add tldr
 
 # lookatme terminal based presentations
 pip install lookatme

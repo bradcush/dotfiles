@@ -13,5 +13,3 @@ nmap <leader>ff :Files<CR>
 nmap <leader>gf :GFiles<CR>
 " Git files from status
 nmap <leader>gs :GFiles?<CR>
-" Help search by tag
-nmap <leader>hp :Helptags<CR>

@@ -6,7 +6,7 @@ Plug 'ryanoasis/vim-devicons' " Filetype glyphs for lightline
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder search files and word occurrence
 Plug 'junegunn/fzf.vim' "Required for FZF vim integration
 
-Plug 'mhinz/vim-startify' " Start screen for vim
+" Plug 'mhinz/vim-startify' " Start screen for vim
 Plug 'dstein64/vim-startuptime' " Startup event timing information
 Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 
@@ -152,7 +152,7 @@ source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/hardtime.vim
 source $HOME/.config/nvim/lightline.vim
 source $HOME/.config/nvim/python.vim
-source $HOME/.config/nvim/startify.vim
+" source $HOME/.config/nvim/startify.vim
 
 " Neovim specific configurations
 luafile $HOME/.config/nvim/lsp.lua

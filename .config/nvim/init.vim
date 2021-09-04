@@ -59,6 +59,8 @@ set backspace=2 " Backspace set two 2 chars
 set autowrite " Autosave the file when loading another buffer
 autocmd BufWritePre * :%s/\s\+$//e " Auto remove trailing on save
 set showtabline=2 " Always show the tabline
+set updatetime=300 " For a better user experience
+set signcolumn=yes " Always show signcolumn to prevent shifting
 
 " Backup
 " Backup files are snapshots before edits are made
@@ -88,10 +90,6 @@ set relativenumber " Show relative line numbers
 set ruler " Show cursor position
 set nowrap " Don't wrap lines
 set scrolloff=2 " Scroll offset from edge to cursor
-
-" Recommended by coc but generally good
-set updatetime=300 " For a better user experience
-set signcolumn=yes " Always show signcolumn to prevent shifting
 
 " Searching
 set ignorecase " Ignore case when searching

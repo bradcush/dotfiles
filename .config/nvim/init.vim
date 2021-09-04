@@ -12,9 +12,6 @@ Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 
 Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
 Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
-" Disabling tree-sitter temporarily while experimenting
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Native support for tree-sitter
-" Plug 'nvim-treesitter/playground' " View treesitter information
 
 " Fill gaps in syntax highlighting support
 Plug 'keith/swift.vim' " Syntax highlights for Swift
@@ -103,7 +100,6 @@ set pumblend=20 "Not sure exactly
 
 " Colorscheme and syntax
 " Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)
-" Using treesitter which sets syntax when needed
 syntax on " Enable syntax highlighting
 colorscheme base16-onedark " Theme requires base16-vim
 " colorscheme base16-gruvbox-dark-soft " Theme requires base16-vim
@@ -149,4 +145,3 @@ source $HOME/.config/nvim/python.vim
 " Neovim specific configurations
 luafile $HOME/.config/nvim/lsp.lua
 source $HOME/.config/nvim/neovim.vim
-luafile $HOME/.config/nvim/treesitter.lua

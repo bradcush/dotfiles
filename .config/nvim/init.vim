@@ -37,7 +37,6 @@ Plug 'kana/vim-textobj-user' " Required dep for entire/line
 Plug 'kana/vim-textobj-entire' " Entire file text objects
 Plug 'kana/vim-textobj-line' " Line text objects
 
-" Color themes
 Plug 'chriskempson/base16-vim' " Standard vim highlight groups
 " Temporary plugin development for personal base16-nvim
 " Plug '~/Documents/repos/base16-nvim' " Standard nvim highlight groups
@@ -51,8 +50,15 @@ set rtp+=/usr/local/opt/fzf
 filetype plugin indent on " Detect file type with auto indent
 set hidden " Hidden buffers with preserved undo/marks
 set autoread " Autorefresh file when it has been edited somewhere else
-au CursorHold,CursorHoldI * checktime
-au FocusGained,BufEnter * checktime
+autocmd CursorHold,CursorHoldI * checktime " Check buffer changes on cursorhold
+autocmd FocusGained,BufEnter * checktime " Check buffer changes on focus/buffer
+" set mouse=a " Enable mouse scrolling
+set showcmd " Show command in bottom bar
+set lazyredraw " Redraw the screen less often
+set backspace=2 " Backspace set two 2 chars
+set autowrite " Autosave the file when loading another buffer
+autocmd BufWritePre * :%s/\s\+$//e " Auto remove trailing on save
+set showtabline=2 " Always show the tabline
 
 " Backup
 " Backup files are snapshots before edits are made
@@ -86,15 +92,6 @@ set scrolloff=2 " Scroll offset from edge to cursor
 " Recommended by coc but generally good
 set updatetime=300 " For a better user experience
 set signcolumn=yes " Always show signcolumn to prevent shifting
-
-" General
-" set mouse=a " Enable mouse scrolling
-set showcmd " Show command in bottom bar
-set lazyredraw " Redraw the screen less often
-set backspace=2 " Backspace set two 2 chars
-set autowrite " Autosave the file when loading another buffer
-autocmd BufWritePre * :%s/\s\+$//e " Auto remove trailing on save
-set showtabline=2 " Always show the tabline
 
 " Searching
 set ignorecase " Ignore case when searching

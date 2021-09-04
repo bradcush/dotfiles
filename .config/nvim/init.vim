@@ -110,7 +110,7 @@ colorscheme base16-onedark " Theme requires base16-vim
 let base16colorspace=256 " Access colors in 256 colorspace for base16-vim
 set termguicolors " Enable 24-bit RGB color in the TUI
 set list " List mode showing tabs, space, and trail
-set listchars=space:.,trail:~,precedes:<
+set listchars=space:.,trail:~,precedes:< " Represent specific listchars
 " Fix syntax highlighting by referencing start of file
 autocmd BufEnter * :syntax sync fromstart
 

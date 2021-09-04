@@ -69,11 +69,16 @@ set nobackup " Never persist a backup file
 set nowritebackup " Never write a backup file
 set noswapfile " Never use swap files for recovery
 
-" Cursor lines
-" Causing slowness specifically navigating some files
+" Cursor, scrolling, and lines
 set cursorline " Highlight cursor line (Causes slowness)
 " set cursorcolumn " Highlights cursor column (Causes slowness)
 set colorcolumn=80 " Set print width indication line
+set number " Show line numbers
+set relativenumber " Show relative line numbers
+" set numberwidth=4 "Number width for lines
+set ruler " Show cursor position
+set nowrap " Don't wrap lines
+set scrolloff=2 " Scroll offset from edge to cursor
 
 " Indentation
 set expandtab " Use spaces instead of <TAB>
@@ -82,14 +87,6 @@ set softtabstop=2 " Use indent of 2 spaces
 set autoindent " Match indentation of previous line
 set smartindent " Smart autoindent when starting a new line.
 set smarttab " Tab inserts a tab and backspace deletes a tab
-
-" Lines
-set number " Show line numbers
-set relativenumber " Show relative line numbers
-" set numberwidth=4 "Number width for lines
-set ruler " Show cursor position
-set nowrap " Don't wrap lines
-set scrolloff=2 " Scroll offset from edge to cursor
 
 " Searching
 set ignorecase " Ignore case when searching

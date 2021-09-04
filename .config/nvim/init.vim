@@ -62,7 +62,7 @@ set showtabline=2 " Always show the tabline
 set updatetime=300 " For a better user experience
 set signcolumn=yes " Always show signcolumn to prevent shifting
 
-" Backup
+" Backup/swapfiles
 " Backup files are snapshots before edits are made
 " Swap files contain changes you've made to a buffer
 set nobackup " Never persist a backup file

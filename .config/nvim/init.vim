@@ -93,10 +93,10 @@ set incsearch " Highlight all search matches when typing
 set showmatch " Show matching ( [ {
 
 " Wildmenu
-set wildmenu "Completion enhanced
-set wildoptions=pum "Not sure exactly
-set wildmode=longest,full "Style of the menu
-set pumblend=20 "Not sure exactly
+set wildmenu " Completion enhanced
+set wildoptions=pum " Completion matches style alignment
+set wildmode=longest,full " Specific menu style
+set pumblend=20 " Pseudo-menu transparency
 
 " Colorscheme and syntax
 " Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)

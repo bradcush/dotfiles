@@ -183,7 +183,7 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+# draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
 #colors:
@@ -268,32 +268,32 @@ draw_bold_text_with_bright_colors: false
 # https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-onedark-256.yml
 colors:
   primary:
-    background: '0x282c34'
-    foreground: '0xabb2bf'
+    background: '#282c34'
+    foreground: '#abb2bf'
 
   cursor:
-    text: '0x282c34'
-    cursor: '0xabb2bf'
+    text: '#282c34'
+    cursor: '#abb2bf'
 
   normal:
-    black: '0x282c34'
-    red: '0xe06c75'
-    green: '0x98c379'
-    yellow: '0xe5c07b'
-    blue: '0x61afef'
-    magenta: '0xc678dd'
-    cyan: '0x56b6c2'
-    white: '0xabb2bf'
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#e5c07b'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#abb2bf'
 
   bright:
-    black: '0x545862'
-    red: '0xd19a66'
-    green: '0x353b45'
-    yellow: '0x3e4451'
-    blue: '0x565c64'
-    magenta: '0xb6bdca'
-    cyan: '0xbe5046'
-    white: '0xc8ccd4'
+    black: '#545862'
+    red: '#d19a66'
+    green: '#353b45'
+    yellow: '#3e4451'
+    blue: '#565c64'
+    magenta: '#b6bdca'
+    cyan: '#be5046'
+    white: '#c8ccd4'
 
 # Visual Bell
 #

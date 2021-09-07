@@ -3,6 +3,9 @@
 # Use vi/vim mode in the shell
 set -o vi
 
+# Enable colored output
+export CLICOLOR=1
+
 # Init for nvm node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"

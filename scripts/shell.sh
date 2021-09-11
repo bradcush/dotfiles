@@ -22,10 +22,6 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# npm and vault globals
-# export NPM_TOKEN="<NPM_TOKEN>"
-# export VAULT_ADDR="<VAULT_ADDR>"
-
 # Launch nvim instead of vim
 VIM_EDITOR="nvim"
 alias vim='$VIM_EDITOR'

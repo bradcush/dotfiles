@@ -35,6 +35,10 @@ brew install fzf
 brew install ripgrep
 brew install the_silver_searcher
 
+# base16-fzf colorscheme repository
+# Expected to be cloned with other repositories
+git clone git@github.com:fnune/base16-fzf.git
+
 # bat is a better replacement for cat
 brew install bat
 

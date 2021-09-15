@@ -31,7 +31,7 @@ brew install zsh-autosuggestions
 brew install fzf
 "$(brew --prefix)"/opt/fzf/install
 
-# Rg and Ag for use with FZF
+# Rg and Ag for use with fzf
 brew install ripgrep
 brew install the_silver_searcher
 

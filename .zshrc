@@ -3,7 +3,7 @@ export FZF_BASE=/usr/local/bin/fzf
 
 # Source shared configuration
 source ~/Documents/repos/dotfiles/scripts/shell.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /Users/bcushing/.fzf.zsh ] && source /Users/bcushing/.fzf.zsh
 
 # Highlight tab selections
 zstyle ':completion:*' menu select

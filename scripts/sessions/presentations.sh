@@ -10,6 +10,7 @@ tmux has-session -t "$SESSION" 2>/dev/null
 # An error means there is no session
 if [[ $? != 0 ]]; then
   cd $PRESENTATIONS_DIRECTORY || exit
+  # Create windows for presentations
   tmux new -s "$SESSION" -d
   tmux send-keys -t "$SESSION" "$PYENV" C-m
   tmux new-window -t "$SESSION"

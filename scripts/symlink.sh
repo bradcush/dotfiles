@@ -8,14 +8,14 @@ ln -s "$DOTFILES_PATH"/.bashrc ~/.bashrc
 ln -s "$DOTFILES_PATH"/.fzf.bash ~/.fzf.bash
 ln -s "$DOTFILES_PATH"/.fzf.zsh ~/.fzf.zsh
 ln -s "$DOTFILES_PATH"/.gitconfig ~/.gitconfig
-ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
 ln -s "$DOTFILES_PATH"/.tmux.conf ~/.tmux.conf
+ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
 
 # Create directories before symlinks
-mkdir -p ~/.config/efm-langserver
-mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/bat
+mkdir -p ~/.config/efm-langserver
+mkdir -p ~/.config/nvim
 
 # nvim config symlinks
 ln -s "$DOTFILES_PATH"/.config/efm-langserver/config.yaml ~/.config/efm-langserver/config.yaml

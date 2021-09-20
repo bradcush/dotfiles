@@ -23,6 +23,7 @@ Plug 'gko/vim-coloresque' " Inline color code preview
 Plug 'heavenshell/vim-jsdoc', { 'do': 'make install' } " JSDoc integration w/ autocompletion
 
 Plug 'tpope/vim-fugitive' " Git embedded in vim
+Plug 'tpope/vim-rhubarb' " Fugitive integration with GitHub
 Plug 'tpope/vim-repeat' " Expanding repeat last action
 Plug 'tpope/vim-surround' " Delete, change, and add surroundings
 Plug 'tpope/vim-commentary' " Commenting support

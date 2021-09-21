@@ -24,6 +24,7 @@ Plug 'heavenshell/vim-jsdoc', { 'do': 'make install' } " JSDoc integration w/ au
 
 Plug 'tpope/vim-fugitive' " Git embedded in vim
 Plug 'tpope/vim-rhubarb' " Fugitive integration with GitHub
+Plug 'shumphrey/fugitive-gitlab.vim' " Fugitive integration with GitLab
 Plug 'tpope/vim-repeat' " Expanding repeat last action
 Plug 'tpope/vim-surround' " Delete, change, and add surroundings
 Plug 'tpope/vim-commentary' " Commenting support
@@ -136,6 +137,7 @@ source $HOME/.config/nvim/mappings.vim
 " Vim specific configurations
 source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
+source $HOME/.config/nvim/fugitive.vim
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/hardtime.vim
 source $HOME/.config/nvim/lightline.vim

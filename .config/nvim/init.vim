@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim' " Lighter status bar
 Plug 'ryanoasis/vim-devicons' " Filetype glyphs for lightline
 " Sometimes fzf#install fails and install --all in the FZF plugin dir is needed
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder search files and word occurrence
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder searching
 Plug 'junegunn/fzf.vim' "Required for FZF vim integration
 
 " Plug 'mhinz/vim-startify' " Start screen for vim

@@ -98,9 +98,9 @@ yarn global add vim-language-server
 # Language servers for html, css, and json
 yarn global add vscode-langservers-extracted
 yarn global add yaml-language-server
-
-# Lua language server and formatter install
+# Lua language server and formatter install (LSP requires compilation)
 # https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
+git clone https://github.com/sumneko/lua-language-server
 luarocks install --server=https://luarocks.org/dev luaformatter
 
 # Install llvm with clangd for C language support

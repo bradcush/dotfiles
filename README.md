@@ -33,3 +33,10 @@ make personal
 make presentations
 make sae
 ```
+
+## Shell
+
+Both `bash` and `zsh` are supported with all shared configuration declared in
+`scripts/shell.sh` and sourced in `.bashrc` and `.zshrc` respectively.
+Configuration specific to fzf is contained in `.fzf.bash` and `.fzf.zsh` and
+sourced in the respective rc files for those shell also.

@@ -8,6 +8,3 @@ fi
 
 # Key bindings for fzf
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-
-# Zsh auto-suggestions setup
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh

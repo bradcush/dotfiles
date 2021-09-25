@@ -5,6 +5,9 @@ export FZF_BASE=/usr/local/bin/fzf
 source ~/Documents/repos/dotfiles/scripts/shell.sh
 [ -f /Users/bcushing/.fzf.zsh ] && source /Users/bcushing/.fzf.zsh
 
+# zsh-autosuggestions setup
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Highlight tab selections
 zstyle ':completion:*' menu select
 

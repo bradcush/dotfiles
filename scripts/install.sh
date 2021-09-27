@@ -5,6 +5,9 @@
 # Run "brew update" afterwards for latest formulae
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+# Yarn for npm dependency mgmt
+brew install yarn
+
 # Install Alacritty GPU terminal emulator
 brew install --cask alacritty
 # Install kitty GPU terminal emulator
@@ -74,9 +77,6 @@ brew install --HEAD pyenv-virtualenv
 
 # Suggested build environment for python
 # brew install openssl readline sqlite3 xz zlib
-
-# Yarn for npm dependency mgmt
-brew install yarn
 
 # Language servers and formatters used
 # with Neovim LSP and efm-langserver

@@ -1,6 +1,18 @@
 # dotfiles
 
-dotfiles and vim configuration
+macOS dotfiles, install, and configuration
+
+## Configuration
+
+- Alacritty
+- Bash
+- Bat
+- FZF
+- Git
+- Neovim
+- Starship
+- Tmux
+- Z shell
 
 ## Install
 

@@ -26,11 +26,11 @@ ln -s "$DOTFILES_PATH"/.config/nvim/fzf.vim ~/.config/nvim/fzf.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/hardtime.vim ~/.config/nvim/hardtime.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/lightline.vim ~/.config/nvim/lightline.vim
+ln -s "$DOTFILES_PATH"/.config/nvim/lsp.lua ~/.config/nvim/lsp.lua
 ln -s "$DOTFILES_PATH"/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/neovim.vim ~/.config/nvim/neovim.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/python.vim ~/.config/nvim/python.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/startify.vim ~/.config/nvim/startify.vim
-ln -s "$DOTFILES_PATH"/.config/nvim/lsp.lua ~/.config/nvim/lsp.lua
 
 # Miscellaneous configuration symlinks
 ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml

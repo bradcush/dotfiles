@@ -116,8 +116,6 @@ autocmd BufEnter * :syntax sync fromstart
 " hi Whitespace guifg=grey
 " hi NonText guifg=grey
 hi Comment gui=italic
-" Underline spelling mistakes
-" hi SpellBad gui=underline guisp=NONE
 " Diagnostic information colors
 hi LspDiagnosticsDefaultError guifg=#be5046
 hi LspDiagnosticsDefaultWarning guifg=#e5c07b

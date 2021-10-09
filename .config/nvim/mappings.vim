@@ -15,6 +15,9 @@ nnoremap <C-l> <C-w>l
 nmap <leader>sp :set spell spelllang=en_us spelloptions=camel<CR>
 nmap <leader>ns :set nospell<CR>
 
+" Output highlight groups
+nmap <leader>hi :so $VIMRUNTIME/syntax/hitest.vim<CR>
+
 " Copy from position
 nnoremap Y y$
 

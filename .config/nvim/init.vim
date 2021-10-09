@@ -102,7 +102,6 @@ set wildmode=longest,full " Specific menu style
 set pumblend=20 " Pseudo-menu transparency
 
 " Colorscheme and syntax
-" Output highlighting groups (:so $VIMRUNTIME/syntax/hitest.vim)
 syntax on " Enable syntax highlighting
 colorscheme base16-onedark " Theme requires base16-vim
 " colorscheme base16-gruvbox-dark-soft " Theme requires base16-vim

@@ -20,7 +20,7 @@ Plug 'cespare/vim-toml' " Syntax highlights for toml configs
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig files for settings
-Plug 'gko/vim-coloresque' " Inline color code preview
+Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' } " Inline color code preview
 Plug 'heavenshell/vim-jsdoc', { 'do': 'make install' } " JSDoc integration w/ autocompletion
 
 Plug 'tpope/vim-fugitive' " Git embedded in vim

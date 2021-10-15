@@ -23,3 +23,6 @@ bindkey -M menuselect 'l' vi-forward-char
 
 # Init starship shell prompt
 eval "$(starship init zsh)"
+
+# zsh-syntax-highlighting setup must be sourced last
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

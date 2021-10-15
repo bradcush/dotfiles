@@ -30,6 +30,9 @@ brew install starship
 # Install zsh-autosuggestions
 brew install zsh-autosuggestions
 
+# Install zsh-syntax-highlighting
+brew install zsh-syntax-highlighting
+
 # A command-line fuzzy finder
 brew install fzf
 "$(brew --prefix)"/opt/fzf/install

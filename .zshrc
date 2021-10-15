@@ -8,11 +8,12 @@ source ~/Documents/repos/dotfiles/scripts/shell.sh
 # zsh-autosuggestions setup
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Highlight tab selections
-zstyle ':completion:*' menu select
-
-# Show hidden files for completion
-_comp_options+=(globdots)
+# Completion configuration
+autoload -Uz compinit # Mark compinit function
+compinit # Load complist module
+zmodload zsh/complist # Load completion list
+zstyle ':completion:*' menu select # Highlight tab selections
+_comp_options+=(globdots) # Show hidden files for completion
 
 # Use vi/vim bindings for selections
 bindkey -M menuselect 'h' vi-backward-char

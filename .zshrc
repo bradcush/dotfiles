@@ -11,6 +11,9 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Highlight tab selections
 zstyle ':completion:*' menu select
 
+# Show hidden files for completion
+_comp_options+=(globdots)
+
 # Use vi/vim bindings for selections
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history

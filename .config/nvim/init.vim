@@ -128,6 +128,12 @@ set splitbelow splitright " New split windows to the bottom/right
 let g:netrw_liststyle = 4 "Show contents of current folder
 " let g:netrw_liststyle = 3 "Show contents of entire tree
 
+" Highlight yanked contents
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+augroup END
+
 " Important before any other mappings as general
 " mappings like the leader key are set
 source $HOME/.config/nvim/mappings.vim
@@ -143,4 +149,3 @@ source $HOME/.config/nvim/python.vim
 
 " Neovim specific configurations
 luafile $HOME/.config/nvim/lsp.lua
-source $HOME/.config/nvim/neovim.vim

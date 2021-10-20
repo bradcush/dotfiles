@@ -9,7 +9,7 @@ local on_attach = function(client, bufnr)
 
     option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-    -- Mappings.
+    -- Mappings
     local opts = {noremap = true, silent = true}
     keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
     keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)

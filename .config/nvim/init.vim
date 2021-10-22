@@ -134,10 +134,10 @@ augroup highlight_yank
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
 augroup END
 
+" Vim specific configurations
 " Important before any other mappings as general
 " mappings like the leader key are set
 source $HOME/.config/nvim/mappings.vim
-" Vim specific configurations
 source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fugitive.vim

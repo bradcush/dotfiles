@@ -2,8 +2,7 @@
 # between shell prompts
 add_newline = false
 
-# Keep prompt on
-# the same line
+# Format single line prompt
 [line_break]
 disabled = true
 

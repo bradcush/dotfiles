@@ -16,8 +16,6 @@ local on_attach = function(client, bufnr)
     keymap('n', 'gy', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
     keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
     keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    -- Disabling signature help as mapping conflicts with window navigation
-    -- keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
     keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
     keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     keymap('n', '<leader>dl', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>',

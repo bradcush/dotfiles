@@ -17,8 +17,8 @@ brew install --cask alacritty
 brew tap homebrew/cask-fonts
 # Hack Nerd Font has strong differences between
 # similar characters and supports glyphs
+# brew install --cask font-hack
 brew install --cask font-hack-nerd-font
-brew install --cask font-hack
 # brew install --cask font-ubuntumono-nerd-font
 
 # Terminal multiplexer

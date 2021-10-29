@@ -103,9 +103,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: monospace
-    # family: Hack
     family: Hack Nerd Font
-    # family: Monaco
     # family: UbuntuMono Nerd Font
 
     # The quick brown fox jumps over the lazy dog

@@ -22,6 +22,9 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# Hide virtual environment in prompt
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
 # Launch nvim instead of vim
 VIM_EDITOR="nvim"
 alias vim='$VIM_EDITOR'

@@ -38,7 +38,7 @@ window:
   #  y: 0
   padding:
     x: 5
-    y: 2
+    y: 5
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false

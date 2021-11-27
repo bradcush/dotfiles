@@ -147,6 +147,7 @@ source $HOME/.config/nvim/hardtime.vim
 source $HOME/.config/nvim/lightline.vim
 source $HOME/.config/nvim/python.vim
 " source $HOME/.config/nvim/startify.vim
+source $HOME/.config/nvim/test.vim
 
 " Neovim specific configurations
 luafile $HOME/.config/nvim/lsp.lua

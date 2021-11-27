@@ -30,6 +30,7 @@ ln -s "$DOTFILES_PATH"/.config/nvim/lsp.lua ~/.config/nvim/lsp.lua
 ln -s "$DOTFILES_PATH"/.config/nvim/mappings.vim ~/.config/nvim/mappings.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/python.vim ~/.config/nvim/python.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/startify.vim ~/.config/nvim/startify.vim
+ln -s "$DOTFILES_PATH"/.config/nvim/test.vim ~/.config/nvim/test.vim
 
 # Miscellaneous configuration symlinks
 ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml

@@ -22,6 +22,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdow
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig files for settings
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' } " Inline color code preview
 Plug 'heavenshell/vim-jsdoc', { 'do': 'make install' } " JSDoc integration w/ autocompletion
+Plug 'vim-test/vim-test' " Run test types with different granularity
 
 Plug 'tpope/vim-fugitive' " Git embedded in vim
 Plug 'tpope/vim-rhubarb' " Fugitive integration with GitHub

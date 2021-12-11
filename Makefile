@@ -27,6 +27,11 @@ personal:
 presentations:
 	@./scripts/sessions/presentations.sh
 
+# Start problems session
+.PHONY: problems
+problems:
+	@./scripts/sessions/problems.sh
+
 # Start SAE session
 .PHONY: sae
 sae:

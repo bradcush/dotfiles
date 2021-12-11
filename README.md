@@ -43,6 +43,7 @@ make datalgo
 make extension
 make personal
 make presentations
+make problems
 make sae
 ```
 

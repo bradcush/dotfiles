@@ -26,3 +26,22 @@ inoremap , ,<C-g>u
 inoremap . .<C-g>u
 inoremap ! !<C-g>u
 inoremap ? ?<C-g>u
+
+" Create a new scratch buffer
+" or open the existing one
+function! Scratch()
+  let name = 'scratch'
+  let number = bufnr(name)
+    if number > 0
+       execute 'buffer ' . name
+       return
+    endif
+    execute 'enew'
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
+    setlocal noswapfile
+    file scratch
+endfunction
+
+" Open a scratch buffer
+nmap <leader>sc :call Scratch()<CR>

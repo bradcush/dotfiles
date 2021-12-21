@@ -40,6 +40,7 @@ function! Scratch()
     setlocal buftype=nofile
     setlocal bufhidden=hide
     setlocal noswapfile
+    setlocal nobuflisted
     file scratch
 endfunction
 

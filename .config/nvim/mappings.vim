@@ -30,18 +30,18 @@ inoremap ? ?<C-g>u
 " Create a new scratch buffer
 " or open the existing one
 function! Scratch()
-  let name = 'scratch'
-  let number = bufnr(name)
+    let name = 'scratch'
+    let number = bufnr(name)
     if number > 0
-       execute 'buffer ' . name
-       return
+        execute 'buffer ' . name
+    else
+        execute 'enew'
+        file scratch
     endif
-    execute 'enew'
     setlocal buftype=nofile
     setlocal bufhidden=hide
     setlocal noswapfile
     setlocal nobuflisted
-    file scratch
 endfunction
 
 " Open a scratch buffer

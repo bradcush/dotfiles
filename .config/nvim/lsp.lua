@@ -58,6 +58,13 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {on_attach = on_attach}
 end
 
+-- Overriding how diagnostics are published
+vim.lsp.handlers['textDocument/publishDiagnostics'] =
+    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+        -- Instead of normal mode
+        update_in_insert = true
+    })
+
 -- Ignore formatting for js and ts because it conflicts
 -- with eslint and prettier which is preferred
 nvim_lsp['tsserver'].setup {

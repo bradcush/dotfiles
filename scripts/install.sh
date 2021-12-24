@@ -81,11 +81,15 @@ brew install --HEAD pyenv-virtualenv
 # Suggested build environment for python
 # brew install openssl readline sqlite3 xz zlib
 
+## Install Rust using rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Language servers and formatters used
 # with Neovim LSP and efm-langserver
 brew install efm-langserver
 brew install pandoc
 brew install markdownlint-cli
+brew install rust-analyzer
 brew install shellcheck
 brew install shfmt
 # Globally install eslint/prettier as we to

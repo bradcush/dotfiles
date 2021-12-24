@@ -51,6 +51,7 @@ local servers = {
     'html',
     'jsonls',
     'pyright',
+    'rust_analyzer',
     'vimls',
     'yamlls'
 }

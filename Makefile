@@ -12,6 +12,11 @@ symlink:
 extension:
 	@./scripts/sessions/extension.sh
 
+# Start bradcush session
+.PHONY: bradcush
+bradcush:
+	@./scripts/sessions/bradcush.sh
+
 # Start datalgo session
 .PHONY: datalgo
 datalgo:

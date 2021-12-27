@@ -39,6 +39,7 @@ make symlink
 Start a given tmux session
 
 ``` sh
+make bradcush
 make datalgo
 make extension
 make personal

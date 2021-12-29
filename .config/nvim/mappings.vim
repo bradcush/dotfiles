@@ -27,6 +27,11 @@ inoremap . .<C-g>u
 inoremap ! !<C-g>u
 inoremap ? ?<C-g>u
 
+" Cursor to beginning of command-line because
+" the default CTRL-B is taken over by tmux
+" :h cmdline-editing explains more
+cnoremap <C-a> <Home>
+
 " Create a new scratch buffer
 " or open the existing one
 function! Scratch()

@@ -10,6 +10,7 @@ ln -s "$DOTFILES_PATH"/.fzf.zsh ~/.fzf.zsh
 ln -s "$DOTFILES_PATH"/.gitconfig ~/.gitconfig
 ln -s "$DOTFILES_PATH"/.profile ~/.profile
 ln -s "$DOTFILES_PATH"/.tmux.conf ~/.tmux.conf
+ln -s "$DOTFILES_PATH"/.zshenv ~/.zshenv
 ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
 
 # Create directories before symlinks

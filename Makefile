@@ -41,3 +41,8 @@ problems:
 .PHONY: sae
 sae:
 	@./scripts/sessions/sae.sh
+
+# Start scratch session
+.PHONY: scratch
+scratch:
+	@./scripts/sessions/scratch.sh

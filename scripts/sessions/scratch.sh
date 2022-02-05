@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HOME_DIRECTORY=~
-SESSION="home"
+SESSION="scratch"
 
 tmux has-session -t "$SESSION" 2>/dev/null
 

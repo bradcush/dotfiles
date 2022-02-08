@@ -36,7 +36,8 @@ make symlink
 
 ## Sessions
 
-Start a given tmux session
+Start a given tmux session for working on a specific project. In some cases a
+session will also setup an environment or open multiple repositories.
 
 ``` sh
 make bradcush
@@ -46,7 +47,6 @@ make personal
 make presentations
 make problems
 make sae
-make scratch
 ```
 
 ## Shell

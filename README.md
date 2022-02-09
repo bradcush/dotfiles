@@ -28,7 +28,9 @@ make install
 
 ## Symlink
 
-Symlink all dotfiles in repository with home directory
+Symlink all dotfiles in repository with home directory. This repository is used
+as the source of truth for all configuration files which are then symlinked to
+their expected location in the file system.
 
 ``` sh
 make symlink

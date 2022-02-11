@@ -42,5 +42,6 @@ export BAT_THEME="base16"
 # For clangd and other llvm related binaries
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
-# Source env script for adding bin path
+# Source env script for adding the
+# cargo binary to path for Rust
 . /Users/bcushing/.cargo/env

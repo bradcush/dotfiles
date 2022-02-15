@@ -66,6 +66,15 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] =
         update_in_insert = true
     })
 
+-- Change diagnostics icon and highlight group
+-- Setting explicit defaults for icon at the moment
+-- local signs = {Error = ' ', Warn = ' ', Hint = ' ', Info = ' '}
+local signs = {Error = 'E ', Warn = 'W ', Hint = 'H ', Info = 'I '}
+for type, icon in pairs(signs) do
+    local hl = 'DiagnosticSign' .. type
+    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
+end
+
 -- Ignore formatting for js and ts because it conflicts
 -- with eslint and prettier which is preferred
 nvim_lsp['tsserver'].setup {

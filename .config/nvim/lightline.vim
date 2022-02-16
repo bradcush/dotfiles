@@ -37,7 +37,7 @@ let g:lightline.component_type = {
     \ 'warning': 'warning' }
 
 " Update Lightline when diagnostics info changes
-autocmd User LspDiagnosticsChanged call lightline#update()
+autocmd DiagnosticChanged * call lightline#update()
 
 " Show file location information
 function! DynamicFileInfo()
@@ -63,7 +63,8 @@ endfunction
 
 " Diagnostics error information
 function! DiagnosticError() abort
-    let error = luaeval('vim.lsp.diagnostic.get_count(0, [[Error]])')
+    let severity = { 'severity': 'Error' }
+    let error = len(v:lua.vim.diagnostic.get(0, severity))
     if empty(error) | return '' | endif
     let diagnostic = 'E' . error
     return diagnostic
@@ -71,7 +72,8 @@ endfunction
 
 " Diagnostics warning information
 function! DiagnosticWarning() abort
-    let warning = luaeval('vim.lsp.diagnostic.get_count(0, [[Warning]])')
+    let severity = { 'severity': 'Warn' }
+    let warning = len(v:lua.vim.diagnostic.get(0, severity))
     if empty(warning) | return '' | endif
     let diagnostic = 'W' . warning
     return diagnostic

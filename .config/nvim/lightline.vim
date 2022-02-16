@@ -30,15 +30,11 @@ let g:lightline.component_function = {
 
 let g:lightline.component_expand = {
     \ 'error': 'DiagnosticError',
-    \ 'warning': 'DiagnosticWarning',
-    \ 'info': 'DiagnosticInfo',
-    \ 'hint': 'DiagnosticHint' }
+    \ 'warning': 'DiagnosticWarning' }
 
 let g:lightline.component_type = {
     \ 'error': 'error',
-    \ 'warning': 'warning',
-    \ 'info': 'middle',
-    \ 'hint': 'middle' }
+    \ 'warning': 'warning' }
 
 " Update Lightline when diagnostics info changes
 autocmd User LspDiagnosticsChanged call lightline#update()

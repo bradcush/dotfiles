@@ -21,4 +21,4 @@ disabled = true
 disabled = true
 
 # Increase the default timeout
-command_timeout = 5000
+command_timeout = 10000

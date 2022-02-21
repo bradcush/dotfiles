@@ -118,22 +118,22 @@ autocmd BufEnter * :syntax sync fromstart
 hi Comment gui=italic
 " Diagnostic information colors
 " Specified for default and virtual text
-hi LspDiagnosticsDefaultError guifg=#be5046
-hi DiagnosticVirtualTextError guifg=#be5046
-hi DiagnosticSignError guifg=#be5046
 hi DiagnosticFloatingError guifg=#be5046
-hi LspDiagnosticsDefaultWarning guifg=#e5c07b
-hi DiagnosticVirtualTextWarn guifg=#e5c07b
-hi DiagnosticSignWarn guifg=#e5c07b
+hi DiagnosticSignError guifg=#be5046
+hi DiagnosticVirtualTextError guifg=#be5046
+hi LspDiagnosticsDefaultError guifg=#be5046
 hi DiagnosticFloatingWarn guifg=#e5c07b
-hi LspDiagnosticsDefaultInformation guifg=#61afef
-hi DiagnosticVirtualTextInfo guifg=#61afef
-hi DiagnosticSignInfo guifg=#61afef
+hi DiagnosticSignWarn guifg=#e5c07b
+hi DiagnosticVirtualTextWarn guifg=#e5c07b
+hi LspDiagnosticsDefaultWarning guifg=#e5c07b
 hi DiagnosticFloatingInfo guifg=#61afef
-hi LspDiagnosticsDefaultHint guifg=#abb2bf
-hi DiagnosticVirtualTextHint guifg=#abb2bf
-hi DiagnosticSignHint guifg=#abb2bf
+hi DiagnosticSignInfo guifg=#61afef
+hi DiagnosticVirtualTextInfo guifg=#61afef
+hi LspDiagnosticsDefaultInformation guifg=#61afef
 hi DiagnosticFloatingHint guifg=#abb2bf
+hi DiagnosticSignHint guifg=#abb2bf
+hi DiagnosticVirtualTextHint guifg=#abb2bf
+hi LspDiagnosticsDefaultHint guifg=#abb2bf
 
 " Split windows
 set splitbelow splitright " New split windows to the bottom/right

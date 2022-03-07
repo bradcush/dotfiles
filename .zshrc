@@ -6,7 +6,7 @@ source ~/Documents/repos/dotfiles/scripts/shell.sh
 [ -f /Users/bcushing/.fzf.zsh ] && source /Users/bcushing/.fzf.zsh
 
 # zsh-autosuggestions setup
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Completion configuration
 autoload -Uz compinit # Mark compinit function
@@ -25,4 +25,4 @@ bindkey -M menuselect 'l' vi-forward-char
 eval "$(starship init zsh)"
 
 # zsh-syntax-highlighting setup must be sourced last
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

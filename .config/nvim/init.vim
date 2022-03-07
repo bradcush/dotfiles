@@ -44,7 +44,7 @@ Plug 'chriskempson/base16-vim' " Standard vim highlight groups
 call plug#end()
 
 " Set the runtime path to include fzf
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 
 " General
 filetype plugin indent on " Detect file type with auto indent

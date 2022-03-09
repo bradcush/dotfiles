@@ -108,7 +108,7 @@ nvim_lsp['efm'].setup {
 
 -- Set the path to the sumneko installation
 local sumneko_root_path = '/Users/bcushing/Documents/repos/lua-language-server'
-local sumneko_binary = sumneko_root_path .. '/bin/macOS/lua-language-server'
+local sumneko_binary = sumneko_root_path .. '/bin/lua-language-server'
 
 nvim_lsp['sumneko_lua'].setup {
     on_attach = on_attach,

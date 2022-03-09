@@ -70,7 +70,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # python2 -m pip install --upgrade pip
 # python3 -m pip install --upgrade pip
 # For JS remote-plugins support
-yarn global -g neovim
+yarn global add neovim
 
 # NVM for managing node versions
 brew install nvm

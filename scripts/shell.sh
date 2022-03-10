@@ -42,6 +42,9 @@ export BAT_THEME="base16"
 # For clangd and other llvm related binaries
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
+# GPG requires setting tty
+export GPG_TTY="$TTY"
+
 # Source env script for adding the
 # cargo binary to path for Rust
 . /Users/bcushing/.cargo/env

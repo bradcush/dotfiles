@@ -40,7 +40,7 @@ export BAT_THEME="base16"
 . /Users/bcushing/Documents/repos/base16-fzf/bash/base16-onedark.config
 
 # For clangd and other llvm related binaries
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # Source env script for adding the
 # cargo binary to path for Rust

@@ -81,9 +81,6 @@ brew install pyenv
 # virtualenv for managing python environments
 brew install --HEAD pyenv-virtualenv
 
-# Suggested build environment for python
-# brew install openssl readline sqlite3 xz zlib
-
 ## Install Rust using rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 

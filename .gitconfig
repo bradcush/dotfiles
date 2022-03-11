@@ -3,9 +3,9 @@
 [user]
 	name = Bradley Cushing
 	email = bradley.cushing@dashlane.com
-	signingkey = 78115DED2DCC4291E175509059F654E413DC2247
+	signingkey = 55F7004B96DC8F88
 [commit]
-	gpgSign = true
+	gpgsign = true
 [tag]
 	forceSignAnnotated = true
 [rebase]

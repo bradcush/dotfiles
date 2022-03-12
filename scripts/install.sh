@@ -109,6 +109,8 @@ yarn global add yaml-language-server
 # https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
 git clone https://github.com/sumneko/lua-language-server
 luarocks install --server=https://luarocks.org/dev luaformatter
+# Compiling lua-language-server requires ninja
+brew install ninja
 
 # Install llvm with clangd for C language support
 # Requires path modification in .bashrc

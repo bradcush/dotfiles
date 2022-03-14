@@ -58,6 +58,9 @@ brew install bat
 # brew install luv
 brew install --HEAD neovim
 
+# Go for compiling hexokinase
+brew install go
+
 # Download plug.vim and put it in the "autoload"
 # directory for use with "vim-plug" plugin manager
 # https://github.com/junegunn/vim-plug

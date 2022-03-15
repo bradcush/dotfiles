@@ -141,8 +141,5 @@ brew install neofetch
 # Display directories as trees
 brew install tree
 
-# Better process viewing than top
-brew install htop
-
 # macOS trash cli
 brew install trash

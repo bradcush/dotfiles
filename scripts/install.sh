@@ -120,9 +120,6 @@ brew install ninja
 # (eg. export PATH="/usr/local/opt/llvm/bin:$PATH")
 brew install llvm
 
-# Used by coc-python among others
-brew install ctags
-
 # Vault secret management
 brew install vault
 

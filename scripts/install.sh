@@ -140,3 +140,8 @@ brew install tree
 
 # macOS trash cli
 brew install trash
+
+# gpg for commit signatures
+# GPG Suite used intead for keychain
+# https://gpgtools.org
+brew install gpg

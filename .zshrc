@@ -8,6 +8,9 @@ source ~/Documents/repos/dotfiles/scripts/shell.sh
 # zsh-autosuggestions setup
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# zsh-autocomplete setup
+# source /Users/bcushing/Documents/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # Completion configuration
 autoload -Uz compinit # Mark compinit function
 compinit # Load complist module

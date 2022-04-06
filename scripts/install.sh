@@ -33,6 +33,9 @@ brew install starship
 # Install zsh-autosuggestions
 brew install zsh-autosuggestions
 
+# Install zsh-autocomplete
+git clone https://github.com/marlonrichert/zsh-autocomplete
+
 # Install zsh-syntax-highlighting
 brew install zsh-syntax-highlighting
 

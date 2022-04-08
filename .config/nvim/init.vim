@@ -140,7 +140,6 @@ set splitbelow splitright " New split windows to the bottom/right
 
 " netrw options for viewing
 let g:netrw_liststyle = 4 "Show contents of current folder
-" let g:netrw_liststyle = 3 "Show contents of entire tree
 
 " Highlight yanked contents
 augroup highlight_yank

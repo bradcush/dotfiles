@@ -46,3 +46,8 @@ sae:
 .PHONY: scratch
 scratch:
 	@./scripts/sessions/scratch.sh
+
+# Start study session
+.PHONY: study
+study:
+	@./scripts/sessions/study.sh

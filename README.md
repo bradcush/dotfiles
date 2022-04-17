@@ -49,6 +49,8 @@ make personal
 make presentations
 make problems
 make sae
+make scratch
+make study
 ```
 
 ## Shell

@@ -45,8 +45,8 @@ end
 -- buffer local keybindings when the language server attaches
 local servers = {
     'bashls',
-    'cssls',
     'clangd',
+    'cssls',
     'html',
     'jsonls',
     'pyright',

@@ -130,7 +130,8 @@ brew install vault
 yarn global add tldr
 
 # lookatme terminal based presentations
-pip install lookatme
+# Install as part of project python environment
+# pip install lookatme
 
 # Display keys pressed on your screen
 brew install keycastr

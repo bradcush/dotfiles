@@ -1,6 +1,7 @@
 #!/bin/bash
 
 NYU_DIRECTORY=~/Documents/repos/nyux-cppprg1
+CPPLAY_DIRECTORY=~/Documents/repos/cpplay
 SESSION="study"
 VIM="vim"
 
@@ -12,6 +13,10 @@ if [[ $? != 0 ]]; then
   # Create windows for nyux
   tmux new -s "$SESSION" -d
   tmux new-window -t "$SESSION"
+  tmux send-keys -t "$SESSION" "$VIM" C-m
+  # Create windows for cpplay
+  tmux new-window -t "$SESSION" -c $CPPLAY_DIRECTORY
+  tmux new-window -t "$SESSION" -c $CPPLAY_DIRECTORY
   tmux send-keys -t "$SESSION" "$VIM" C-m
 else
   echo "$SESSION already exists"

@@ -9,7 +9,7 @@ tmux has-session -t "$SESSION" 2>/dev/null
 # An error means there is no session
 if [[ $? != 0 ]]; then
   cd $NYU_DIRECTORY || exit
-  # Create windows for safariawakens
+  # Create windows for nyux
   tmux new -s "$SESSION" -d
   tmux new-window -t "$SESSION"
   tmux send-keys -t "$SESSION" "$VIM" C-m

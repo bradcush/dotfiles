@@ -6,6 +6,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Yarn for npm dependency mgmt
+# Global symlinks using /opt/homebrew/bin
+# yarn global bin shows binary path
 brew install yarn
 
 # PNPM for npm dependency mgmt
@@ -76,7 +78,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # python2 -m pip install --upgrade pip
 # python3 -m pip install --upgrade pip
 # For JS remote-plugins support
-yarn global add neovim
+npm install -g neovim
 
 # NVM for managing node versions
 brew install nvm
@@ -102,15 +104,15 @@ brew install shfmt
 # not rely on one location for monorepos
 # Favoring eslint_d over eslint as it launches daemon
 # that kills subsequent startup times after first
-yarn global add eslint_d
-yarn global add prettier
-yarn global add bash-language-server
-yarn global add pyright
-yarn global add typescript typescript-language-server
-yarn global add vim-language-server
+npm install -g eslint_d
+npm install -g prettier
+npm install -g bash-language-server
+npm install -g pyright
+npm install -g typescript typescript-language-server
+npm install -g vim-language-server
 # Language servers for html, css, and json
-yarn global add vscode-langservers-extracted
-yarn global add yaml-language-server
+npm install -g vscode-langservers-extracted
+npm install -g yaml-language-server
 # Lua language server and formatter install (LSP requires compilation)
 # https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
 git clone https://github.com/sumneko/lua-language-server
@@ -127,7 +129,7 @@ brew install llvm
 brew install vault
 
 # TLDR man pages Node.js client
-yarn global add tldr
+npm install -g tldr
 
 # lookatme terminal based presentations
 # Install as part of project python environment

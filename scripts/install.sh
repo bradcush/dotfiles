@@ -11,7 +11,7 @@
 brew install yarn
 
 # PNPM for npm dependency mgmt
-npm install -g pnpm@6
+npm install -g pnpm@6.32.8
 
 # Install Alacritty GPU terminal emulator
 brew install --cask alacritty

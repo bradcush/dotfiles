@@ -12,6 +12,9 @@ brew install yarn
 
 # PNPM for npm dependency mgmt
 npm install -g pnpm@6.32.8
+# Shell tab-completion for pnpm
+pnpm install-completion bash
+pnpm install-completion zsh
 
 # Install Alacritty GPU terminal emulator
 brew install --cask alacritty

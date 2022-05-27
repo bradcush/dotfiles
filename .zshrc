@@ -29,3 +29,7 @@ eval "$(starship init zsh)"
 
 # zsh-syntax-highlighting setup must be sourced last
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Source pnpm tabtab for packages
+[[ -f /Users/bcushing/config/tabtab/zsh/__tabtab.zsh ]] \
+  && . /Users/bcushing/config/tabtab/zsh/__tabtab.zsh

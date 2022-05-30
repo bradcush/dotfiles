@@ -42,6 +42,7 @@ Start a given tmux session for working on a specific project. In some cases a
 session will also setup an environment or open multiple repositories.
 
 ``` sh
+make arduino
 make bradcush
 make datalgo
 make extension

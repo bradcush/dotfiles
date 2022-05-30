@@ -7,10 +7,10 @@
 symlink:
 	@./scripts/symlink.sh
 
-# Start extension session
-.PHONY: extension
-extension:
-	@./scripts/sessions/extension.sh
+# Start arduino session
+.PHONY: arduino
+arduino:
+	@./scripts/sessions/arduino.sh
 
 # Start bradcush session
 .PHONY: bradcush
@@ -21,6 +21,11 @@ bradcush:
 .PHONY: datalgo
 datalgo:
 	@./scripts/sessions/datalgo.sh
+
+# Start extension session
+.PHONY: extension
+extension:
+	@./scripts/sessions/extension.sh
 
 # Start personal session
 .PHONY: personal

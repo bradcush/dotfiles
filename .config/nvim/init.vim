@@ -18,6 +18,7 @@ Plug 'keith/swift.vim' " Syntax highlights for Swift
 Plug 'octol/vim-cpp-enhanced-highlight' " Syntax highlights for C languages
 Plug 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
 Plug 'cespare/vim-toml' " Syntax highlights for toml configs
+Plug 'stevearc/vim-arduino' " Compile, upload, and debug arduino sketches
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig files for settings

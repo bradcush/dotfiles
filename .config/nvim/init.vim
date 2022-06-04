@@ -16,7 +16,7 @@ Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 " Fill gaps in syntax highlighting support
 Plug 'keith/swift.vim' " Syntax highlights for Swift
 Plug 'octol/vim-cpp-enhanced-highlight' " Syntax highlights for C languages
-Plug 'jxnblk/vim-mdx-js' " Syntax highlights for the MDX documentation
+Plug 'jxnblk/vim-mdx-js' " Syntax highlights for MDX documentation
 Plug 'cespare/vim-toml' " Syntax highlights for toml configs
 Plug 'stevearc/vim-arduino' " Compile, upload, and debug arduino sketches
 

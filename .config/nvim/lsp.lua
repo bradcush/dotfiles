@@ -108,7 +108,6 @@ nvim_lsp['efm'].setup {
 -- Set the path to the sumneko installation
 local sumneko_root_path = '/Users/bcushing/Documents/repos/lua-language-server'
 local sumneko_binary = sumneko_root_path .. '/bin/lua-language-server'
-
 nvim_lsp['sumneko_lua'].setup {
     on_attach = on_attach,
     cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'},
@@ -125,3 +124,23 @@ nvim_lsp['sumneko_lua'].setup {
         }
     }
 }
+
+-- Set paths for arduino language server command
+local arduino_binary = '/Users/bcushing/go/bin/arduino-language-server'
+local arduino_config = '/Users/bcushing/Library/Arduino15/arduino-cli.yaml'
+nvim_lsp['arduino_language_server'].setup({
+    on_attach = on_attach,
+    -- Some flags like clangd and cli should be optional according to
+    -- documentation but are required to run the language server. The Fully
+    -- Qualified Board Name (FQBN) also needs to be set, which can be hardcoded
+    -- here or referenced in a project specific sketch.json file.
+    cmd = {
+        arduino_binary,
+        '-cli-config',
+        arduino_config,
+        '-clangd',
+        'clangd',
+        '-cli',
+        'arduino-cli'
+    }
+})

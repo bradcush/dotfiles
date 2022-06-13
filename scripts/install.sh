@@ -129,6 +129,10 @@ brew install ninja
 # (eg. export PATH="/usr/local/opt/llvm/bin:$PATH")
 brew install llvm
 
+# Arduino language server module
+# https://github.com/arduino/arduino-language-server
+go install github.com/arduino/arduino-language-server@latest
+
 # Arduino CLI supported by vim-arduino
 brew install arduino-cli
 

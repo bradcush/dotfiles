@@ -153,6 +153,7 @@ augroup END
 " Important before any other mappings as general
 " mappings like the leader key are set
 source $HOME/.config/nvim/mappings.vim
+source $HOME/.config/nvim/arduino.vim
 source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fugitive.vim

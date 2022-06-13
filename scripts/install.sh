@@ -129,6 +129,9 @@ brew install ninja
 # (eg. export PATH="/usr/local/opt/llvm/bin:$PATH")
 brew install llvm
 
+# Arduino CLI supported by vim-arduino
+brew install arduino-cli
+
 # Vault secret management
 brew install vault
 

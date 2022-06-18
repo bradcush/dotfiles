@@ -136,6 +136,9 @@ go install github.com/arduino/arduino-language-server@latest
 # Arduino CLI supported by vim-arduino
 brew install arduino-cli
 
+# Dashlane CLI unofficial
+git clone git@github.com:Dashlane/dashlane-cli.git
+
 # Vault secret management
 brew install vault
 

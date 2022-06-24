@@ -42,11 +42,6 @@ presentations:
 problems:
 	@./scripts/sessions/problems.sh
 
-# Start SAE session
-.PHONY: sae
-sae:
-	@./scripts/sessions/sae.sh
-
 # Start scratch session
 .PHONY: scratch
 scratch:

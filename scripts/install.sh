@@ -116,7 +116,7 @@ npm install -g vscode-langservers-extracted
 npm install -g yaml-language-server
 # Lua language server and formatter install (LSP requires compilation)
 # https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
-git clone https://github.com/sumneko/lua-language-server
+git clone git@github.com:sumneko/lua-language-server.git
 luarocks install --server=https://luarocks.org/dev luaformatter
 # Compiling lua-language-server requires ninja
 brew install ninja

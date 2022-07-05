@@ -24,7 +24,7 @@ local on_attach = function(client, bufnr)
     keymap('n', '<leader>ds', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
 
     -- Set some key bindings conditional on server capabilities
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.documentFormattingProvider then
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
         -- Auto-format document prior to saving should be synchronous to
         -- finish update before save. Timeout is arbitrarily set to 500
@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
                 autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)
             augroup END
         ]], true)
-    elseif client.resolved_capabilities.document_range_formatting then
+    elseif client.server_capabilities.documentRangeFormattingProvider then
         keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
     end
 end
@@ -78,7 +78,7 @@ end
 -- with eslint and prettier which is preferred
 nvim_lsp['tsserver'].setup {
     on_attach = function(client, bufnr)
-        client.resolved_capabilities.document_formatting = false
+        client.server_capabilities.documentFormattingProvider = false
         on_attach(client, bufnr)
     end
 }

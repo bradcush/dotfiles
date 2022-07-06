@@ -2,7 +2,7 @@
 
 # Install Homebrew package manager of macOS
 # Homebrew Cask extends Homebrew and comes with it
-# Run "brew update" afterwards for latest formulae
+# Run brew update afterwards for latest formulae
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Yarn for npm dependency mgmt
@@ -58,7 +58,8 @@ git clone git@github.com:fnune/base16-fzf.git
 brew install bat
 
 # Install Neovim development version
-# To upgrade HEAD run "brew reinstall neovim"
+# To upgrade HEAD run brew reinstall neovim
+# You can also brew upgrade neovim
 # brew install --HEAD luajit
 # Required luv to be reinstalled
 # brew install luv
@@ -67,8 +68,8 @@ brew install --HEAD neovim
 # Go for compiling hexokinase
 brew install go
 
-# Download plug.vim and put it in the "autoload"
-# directory for use with "vim-plug" plugin manager
+# Download plug.vim and put it in the autoload
+# directory for use with vim-plug plugin manager
 # https://github.com/junegunn/vim-plug
 # :PlugInstall required before running Neovim successfully
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

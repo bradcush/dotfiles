@@ -102,6 +102,7 @@ brew install markdownlint-cli
 brew install rust-analyzer
 brew install shellcheck
 brew install shfmt
+brew install texlab
 # Globally install eslint/prettier as we to
 # not rely on one location for monorepos
 # Favoring eslint_d over eslint as it launches daemon
@@ -136,6 +137,10 @@ brew install arduino-cli
 
 # Dashlane CLI unofficial
 git clone git@github.com:Dashlane/dashlane-cli.git
+
+# Install latex tools like latexmk
+# and others needed by texlab
+brew install mactex
 
 # Vault secret management
 brew install vault

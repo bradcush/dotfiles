@@ -83,6 +83,24 @@ nvim_lsp['tsserver'].setup {
     end
 }
 
+-- Custom configuration for latex for
+-- building, linting, and formatting
+nvim_lsp['texlab'].setup {
+    on_attach = on_attach,
+    settings = {
+        texlab = {
+            build = {
+                args = {'-pdf', '-interaction=nonstopmode', '-synctex=1', '%f'},
+                executable = 'latexmk',
+                forwardSearchAfter = false,
+                onSave = true
+            },
+            chktex = {onEdit = true, onOpenAndSave = true},
+            latexindent = {modifyLineBreaks = true}
+        }
+    }
+}
+
 -- eslint and prettier custom lsp among others
 -- TODO: Specify separate efm setup for formatting types
 -- we want to disable when there is no local config

@@ -85,12 +85,25 @@ nvim_lsp['tsserver'].setup {
 
 -- Custom configuration for latex for
 -- building, linting, and formatting
+local aux_directory = './auxiliary';
+local output_flag = '-outdir=' .. aux_directory;
 nvim_lsp['texlab'].setup {
     on_attach = on_attach,
     settings = {
         texlab = {
+            -- Current working directory instead
+            -- of the current file location
+            rootDirectory = '.',
+            -- Built files in one directory
+            auxDirectory = aux_directory,
             build = {
-                args = {'-pdf', '-interaction=nonstopmode', '-synctex=1', '%f'},
+                args = {
+                    '-pdf',
+                    '-interaction=nonstopmode',
+                    output_flag,
+                    '-synctex=1',
+                    '%f'
+                },
                 executable = 'latexmk',
                 forwardSearchAfter = false,
                 onSave = true

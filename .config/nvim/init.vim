@@ -29,6 +29,7 @@ Plug 'vim-test/vim-test' " Run test types with different granularity
 Plug 'tpope/vim-fugitive' " Git embedded in vim
 Plug 'tpope/vim-rhubarb' " Fugitive integration with GitHub
 Plug 'shumphrey/fugitive-gitlab.vim' " Fugitive integration with GitLab
+Plug 'mhinz/vim-signify' " Sign column git diff markers
 Plug 'tpope/vim-repeat' " Expanding repeat last action
 Plug 'tpope/vim-surround' " Delete, change, and add surroundings
 Plug 'tpope/vim-commentary' " Commenting support
@@ -61,7 +62,7 @@ set backspace=2 " Backspace set two 2 chars
 set autowrite " Autosave the file when loading another buffer
 autocmd BufWritePre * :%s/\s\+$//e " Auto remove trailing on save
 set showtabline=2 " Always show the tabline
-set updatetime=300 " For a better user experience
+set updatetime=100 " For a better user experience
 set signcolumn=yes " Always show signcolumn to prevent shifting
 
 " Backup/swapfiles
@@ -148,6 +149,23 @@ augroup highlight_yank
     autocmd!
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
 augroup END
+
+" Priority after lsp feedback
+let g:signify_priority = 5
+
+" Disable deleted lines count
+let g:signify_sign_show_count = 0
+
+" Change default sign
+let g:signify_sign_add = '▍'
+let g:signify_sign_delete = '▍'
+let g:signify_sign_delete_first_line = '▍'
+let g:signify_sign_change = '▍'
+let g:signify_sign_change_delete = '▍'
+
+hi SignifySignAdd guifg=#98c379
+hi SignifySignDelete guifg=#be5046
+hi SignifySignChange guifg=#61afef
 
 " Vim specific configurations
 " Important before any other mappings as general

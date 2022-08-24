@@ -25,19 +25,21 @@ local on_attach = function(client, bufnr)
 
     -- Set some key bindings conditional on server capabilities
     if client.server_capabilities.documentFormattingProvider then
-        keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+        keymap('n', '<leader>f',
+               '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
         -- Auto-format document prior to saving should be synchronous to
-        -- finish update before save. Timeout is arbitrarily set to 500
+        -- finish update before save. Timeout left to be the default 1000
         -- milliseconds for now. All files specified instead of current
         -- buffer due to autocmd being removed after new buffer created.
         vim.api.nvim_exec([[
             augroup formatting
                 autocmd!
-                autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)
+                autocmd BufWritePre * lua vim.lsp.buf.format()
             augroup END
         ]], true)
     elseif client.server_capabilities.documentRangeFormattingProvider then
-        keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+        keymap('n', '<leader>f',
+               '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
     end
 end
 

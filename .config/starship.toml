@@ -19,6 +19,8 @@ disabled = true
 disabled = true
 [python]
 disabled = true
+[rust]
+disabled = true
 
 # Increase the default timeout
 command_timeout = 5000

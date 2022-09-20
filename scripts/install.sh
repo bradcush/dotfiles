@@ -12,7 +12,8 @@ brew install yarn
 
 # PNPM for npm dependency mgmt
 # Fixed PNPM version for Dashlane
-npm install -g pnpm@6.32.8
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+
 # Shell tab-completion for pnpm
 pnpm install-completion bash
 pnpm install-completion zsh

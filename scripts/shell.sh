@@ -11,6 +11,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
+# Add pnpm curl location to PATH
+export PNPM_HOME="/Users/bcushing/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # Add pyenv executable to PATH and
 # enable shims by adding the following
 # to ~/.profile and ~/.zprofile:

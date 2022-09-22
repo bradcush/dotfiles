@@ -27,6 +27,10 @@ inoremap . .<C-g>u
 inoremap ! !<C-g>u
 inoremap ? ?<C-g>u
 
+" Paste in visual mode without losing
+" contents of the paste register
+xnoremap <leader>p "_dP
+
 " Cursor to beginning of command-line because
 " the default CTRL-B is taken over by tmux
 " :h cmdline-editing explains more

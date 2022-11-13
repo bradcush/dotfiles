@@ -138,6 +138,9 @@ hi DiagnosticSignHint guifg=#abb2bf
 hi DiagnosticVirtualTextHint guifg=#abb2bf
 hi LspDiagnosticsDefaultHint guifg=#abb2bf
 
+" Highlight code snippets in markdown
+let g:markdown_fenced_languages = ['typescript']
+
 " Split windows
 set splitbelow splitright " New split windows to the bottom/right
 

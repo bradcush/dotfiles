@@ -12,6 +12,8 @@ brew install yarn
 
 # PNPM for npm dependency mgmt
 # Fixed PNPM version for Dashlane
+# Remove then reinstall to upgrade
+# rm -rf $PNPM_HOME
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 # Shell tab-completion for pnpm

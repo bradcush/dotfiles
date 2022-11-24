@@ -14,9 +14,6 @@ brew install yarn
 # Fixed PNPM version for Dashlane
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-# Resolve pnpm-lock.yaml conflicts
-npm install -g @pnpm/merge-driver
-
 # Shell tab-completion for pnpm
 pnpm install-completion bash
 pnpm install-completion zsh

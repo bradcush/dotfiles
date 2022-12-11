@@ -5,6 +5,13 @@ root-markers:
   - .git/
 
 tools:
+  # cpplint: &cpplint
+  #   lint-command: '~/cpplint.py --output=vs7 ${INPUT}'
+  #   lint-stdin: true
+  #   lint-formats:
+  #     - "%f(%l): %tarning %m"
+  #     - "%f(%l): %trror %m"
+
   eslint: &eslint
     lint-command: 'eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}'
     lint-ignore-exit-code: true
@@ -53,6 +60,9 @@ tools:
     format-stdin: true
 
 languages:
+  # cpp:
+  #   - <<: *cpplint
+
   javascript:
     - <<: *eslint
     - <<: *prettier

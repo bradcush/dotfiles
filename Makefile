@@ -22,15 +22,25 @@ bradcush:
 datalgo:
 	@./scripts/sessions/datalgo.sh
 
+# Start dotfiles session
+.PHONY: dotfiles
+dotfiles:
+	@./scripts/sessions/dotfiles.sh
+
 # Start extension session
 .PHONY: extension
 extension:
 	@./scripts/sessions/extension.sh
 
-# Start personal session
-.PHONY: personal
-personal:
-	@./scripts/sessions/personal.sh
+# Start mark session
+.PHONY: mark
+mark:
+	@./scripts/sessions/mark.sh
+
+# Start nyu session
+.PHONY: nyu
+nyu:
+	@./scripts/sessions/nyu.sh
 
 # Start presentations session
 .PHONY: presentations
@@ -46,8 +56,3 @@ problems:
 .PHONY: scratch
 scratch:
 	@./scripts/sessions/scratch.sh
-
-# Start study session
-.PHONY: study
-study:
-	@./scripts/sessions/study.sh

@@ -35,6 +35,10 @@ alias vim='$VIM_EDITOR'
 # Set default editor to nvim
 export EDITOR=${VIM_EDITOR}
 
+# Launch bat instead of cat
+CONCATENATE="bat"
+alias cat='$CONCATENATE'
+
 # Theme for bat syntax highlighting
 # export BAT_THEME="base16-onedark"
 export BAT_THEME="base16"

@@ -23,6 +23,10 @@ local on_attach = function(client, bufnr)
     keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
     keymap('n', '<leader>ds', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
 
+    -- Disable semantic token highlighting which is enabled
+    -- automatically on attach for clients that support it
+    client.server_capabilities.semanticTokensProvider = nil
+
     -- Set some key bindings conditional on server capabilities
     if client.server_capabilities.documentFormattingProvider then
         keymap('n', '<leader>f',

@@ -15,6 +15,8 @@ brew install yarn
 # Remove then reinstall to upgrade
 # rm -rf $PNPM_HOME
 curl -fsSL https://get.pnpm.io/install.sh | sh -
+# Also upgrade pnpm version
+# pnpm add -g pnpm
 
 # Shell tab-completion for pnpm
 pnpm install-completion bash

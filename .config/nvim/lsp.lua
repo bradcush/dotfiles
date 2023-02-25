@@ -1,29 +1,30 @@
 local nvim_lsp = require('lspconfig')
 
+local opts = {noremap = true, silent = true}
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, opts)
+
 local on_attach = function(client, bufnr)
     -- ~/.cache/nvim/lsp.log for debug logs
     -- vim.lsp.set_log_level('debug')
 
-    local function keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-    option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-    -- Mappings
-    local opts = {noremap = true, silent = true}
-    keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-    keymap('n', 'gy', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-    keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-    keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-    keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-    keymap('n', '<leader>dl', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-    keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-    keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-    keymap('n', '<leader>ds', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
+    -- Mappings specific to buffers
+    local bufopts = {noremap = true, silent = true, buffer = bufnr}
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    vim.keymap.set('n', 'gy', vim.lsp.buf.definition, bufopts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', '<leader>ds', vim.lsp.buf.document_symbol, bufopts)
+    local async_format = function() vim.lsp.buf.format {async = true} end
+    vim.keymap.set('n', '<leader>f', async_format, bufopts)
 
     -- Disable semantic token highlighting which is enabled
     -- automatically on attach for clients that support it
@@ -31,8 +32,6 @@ local on_attach = function(client, bufnr)
 
     -- Set some key bindings conditional on server capabilities
     if client.server_capabilities.documentFormattingProvider then
-        keymap('n', '<leader>f',
-               '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
         -- Auto-format document prior to saving should be synchronous to
         -- finish update before save. Timeout left to be the default 1000
         -- milliseconds for now. All files specified instead of current
@@ -43,9 +42,6 @@ local on_attach = function(client, bufnr)
                 autocmd BufWritePre * lua vim.lsp.buf.format()
             augroup END
         ]], true)
-    elseif client.server_capabilities.documentRangeFormattingProvider then
-        keymap('n', '<leader>f',
-               '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
     end
 end
 

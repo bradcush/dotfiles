@@ -142,6 +142,8 @@ brew install arduino-cli
 
 # Dashlane CLI unofficial
 git clone git@github.com:Dashlane/dashlane-cli.git
+# Dashlane CLI install using homebrew
+# brew install --build-from-source dashlane-cli.rb
 
 # Install latex tools like latexmk
 # and others needed by texlab

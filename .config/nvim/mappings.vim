@@ -55,3 +55,8 @@ endfunction
 
 " Open a scratch buffer
 nmap <leader>sc :call Scratch()<CR>
+
+" Bookmarks workflow where global marks HJKL
+" only are used for tagging working files
+nnoremap <leader>dm :delmarks A-Z<CR>
+nnoremap <leader>sm :marks HJKL<CR>

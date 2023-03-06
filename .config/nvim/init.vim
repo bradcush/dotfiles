@@ -36,9 +36,6 @@ Plug 'tpope/vim-commentary' " Commenting support
 " Causing rendering issues in kitty for some reason
 Plug 'tpope/vim-vinegar' " No need for the project drawer
 
-Plug 'nvim-lua/plenary.nvim' " Lua library needed by grapple
-Plug 'cbochs/grapple.nvim' " Tagged file navigation like harpoon
-
 Plug 'michaeljsmith/vim-indent-object' " Indent text objects
 Plug 'kana/vim-textobj-user' " Required dep for entire/line
 Plug 'kana/vim-textobj-entire' " Entire file text objects

@@ -102,6 +102,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Language servers and formatters used
 # with Neovim LSP and efm-langserver
 brew install efm-langserver
+brew install lua-language-server
 brew install pandoc
 brew install markdownlint-cli
 brew install rust-analyzer
@@ -121,12 +122,6 @@ npm install -g vim-language-server
 # Language servers for html, css, and json
 npm install -g vscode-langservers-extracted
 npm install -g yaml-language-server
-# Lua language server and formatter install (LSP requires compilation)
-# https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
-git clone git@github.com:sumneko/lua-language-server.git
-luarocks install --server=https://luarocks.org/dev luaformatter
-# Compiling lua-language-server requires ninja
-brew install ninja
 
 # Install llvm with clangd for C language support
 # Requires path modification in .bashrc

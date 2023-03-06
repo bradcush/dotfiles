@@ -1,7 +1,7 @@
 local nvim_lsp = require('lspconfig')
 
 -- Mappings for diagnostics
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -14,7 +14,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
     -- Mappings specific to buffers
-    local bufopts = {noremap = true, silent = true, buffer = bufnr}
+    local bufopts = { noremap = true, silent = true, buffer = bufnr }
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', 'gy', vim.lsp.buf.definition, bufopts)
@@ -24,7 +24,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', '<leader>ds', vim.lsp.buf.document_symbol, bufopts)
-    local async_format = function() vim.lsp.buf.format {async = true} end
+    local async_format = function() vim.lsp.buf.format { async = true } end
     vim.keymap.set('n', '<leader>f', async_format, bufopts)
 
     -- Disable semantic token highlighting which is enabled
@@ -60,7 +60,7 @@ local servers = {
     'yamlls'
 }
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {on_attach = on_attach}
+    nvim_lsp[lsp].setup { on_attach = on_attach }
 end
 
 -- Overriding how diagnostics are published
@@ -73,10 +73,10 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] =
 -- Change diagnostics icon and highlight group
 -- Setting explicit defaults for icon at the moment
 -- local signs = {Error = ' ', Warn = ' ', Hint = ' ', Info = ' '}
-local signs = {Error = 'E ', Warn = 'W ', Hint = 'H ', Info = 'I '}
+local signs = { Error = 'E ', Warn = 'W ', Hint = 'H ', Info = 'I ' }
 for type, icon in pairs(signs) do
     local hl = 'DiagnosticSign' .. type
-    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 -- Ignore formatting for js and ts because it conflicts
@@ -113,8 +113,8 @@ nvim_lsp['texlab'].setup {
                 forwardSearchAfter = false,
                 onSave = true
             },
-            chktex = {onEdit = true, onOpenAndSave = true},
-            latexindent = {modifyLineBreaks = true}
+            chktex = { onEdit = true, onOpenAndSave = true },
+            latexindent = { modifyLineBreaks = true }
         }
     }
 }
@@ -124,7 +124,7 @@ nvim_lsp['texlab'].setup {
 -- we want to disable when there is no local config
 nvim_lsp['efm'].setup {
     on_attach = on_attach,
-    init_options = {documentFormatting = true},
+    init_options = { documentFormatting = true },
     -- Listing filetypes explicitly as to not conflict with
     -- other language servers that provide formatting
     filetypes = {
@@ -141,22 +141,16 @@ nvim_lsp['efm'].setup {
     }
 }
 
--- Set the path to the sumneko installation
-local sumneko_root_path = '/Users/bcushing/Documents/repos/lua-language-server'
-local sumneko_binary = sumneko_root_path .. '/bin/lua-language-server'
-nvim_lsp['sumneko_lua'].setup {
+-- Lua language server custom setup
+nvim_lsp['lua_ls'].setup {
     on_attach = on_attach,
-    cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'},
     settings = {
         Lua = {
-            runtime = {version = 'LuaJIT', path = vim.split(package.path, ';')},
-            diagnostics = {globals = {'vim'}},
-            workspace = {
-                library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true
-                }
-            }
+            runtime = { version = 'LuaJIT' },
+            diagnostics = { globals = { 'vim' } },
+            -- Make the server aware of Neovim runtime files
+            workspace = { library = vim.api.nvim_get_runtime_file('', true) },
+            telemetry = { enable = false }
         }
     }
 }

@@ -31,6 +31,10 @@ inoremap ? ?<C-g>u
 " contents of the paste register
 xnoremap <leader>p "_dP
 
+" Copy to universal clipboard
+nnoremap <leader>y "*y
+nmap <leader>Y "*Y
+
 " Cursor to beginning of command-line because
 " the default CTRL-B is taken over by tmux
 " :h cmdline-editing explains more

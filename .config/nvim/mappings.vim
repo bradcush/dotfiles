@@ -56,7 +56,21 @@ endfunction
 " Open a scratch buffer
 nmap <leader>sc :call Scratch()<CR>
 
-" Bookmarks workflow where global marks HJKL
+" Bookmarks workflow where global marks ABCDE
 " only are used for tagging working files
-nnoremap <leader>dm :delmarks A-Z<CR>
-nnoremap <leader>sm :marks HJKL<CR>
+nnoremap <leader>sm :marks ABCDE<CR>
+nnoremap <leader>dm :delmarks ABCDE<CR>
+" Set special marks using numbers
+" to retain visual keyboard order
+nnoremap m1 mA
+nnoremap m2 mB
+nnoremap m3 mC
+nnoremap m4 mD
+nnoremap m5 mE
+" Naviate to special marks with <leader>number
+" so there is no mapping overlap and no delay
+nnoremap <leader>1 `Azz
+nnoremap <leader>2 `Bzz
+nnoremap <leader>3 `Czz
+nnoremap <leader>4 `Dzz
+nnoremap <leader>5 `Ezz

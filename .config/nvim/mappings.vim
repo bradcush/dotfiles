@@ -2,7 +2,8 @@
 let mapleader = " " " Map leader to space
 
 " Edit and source nvim init file
-nmap <leader>rc :e ~/Documents/repos/dotfiles/.config/nvim/init.vim<CR>
+nmap <leader>rc <cmd>e ~/Documents/repos/dotfiles/.config/nvim/init.vim<CR>
+" Specify with colon so command shows
 nmap <leader>so :so ~/.config/nvim/init.vim<CR>
 
 " Window navigation
@@ -12,14 +13,11 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Toggle spell checking
-nmap <leader>sp :set spell spelllang=en_us spelloptions=camel<CR>
-nmap <leader>ns :set nospell<CR>
+nmap <leader>sp <cmd>set spell spelllang=en_us spelloptions=camel<CR>
+nmap <leader>ns <cmd>set nospell<CR>
 
 " Output highlight groups
-nmap <leader>hi :so $VIMRUNTIME/syntax/hitest.vim<CR>
-
-" Copy from position
-nnoremap Y y$
+nmap <leader>hi <cmd>so $VIMRUNTIME/syntax/hitest.vim<CR>
 
 " Undo break points
 inoremap , ,<C-g>u

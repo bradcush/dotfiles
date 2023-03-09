@@ -29,6 +29,9 @@ inoremap ? ?<C-g>u
 " contents of the paste register
 xnoremap <leader>p "_dP
 
+" Copy from position
+nnoremap Y y$
+
 " Copy to universal clipboard
 nnoremap <leader>y "*y
 nmap <leader>Y "*Y

@@ -24,8 +24,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', '<leader>ds', vim.lsp.buf.document_symbol, bufopts)
-    local async_format = function() vim.lsp.buf.format { async = true } end
-    vim.keymap.set('n', '<leader>f', async_format, bufopts)
+    -- Format synchronously avoids glitching behaviour
+    vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format, bufopts)
 
     -- Disable semantic token highlighting which is enabled
     -- automatically on attach for clients that support it

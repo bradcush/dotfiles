@@ -13,5 +13,3 @@ nmap <leader>fs :Rg<CR>
 nmap <leader>gf :GFiles<CR>
 " Git files from status
 nmap <leader>gs :GFiles?<CR>
-" All registered marks
-nmap <leader>fm :Marks<CR>

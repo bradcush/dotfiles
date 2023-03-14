@@ -128,7 +128,7 @@ nvim_lsp['efm'].setup {
     -- Listing filetypes explicitly as to not conflict with
     -- other language servers that provide formatting
     filetypes = {
-        'lua',
+        -- 'lua',
         'markdown',
         'python',
         'javascript',

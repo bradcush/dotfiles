@@ -21,10 +21,6 @@ tools:
       - "%f(%l,%c): %rror %m"
     format-stdin: true
 
-  # lua-lua-format: &lua-lua-format
-  #   format-command: 'lua-format -i'
-  #   format-stdin: true
-
   markdown-markdownlint: &markdown-markdownlint
     lint-command: 'markdownlint -s'
     lint-stdin: true
@@ -74,9 +70,6 @@ languages:
   javascript.jsx:
     - <<: *eslint
     - <<: *prettier
-
-  # lua:
-  #   - <<: *lua-lua-format
 
   markdown:
     - <<: *markdown-markdownlint

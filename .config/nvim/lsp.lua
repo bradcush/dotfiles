@@ -24,8 +24,9 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', '<leader>ds', vim.lsp.buf.document_symbol, bufopts)
-    -- Format synchronously avoids glitching behaviour
-    vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format, bufopts)
+    -- No need to block anything when formatting manually
+    local async_format = function() vim.lsp.buf.format { async = true } end
+    vim.keymap.set('n', '<leader>fm', async_format, bufopts)
 
     -- Disable semantic token highlighting which is enabled
     -- automatically on attach for clients that support it
@@ -128,7 +129,6 @@ nvim_lsp['efm'].setup {
     -- Listing filetypes explicitly as to not conflict with
     -- other language servers that provide formatting
     filetypes = {
-        -- 'lua',
         'markdown',
         'python',
         'javascript',

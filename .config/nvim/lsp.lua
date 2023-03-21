@@ -32,6 +32,9 @@ local on_attach = function(client, bufnr)
     -- automatically on attach for clients that support it
     client.server_capabilities.semanticTokensProvider = nil
 
+    -- Disable formatting (eg. gqq) by language server
+    vim.api.nvim_buf_set_option(bufnr, 'formatexpr', '')
+
     -- Set some key bindings conditional on server capabilities
     if client.server_capabilities.documentFormattingProvider then
         -- Auto-format document prior to saving should be synchronous to

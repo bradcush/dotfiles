@@ -139,6 +139,9 @@ hi DiagnosticSignHint guifg=#abb2bf
 hi DiagnosticVirtualTextHint guifg=#abb2bf
 hi LspDiagnosticsDefaultHint guifg=#abb2bf
 
+" Copilot colors like comments
+hi CopilotSuggestion guifg=#545862
+
 " Highlight code snippets in markdown
 let g:markdown_fenced_languages = ['typescript']
 

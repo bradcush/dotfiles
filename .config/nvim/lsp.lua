@@ -6,6 +6,8 @@ vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, opts)
+local workspace_diagnostics = '<cmd>TroubleToggle workspace_diagnostics<CR>'
+vim.keymap.set('n', '<leader>dw', workspace_diagnostics, opts)
 
 local on_attach = function(client, bufnr)
     -- ~/.cache/nvim/lsp.log for debug logs
@@ -177,3 +179,9 @@ nvim_lsp['arduino_language_server'].setup({
         'arduino-cli'
     }
 })
+
+-- Trouble pretty lists setup
+require("trouble").setup {
+    icons = false,
+    padding = false
+}

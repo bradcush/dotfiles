@@ -13,6 +13,7 @@ Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
 Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 Plug 'github/copilot.vim' " GitHub copilot integration
+Plug 'folke/trouble.nvim' " Pretty lists for LSP features
 
 " Fill gaps in syntax highlighting support
 Plug 'keith/swift.vim' " Syntax highlights for Swift

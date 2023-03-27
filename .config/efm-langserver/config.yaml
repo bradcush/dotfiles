@@ -29,6 +29,10 @@ tools:
       - '%f:%l:%c %m'
       - '%f: %l: %m'
 
+  lua-lua-format: &lua-lua-format
+    format-command: 'lua-format -i'
+    format-stdin: true
+
   markdown-pandoc: &markdown-pandoc
     format-command: 'pandoc -f markdown -t gfm+smart --tab-stop=2 --wrap=preserve'
     format-stdin: true
@@ -70,6 +74,9 @@ languages:
   javascript.jsx:
     - <<: *eslint
     - <<: *prettier
+
+  lua:
+    - <<: *lua-lua-format
 
   markdown:
     - <<: *markdown-markdownlint

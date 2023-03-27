@@ -1,7 +1,7 @@
 local nvim_lsp = require('lspconfig')
 
 -- Mappings for diagnostics
-local opts = { noremap = true, silent = true }
+local opts = {noremap = true, silent = true}
 vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -16,7 +16,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
     -- Mappings specific to buffers
-    local bufopts = { noremap = true, silent = true, buffer = bufnr }
+    local bufopts = {noremap = true, silent = true, buffer = bufnr}
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', 'gy', vim.lsp.buf.type_definition, bufopts)
@@ -27,7 +27,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', '<leader>ds', vim.lsp.buf.document_symbol, bufopts)
     -- No need to block anything when formatting manually
-    local async_format = function() vim.lsp.buf.format { async = true } end
+    local async_format = function() vim.lsp.buf.format {async = true} end
     vim.keymap.set('n', '<leader>fm', async_format, bufopts)
 
     -- Disable semantic token highlighting which is enabled
@@ -66,7 +66,7 @@ local servers = {
     'yamlls'
 }
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup { on_attach = on_attach }
+    nvim_lsp[lsp].setup {on_attach = on_attach}
 end
 
 -- Overriding how diagnostics are published
@@ -79,19 +79,34 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] =
 -- Change diagnostics icon and highlight group
 -- Setting explicit defaults for icon at the moment
 -- local signs = {Error = ' ', Warn = ' ', Hint = ' ', Info = ' '}
-local signs = { Error = 'E ', Warn = 'W ', Hint = 'H ', Info = 'I ' }
+local signs = {Error = 'E ', Warn = 'W ', Hint = 'H ', Info = 'I '}
 for type, icon in pairs(signs) do
     local hl = 'DiagnosticSign' .. type
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
+end
+
+-- Disable default formatting to allow something custom
+local on_attach_without_formatting = function(client, bufnr)
+    client.server_capabilities.documentFormattingProvider = false
+    on_attach(client, bufnr)
 end
 
 -- Ignore formatting for js and ts because it conflicts
 -- with eslint and prettier which is preferred
-nvim_lsp['tsserver'].setup {
-    on_attach = function(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = false
-        on_attach(client, bufnr)
-    end
+nvim_lsp['tsserver'].setup {on_attach = on_attach_without_formatting}
+
+-- Lua language server custom setup
+nvim_lsp['lua_ls'].setup {
+    on_attach = on_attach_without_formatting,
+    settings = {
+        Lua = {
+            runtime = {version = 'LuaJIT'},
+            diagnostics = {globals = {'vim'}},
+            -- Make the server aware of Neovim runtime files
+            workspace = {library = vim.api.nvim_get_runtime_file('', true)},
+            telemetry = {enable = false}
+        }
+    }
 }
 
 -- Custom configuration for latex for
@@ -119,8 +134,8 @@ nvim_lsp['texlab'].setup {
                 forwardSearchAfter = false,
                 onSave = true
             },
-            chktex = { onEdit = true, onOpenAndSave = true },
-            latexindent = { modifyLineBreaks = true }
+            chktex = {onEdit = true, onOpenAndSave = true},
+            latexindent = {modifyLineBreaks = true}
         }
     }
 }
@@ -130,10 +145,11 @@ nvim_lsp['texlab'].setup {
 -- we want to disable when there is no local config
 nvim_lsp['efm'].setup {
     on_attach = on_attach,
-    init_options = { documentFormatting = true },
+    init_options = {documentFormatting = true},
     -- Listing filetypes explicitly as to not conflict with
     -- other language servers that provide formatting
     filetypes = {
+        'lua',
         'markdown',
         'python',
         'javascript',
@@ -143,20 +159,6 @@ nvim_lsp['efm'].setup {
         'typescript',
         'typescriptreact',
         'typescript.tsx'
-    }
-}
-
--- Lua language server custom setup
-nvim_lsp['lua_ls'].setup {
-    on_attach = on_attach,
-    settings = {
-        Lua = {
-            runtime = { version = 'LuaJIT' },
-            diagnostics = { globals = { 'vim' } },
-            -- Make the server aware of Neovim runtime files
-            workspace = { library = vim.api.nvim_get_runtime_file('', true) },
-            telemetry = { enable = false }
-        }
     }
 }
 

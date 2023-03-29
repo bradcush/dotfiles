@@ -183,7 +183,12 @@ nvim_lsp['arduino_language_server'].setup({
 })
 
 -- Trouble pretty lists setup
-require("trouble").setup {
+require('trouble').setup {
     icons = false,
-    padding = false
+    padding = false,
+    signs = {
+        -- Not specified by default
+        other = 'O'
+    },
+    use_diagnostic_signs = true
 }

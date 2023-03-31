@@ -1,6 +1,6 @@
 " Test command mappings
-nmap <leader>tn :TestNearest<CR>
-nmap <leader>tf :TestFile<CR>
-nmap <leader>ts :TestSuite<CR>
-nmap <leader>tl :TestLast<CR>
-nmap <leader>tv :TestVisit<CR>
+nmap <leader>tn :TestNearest<cr>
+nmap <leader>tf :TestFile<cr>
+nmap <leader>ts :TestSuite<cr>
+nmap <leader>tl :TestLast<cr>
+nmap <leader>tv :TestVisit<cr>

@@ -36,4 +36,4 @@ let g:startify_commands = [
 autocmd User Startified setlocal cursorline
 
 " Go boack to start screen
-nnoremap <leader>st :Startify<CR>
+nnoremap <leader>st :Startify<cr>

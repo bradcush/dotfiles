@@ -2,9 +2,9 @@
 let mapleader = " " " Map leader to space
 
 " Edit and source nvim init file
-nmap <leader>rc <cmd>e ~/Documents/repos/dotfiles/.config/nvim/init.vim<CR>
+nmap <leader>rc <cmd>e ~/Documents/repos/dotfiles/.config/nvim/init.vim<cr>
 " Specify with colon so command shows
-nmap <leader>so :so ~/.config/nvim/init.vim<CR>
+nmap <leader>so :so ~/.config/nvim/init.vim<cr>
 
 " Window navigation
 nnoremap <C-h> <C-w>h
@@ -13,11 +13,11 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Toggle spell checking
-nmap <leader>sp <cmd>set spell spelllang=en_us spelloptions=camel<CR>
-nmap <leader>ns <cmd>set nospell<CR>
+nmap <leader>sp <cmd>set spell spelllang=en_us spelloptions=camel<cr>
+nmap <leader>ns <cmd>set nospell<cr>
 
 " Output highlight groups
-nmap <leader>hi <cmd>so $VIMRUNTIME/syntax/hitest.vim<CR>
+nmap <leader>hi <cmd>so $VIMRUNTIME/syntax/hitest.vim<cr>
 
 " Undo break points
 inoremap , ,<C-g>u
@@ -59,12 +59,12 @@ function! Scratch()
 endfunction
 
 " Open a scratch buffer
-nmap <leader>sc :call Scratch()<CR>
+nmap <leader>sc :call Scratch()<cr>
 
 " Bookmarks workflow where global marks ASDFG
 " only are used for tagging working files
-nnoremap <leader>sm :marks ASDFG<CR>
-nnoremap <leader>dm :delmarks ASDFG<CR>
+nnoremap <leader>sm :marks ASDFG<cr>
+nnoremap <leader>dm :delmarks ASDFG<cr>
 " Set special marks using left hand home
 " row to retain visual keyboard order
 nnoremap ma mA

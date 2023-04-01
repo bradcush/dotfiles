@@ -140,9 +140,7 @@ nvim_lsp['texlab'].setup {
     }
 }
 
--- eslint and prettier custom lsp among others
--- TODO: Specify separate efm setup for formatting types
--- we want to disable when there is no local config
+-- Custom language server setup
 nvim_lsp['efm'].setup {
     on_attach = on_attach,
     init_options = {documentFormatting = true},

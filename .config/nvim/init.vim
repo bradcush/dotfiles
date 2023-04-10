@@ -38,10 +38,6 @@ Plug 'tpope/vim-commentary' " Commenting support
 " Causing rendering issues in kitty for some reason
 Plug 'tpope/vim-vinegar' " No need for the project drawer
 
-Plug 'michaeljsmith/vim-indent-object' " Indent text objects
-Plug 'kana/vim-textobj-user' " Required dep for entire/line
-Plug 'kana/vim-textobj-entire' " Entire file text objects
-
 Plug 'chriskempson/base16-vim' " Standard vim highlight groups
 " Temporary plugin development for personal base16-nvim
 " Plug '~/Documents/repos/base16-nvim' " Standard nvim highlight groups

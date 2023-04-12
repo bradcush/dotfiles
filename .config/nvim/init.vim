@@ -117,6 +117,9 @@ autocmd BufEnter * :syntax sync fromstart
 " hi Whitespace guifg=grey
 " hi NonText guifg=grey
 hi Comment gui=italic
+" Floating window styles
+hi FloatBorder guifg=#545862
+" hi NormalFloat guibg=#282c34
 " Diagnostic information colors
 " Specified for default and virtual text
 hi DiagnosticFloatingError guifg=#be5046
@@ -135,7 +138,6 @@ hi DiagnosticFloatingHint guifg=#abb2bf
 hi DiagnosticSignHint guifg=#abb2bf
 hi DiagnosticVirtualTextHint guifg=#abb2bf
 hi LspDiagnosticsDefaultHint guifg=#abb2bf
-
 " Copilot colors like comments
 hi CopilotSuggestion guifg=#545862
 

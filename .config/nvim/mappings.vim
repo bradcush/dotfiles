@@ -60,22 +60,3 @@ endfunction
 
 " Open a scratch buffer
 nmap <leader>sc :call Scratch()<cr>
-
-" Bookmarks workflow where global marks ASDFG
-" only are used for tagging working files
-nnoremap <leader>sm :marks ASDFG<cr>
-nnoremap <leader>dm :delmarks ASDFG<cr>
-" Set special marks using left hand home
-" row to retain visual keyboard order
-nnoremap ma mA
-nnoremap ms mS
-nnoremap md mD
-nnoremap mf mF
-nnoremap mg mG
-" Naviate to special marks with <leader>m<letter>
-" so there is no mapping overlap and no delay
-nnoremap <leader>ma `Azz
-nnoremap <leader>ms `Szz
-nnoremap <leader>md `Dzz
-nnoremap <leader>mf `Fzz
-nnoremap <leader>mg `Gzz

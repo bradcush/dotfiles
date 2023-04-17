@@ -11,5 +11,5 @@ grapple.setup({
 
 -- Mapping most commonly used functions
 vim.keymap.set('n', '<leader>go', grapple.popup_tags)
-vim.keymap.set('n', '<leader>gc', grapple.cycle_forward)
+vim.keymap.set('n', '<leader>gh', grapple.cycle_forward)
 vim.keymap.set('n', '<leader>gm', grapple.toggle)

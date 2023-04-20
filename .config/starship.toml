@@ -13,6 +13,8 @@ disabled = true
 
 # Disable showing some
 # language versions
+[dotnet]
+disabled = true
 [lua]
 disabled = true
 [nodejs]

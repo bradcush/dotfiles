@@ -29,10 +29,6 @@ local on_attach = function(client, bufnr)
     local async_format = function() vim.lsp.buf.format {async = true} end
     vim.keymap.set('n', '<leader>fm', async_format, bufopts)
 
-    -- Disable semantic token highlighting which is enabled
-    -- automatically on attach for clients that support it
-    client.server_capabilities.semanticTokensProvider = nil
-
     -- Set some key bindings conditional on server capabilities
     if client.server_capabilities.documentFormattingProvider then
         -- Auto-format document prior to saving should be synchronous to
@@ -52,6 +48,11 @@ end
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(args) vim.bo[args.buf].formatexpr = nil end
 })
+
+-- Hide all semantic highlights by disabling groups
+for _, group in ipairs(vim.fn.getcompletion('@lsp', 'highlight')) do
+    vim.api.nvim_set_hl(0, group, {})
+end
 
 -- Use a loop to conveniently setup defined servers and map
 -- buffer local keybindings when the language server attaches

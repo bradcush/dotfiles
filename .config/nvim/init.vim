@@ -15,9 +15,6 @@ Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 Plug 'github/copilot.vim' " GitHub copilot integration
 Plug 'folke/trouble.nvim' " Pretty lists for LSP features
 
-Plug 'nvim-lua/plenary.nvim' " Lua functions for Neovim
-Plug 'cbochs/grapple.nvim' " Harpoon like file naviation
-
 " Fill gaps in syntax highlighting support
 Plug 'keith/swift.vim' " Syntax highlights for Swift
 Plug 'octol/vim-cpp-enhanced-highlight' " Syntax highlights for C languages
@@ -176,5 +173,4 @@ source $HOME/.config/nvim/signify.vim
 source $HOME/.config/nvim/test.vim
 
 " Neovim specific configurations
-luafile $HOME/.config/nvim/grapple.lua
 luafile $HOME/.config/nvim/lsp.lua

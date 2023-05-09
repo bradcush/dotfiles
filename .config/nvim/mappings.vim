@@ -16,7 +16,8 @@ nnoremap <C-l> <C-w>l
 nmap <leader>sp <cmd>set spell spelllang=en_us spelloptions=camel<cr>
 nmap <leader>ns <cmd>set nospell<cr>
 
-" Output highlight groups
+" Output active highlight groups
+" :highlight lists all highlight groups
 nmap <leader>hi <cmd>so $VIMRUNTIME/syntax/hitest.vim<cr>
 
 " Undo break points

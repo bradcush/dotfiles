@@ -157,6 +157,9 @@ npm install -g tldr
 # Display keys pressed on your screen
 brew install keycastr
 
+# Rectangle window manager
+brew install --cask rectangle
+
 # Neofetch for system stat in cli
 brew install neofetch
 

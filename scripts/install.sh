@@ -160,6 +160,12 @@ brew install keycastr
 # Rectangle window manager
 brew install --cask rectangle
 
+# Install cht.sh client
+# https://github.com/chubin/cheat.sh
+PATH_DIR="$HOME/bin" && mkdir -p "$PATH_DIR"
+curl https://cht.sh/:cht.sh >"$PATH_DIR/cht.sh"
+chmod +x "$PATH_DIR/cht.sh"
+
 # Neofetch for system stat in cli
 brew install neofetch
 

@@ -22,7 +22,7 @@ Plug 'jxnblk/vim-mdx-js' " Syntax highlights for MDX documentation
 Plug 'cespare/vim-toml' " Syntax highlights for toml configs
 Plug 'stevearc/vim-arduino' " Compile, upload, and debug arduino sketches
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' } " Markdown preview in the browser
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig files for settings
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' } " Inline color code preview
 Plug 'heavenshell/vim-jsdoc', { 'do': 'make install' } " JSDoc integration w/ autocompletion

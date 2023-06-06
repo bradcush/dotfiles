@@ -5,6 +5,9 @@
 # Run brew update afterwards for latest formulae
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Bun to run, test, transpile, and bundle
+curl -fsSL https://bun.sh/install | bash
+
 # Yarn for npm dependency mgmt
 # Global symlinks using /opt/homebrew/bin
 # yarn global bin shows binary path

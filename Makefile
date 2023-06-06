@@ -27,11 +27,6 @@ datalgo:
 dotfiles:
 	@./scripts/sessions/dotfiles.sh
 
-# Start extension session
-.PHONY: extension
-extension:
-	@./scripts/sessions/extension.sh
-
 # Start mark session
 .PHONY: mark
 mark:

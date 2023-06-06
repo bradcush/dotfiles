@@ -46,7 +46,6 @@ make arduino
 make bradcush
 make datalgo
 make dotfiles
-make extension
 make mark
 make nyu
 make presentations

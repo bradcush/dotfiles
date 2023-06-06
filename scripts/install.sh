@@ -3,7 +3,7 @@
 # Install Homebrew package manager of macOS
 # Homebrew Cask extends Homebrew and comes with it
 # Run brew update afterwards for latest formulae
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Yarn for npm dependency mgmt
 # Global symlinks using /opt/homebrew/bin

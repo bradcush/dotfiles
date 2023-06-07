@@ -13,6 +13,8 @@ disabled = true
 
 # Disable showing some
 # language versions
+[bun]
+disabled = true
 [dotnet]
 disabled = true
 [lua]

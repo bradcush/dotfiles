@@ -52,7 +52,7 @@ brew install zsh-syntax-highlighting
 
 # A command-line fuzzy finder
 brew install fzf
-"$(brew --prefix)"/opt/fzf/install
+/opt/homebrew/opt/fzf/install
 
 # Rg and Ag for use with fzf
 brew install ripgrep

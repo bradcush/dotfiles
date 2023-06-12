@@ -65,6 +65,9 @@ languages:
     - <<: *eslint
     - <<: *prettier
 
+  json:
+    - <<: *eslint
+
   lua:
     - <<: *lua-lua-format
 

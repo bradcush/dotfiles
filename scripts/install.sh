@@ -83,18 +83,19 @@ brew install go
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# For python remote-plugins support
-# python -m pip install --user --upgrade pynvim
-# python2 -m pip install --upgrade pip
-# python3 -m pip install --upgrade pip
+# NVM for managing node versions
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
 # For JS remote-plugins support
 npm install -g neovim
 
-# NVM for managing node versions
-brew install nvm
-
 # pyenv for managing python versions
+# Set both version with 3 first
+# pyenv global 3.11.3 2.7.18
 brew install pyenv
+
+# For python remote-plugins support
+# python -m pip install neovim
 
 # virtualenv for managing python environments
 brew install --HEAD pyenv-virtualenv

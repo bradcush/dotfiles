@@ -35,3 +35,10 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Source pnpm tabtab for packages
 [[ -f /Users/bradleycushing/.config/tabtab/zsh/__tabtab.zsh ]] \
   && source /Users/bradleycushing/.config/tabtab/zsh/__tabtab.zsh
+
+# Bun auto-completion for zsh
+[ -s "/Users/bradleycushing/.bun/_bun" ] && source "/Users/bradleycushing/.bun/_bun"
+
+# Add Bun to path
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

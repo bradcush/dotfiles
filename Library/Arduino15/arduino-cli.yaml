@@ -3,9 +3,9 @@ board_manager:
 daemon:
   port: "50051"
 directories:
-  data: /Users/bcushing/Library/Arduino15
-  downloads: /Users/bcushing/Library/Arduino15/staging
-  user: /Users/bcushing/Documents/Arduino
+  data: /Users/bradleycushing/Library/Arduino15
+  downloads: /Users/bradleycushing/Library/Arduino15/staging
+  user: /Users/bradleycushing/Documents/Arduino
 library:
   enable_unsafe_install: false
 logging:

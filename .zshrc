@@ -5,13 +5,13 @@ export FZF_BASE=/usr/local/bin/fzf
 
 # Source shared configuration
 source ~/Documents/repos/dotfiles/scripts/shell.sh
-[ -f /Users/bcushing/.fzf.zsh ] && source /Users/bcushing/.fzf.zsh
+[ -f /Users/bradleycushing/.fzf.zsh ] && source /Users/bradleycushing/.fzf.zsh
 
 # zsh-autosuggestions setup
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh-autocomplete setup
-# source /Users/bcushing/Documents/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source /Users/bradleycushing/Documents/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Completion configuration
 autoload -Uz compinit # Mark compinit function
@@ -33,5 +33,5 @@ eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Source pnpm tabtab for packages
-[[ -f /Users/bcushing/.config/tabtab/zsh/__tabtab.zsh ]] \
-  && source /Users/bcushing/.config/tabtab/zsh/__tabtab.zsh
+[[ -f /Users/bradleycushing/.config/tabtab/zsh/__tabtab.zsh ]] \
+  && source /Users/bradleycushing/.config/tabtab/zsh/__tabtab.zsh

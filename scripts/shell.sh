@@ -8,11 +8,11 @@ export CLICOLOR=1
 
 # Init for nvm node version manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
 # Add pnpm curl location to PATH
-export PNPM_HOME="/Users/bcushing/Library/pnpm"
+export PNPM_HOME="/Users/bradleycushing/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # Add pyenv executable to PATH and
@@ -45,7 +45,7 @@ export BAT_THEME="base16"
 
 # One dark colorscheme for fzf
 # https://github.com/fnune/base16-fzf
-. /Users/bcushing/Documents/repos/base16-fzf/bash/base16-onedark.config
+. /Users/bradleycushing/Documents/repos/base16-fzf/bash/base16-onedark.config
 
 # For clangd and other llvm related binaries
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
@@ -55,4 +55,4 @@ export GPG_TTY="$TTY"
 
 # Source env script for adding the
 # cargo binary to path for Rust
-. /Users/bcushing/.cargo/env
+. /Users/bradleycushing/.cargo/env

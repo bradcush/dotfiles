@@ -19,6 +19,7 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/bat
 mkdir -p ~/.config/efm-langserver
 mkdir -p ~/.config/nvim
+mkdir -p ~/Library/Arduino15
 
 # nvim config symlinks
 ln -s "$DOTFILES_PATH"/.config/efm-langserver/config.yaml ~/.config/efm-langserver/config.yaml

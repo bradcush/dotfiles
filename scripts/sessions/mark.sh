@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MARK_DIRECTORY=~/Documents/repos/mark
+MARK_DIRECTORY=~/Documents/repos/mark-tab-manager
 SESSION="mark"
 VIM="vim"
 

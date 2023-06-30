@@ -127,6 +127,11 @@ npm install -g vim-language-server
 npm install -g vscode-langservers-extracted
 npm install -g yaml-language-server
 
+# LuaRocks package mgmt
+brew install luarocks
+# Better Lua source code formatting
+luarocks install --server=https://luarocks.org/dev luaformatter
+
 # Install llvm with clangd for C language support
 # Requires path modification in .bashrc
 # (eg. export PATH="/usr/local/opt/llvm/bin:$PATH")

@@ -13,3 +13,5 @@ nmap <leader>fs :Rg<cr>
 nmap <leader>gf :GFiles<cr>
 " Git files from status
 nmap <leader>gs :GFiles?<cr>
+" Helptags for documentation
+nmap <leader>ht :Helptags<cr>

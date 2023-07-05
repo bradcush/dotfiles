@@ -173,4 +173,5 @@ source $HOME/.config/nvim/signify.vim
 source $HOME/.config/nvim/test.vim
 
 " Neovim specific configurations
+luafile $HOME/.config/nvim/globals.lua
 luafile $HOME/.config/nvim/lsp.lua

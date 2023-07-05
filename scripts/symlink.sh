@@ -28,6 +28,7 @@ ln -s "$DOTFILES_PATH"/.config/nvim/completion.vim ~/.config/nvim/completion.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/editorconfig.vim ~/.config/nvim/editorconfig.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/fugitive.vim ~/.config/nvim/fugitive.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/fzf.vim ~/.config/nvim/fzf.vim
+ln -s "$DOTFILES_PATH"/.config/nvim/globals.lua ~/.config/nvim/globals.lua
 ln -s "$DOTFILES_PATH"/.config/nvim/hardtime.vim ~/.config/nvim/hardtime.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/lightline.vim ~/.config/nvim/lightline.vim

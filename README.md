@@ -61,3 +61,7 @@ files respectively. Configuration specific to fzf is contained in `.fzf.bash`
 and `.fzf.zsh` and sourced in their respective shell configs. Additional
 profile and environment related files for both shells is tracked also
 regardless of if they are empty or contain addition configuration.
+
+## License
+
+[dotfiles MIT License](LICENSE)

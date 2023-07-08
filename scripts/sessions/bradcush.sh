@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BRADCUSH_DIRECTORY=~/Documents/repos/bradcush
+BRADCUSH_DIRECTORY=~/Documents/repos/bradleycushing.com
 SESSION="bradcush"
 VIM="vim"
 

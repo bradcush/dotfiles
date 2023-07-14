@@ -15,6 +15,9 @@ Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 Plug 'github/copilot.vim' " GitHub copilot integration
 Plug 'folke/trouble.nvim' " Pretty lists for LSP features
 
+Plug 'nvim-lua/plenary.nvim' " Helpful Lua utilities for Neovim
+Plug 'bradcush/nvim-deeps' " Neovim LLM assistant
+
 " Fill gaps in syntax highlighting support
 Plug 'keith/swift.vim' " Syntax highlights for Swift
 Plug 'octol/vim-cpp-enhanced-highlight' " Syntax highlights for C languages

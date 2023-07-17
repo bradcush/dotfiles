@@ -43,7 +43,7 @@ Plug 'tpope/vim-vinegar' " No need for the project drawer
 
 Plug 'chriskempson/base16-vim' " Standard vim highlight groups
 " Temporary plugin development for personal base16-nvim
-" Plug '~/Documents/repos/base16-nvim' " Standard nvim highlight groups
+" Plug '~/Documents/repos/nvim-base16' " Standard nvim highlight groups
 " Initialize plugin system
 call plug#end()
 

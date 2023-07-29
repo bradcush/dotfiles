@@ -11,7 +11,11 @@ curl -fsSL https://bun.sh/install | bash
 # Yarn for npm dependency mgmt
 # Global symlinks using /opt/homebrew/bin
 # yarn global bin shows binary path
-brew install yarn
+# https://yarnpkg.com/getting-started/install
+# Shipped with Node.js >= 16.10
+corepack enable
+# Update global yarn version
+corepack prepare yarn@stable --activate
 
 # PNPM for npm dependency mgmt
 # Fixed PNPM version for Dashlane

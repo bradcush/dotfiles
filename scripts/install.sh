@@ -148,10 +148,10 @@ go install github.com/arduino/arduino-language-server@latest
 # Arduino CLI supported by vim-arduino
 brew install arduino-cli
 
-# Dashlane CLI unofficial
+# Experimental Dashlane CLI
 git clone git@github.com:Dashlane/dashlane-cli.git
-# Dashlane CLI install using homebrew
-# brew install --build-from-source dashlane-cli.rb
+# Install using Dashlane homebrew
+# brew install dashlane/tap/dashlane-cli
 
 # Install latex tools like latexmk
 # and others needed by texlab

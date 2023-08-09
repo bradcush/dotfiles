@@ -22,6 +22,11 @@ bradcush:
 datalgo:
 	@./scripts/sessions/datalgo.sh
 
+# Start deeps session
+.PHONY: deeps
+deeps:
+	@./scripts/sessions/deeps.sh
+
 # Start dotfiles session
 .PHONY: dotfiles
 dotfiles:

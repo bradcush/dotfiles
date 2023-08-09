@@ -45,6 +45,7 @@ session will also setup an environment or open multiple repositories.
 make arduino
 make bradcush
 make datalgo
+make deeps
 make dotfiles
 make mark
 make nyu

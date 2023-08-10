@@ -17,6 +17,8 @@ Plug 'folke/trouble.nvim' " Pretty lists for LSP features
 
 Plug 'nvim-lua/plenary.nvim' " Helpful Lua utilities for Neovim
 Plug 'bradcush/nvim-deeps' " Neovim LLM assistant
+" Temporary plugin development for nvim-deeps
+" Plug '~/Documents/repos/nvim-deeps' " Neovim LLM assistant
 
 " Fill gaps in syntax highlighting support
 Plug 'keith/swift.vim' " Syntax highlights for Swift
@@ -42,7 +44,7 @@ Plug 'tpope/vim-commentary' " Commenting support
 Plug 'tpope/vim-vinegar' " No need for the project drawer
 
 Plug 'chriskempson/base16-vim' " Standard vim highlight groups
-" Temporary plugin development for personal base16-nvim
+" Temporary plugin development for personal nvim-base16
 " Plug '~/Documents/repos/nvim-base16' " Standard nvim highlight groups
 " Initialize plugin system
 call plug#end()

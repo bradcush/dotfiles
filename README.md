@@ -1,6 +1,8 @@
 # dotfiles
 
-macOS dotfiles, install, and configuration
+macOS and Arch Linux dotfiles, install, and configuration. The hypothesis for
+organization of this repository is that tools for operating systems are
+configured similarly enenough that it makes sense to share most thigs.
 
 ## Configuration
 

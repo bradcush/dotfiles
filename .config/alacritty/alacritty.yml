@@ -12,6 +12,9 @@ env:
   # available, otherwise `xterm-256color` is used.
   # TERM: alacritty
   TERM: xterm-256color
+  # Arch Linux needs fixed window scale factor
+  # https://github.com/alacritty/alacritty/issues/3424
+  WINIT_X11_SCALE_FACTOR: "1"
 
 window:
   # Window dimensions (changes require restart)

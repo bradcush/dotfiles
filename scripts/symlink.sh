@@ -46,3 +46,6 @@ ln -s "$DOTFILES_PATH"/.config/starship.toml ~/.config/starship.toml
 
 # Library specific file symlinks
 ln -s "$DOTFILES_PATH"/Library/Arduino15/arduino-cli.yaml ~/Library/Arduino15/arduino-cli.yaml
+
+# SSH configuration symlinks
+ln -s "$DOTFILES_PATH"/.ssh/config ~/.ssh/config

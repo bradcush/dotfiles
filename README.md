@@ -25,7 +25,8 @@ requirements and order can change over time which may or may not require manual
 attention for a given dependency during or after install.
 
 ``` sh
-make install
+make install-arch # Arch Linux systems
+make install-macos # macOS systems
 ```
 
 ## Symlink

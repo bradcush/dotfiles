@@ -3,7 +3,10 @@
 [user]
 	name = Bradley Cushing
 	email = bradleycushing@gmail.com
+	# Singing key for macOS
 	signingkey = 9E1C2A90260664D0
+	# Singing key for Arch Linux
+  # signingkey = 0DC07BB23793C014
 [commit]
 	gpgsign = true
 [tag]
@@ -22,4 +25,5 @@
 [init]
 	defaultBranch = main
 [url "git@github.com:"]
+	# Forces ssh useful private plugins
 	insteadOf = https://github.com/

@@ -2,7 +2,7 @@
 
 macOS and Arch Linux dotfiles, install, and configuration. The hypothesis for
 organization of this repository is that tools for operating systems are
-configured similarly enenough that it makes sense to share most thigs.
+configured similarly enough that it makes sense to share most things.
 
 ## Configuration
 

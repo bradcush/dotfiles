@@ -62,12 +62,52 @@ sudo pacman -S ripgrep
 sudo pacman -S bat
 sudo pacman -S go
 
+# Required for installing bun
+sudo pacman -S unzip
+# Bun to run, test, transpile, and bundle
+curl -fsSL https://bun.sh/install | bash
+
+# Globally install eslint/prettier as we to
+# not rely on one location for monorepos
+# Favoring eslint_d over eslint as it launches daemon
+# that kills subsequent startup times after first
+npm install -g eslint_d
+npm install -g prettier
+npm install -g bash-language-server
+npm install -g pyright
+npm install -g typescript typescript-language-server
+npm install -g vim-language-server
+# Language servers for html, css, and json
+npm install -g vscode-langservers-extracted
+npm install -g yaml-language-server
+npm install -g markdownlint-cli
+# Other language servers
+sudo pacman -S shfmt
 # Arch specific language server install
 # go install github.com/mattn/efm-langserver@latest
+# See AUR installation instead for simplicity
+# git clone https://aur.archlinux.org/efm-langserver.git
+# makepkg --syncdeps --rmdeps --clean
+# sudo pacman -U efm-langserver-0.0.48-1-x86_64.pkg.tar.zst
 sudo pacman -S lua-language-server
+sudo pacman -S luarocks
+# Required for installing luaformatter
+sudo pacman -S cmake
+# Installation requires sudo due to install
+luarocks install --server=https://luarocks.org/dev luaformatter
+
+# Experimental Dashlane CLI
+git clone git@github.com:Dashlane/dashlane-cli.git
+
+# TLDR man pages Node.js client
+npm install -g tldr
 # Simple X display locker
 sudo pacman -S slock
 # Managing ssh and gpg keys
 sudo pacman -S keychain
 # Command-line clipboard
 sudo pacman -S xclip
+# Viewing route for packets
+sudo pacman -S traceroute
+# Display directories as trees
+sudo pacman -S tree

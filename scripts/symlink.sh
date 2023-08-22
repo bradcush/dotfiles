@@ -45,6 +45,8 @@ ln -s "$DOTFILES_PATH"/.config/bat/themes/ ~/.config/bat/
 ln -s "$DOTFILES_PATH"/.config/starship.toml ~/.config/starship.toml
 ln -s "$DOTFILES_PATH"/.gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 ln -s "$DOTFILES_PATH"/.ssh/config ~/.ssh/config
+# Specifically for the X Window System
+ln -s "$DOTFILES_PATH"/.xinitrc ~/.xinitrc
 
 # Library specific file symlinks
 ln -s "$DOTFILES_PATH"/Library/Arduino15/arduino-cli.yaml ~/Library/Arduino15/arduino-cli.yaml

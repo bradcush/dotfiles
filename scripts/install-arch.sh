@@ -111,3 +111,6 @@ sudo pacman -S xclip
 sudo pacman -S traceroute
 # Display directories as trees
 sudo pacman -S tree
+
+# IRC client installed with live
+sudo pacman -S irssi

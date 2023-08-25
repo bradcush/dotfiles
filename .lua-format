@@ -1,3 +1,4 @@
+align_parameter: false
 chop_down_table: true
 double_quote_to_single_quote: true
 keep_simple_control_block_one_line: false

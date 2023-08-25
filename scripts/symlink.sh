@@ -45,6 +45,7 @@ ln -s "$DOTFILES_PATH"/.config/bat/themes/ ~/.config/bat/
 ln -s "$DOTFILES_PATH"/.config/chromium-flags.conf ~/.config/chromium-flags.conf
 ln -s "$DOTFILES_PATH"/.config/starship.toml ~/.config/starship.toml
 ln -s "$DOTFILES_PATH"/.gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+ln -s "$DOTFILES_PATH"/.lua-format ~/.lua-format
 ln -s "$DOTFILES_PATH"/.ssh/config ~/.ssh/config
 # Specifically for the X Window System
 ln -s "$DOTFILES_PATH"/.xinitrc ~/.xinitrc

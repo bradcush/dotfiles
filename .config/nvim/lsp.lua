@@ -103,7 +103,9 @@ nvim_lsp['lua_ls'].setup {
     settings = {
         Lua = {
             runtime = {version = 'LuaJIT'},
-            diagnostics = {globals = {'awesome', 'vim'}},
+            diagnostics = {
+                globals = {'awesome', 'client', 'root', 'screen', 'vim'}
+            },
             -- Make the server aware of Neovim runtime files
             workspace = {
                 library = vim.api.nvim_get_runtime_file('', true),

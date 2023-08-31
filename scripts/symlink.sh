@@ -16,6 +16,7 @@ ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
 
 # Create directories before symlinks
 mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/awesome
 mkdir -p ~/.config/bat
 mkdir -p ~/.config/efm-langserver
 mkdir -p ~/.config/nvim
@@ -40,6 +41,7 @@ ln -s "$DOTFILES_PATH"/.config/nvim/startify.vim ~/.config/nvim/startify.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/test.vim ~/.config/nvim/test.vim
 
 # Miscellaneous configuration symlinks
+ln -s "$DOTFILES_PATH"/.config/awesome/rc.lua ~/.config/awesome/rc.lua
 ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s "$DOTFILES_PATH"/.config/bat/themes/ ~/.config/bat/
 ln -s "$DOTFILES_PATH"/.config/chromium-flags.conf ~/.config/chromium-flags.conf

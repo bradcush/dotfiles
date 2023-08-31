@@ -17,18 +17,6 @@ corepack enable
 # Update global yarn version
 corepack prepare yarn@stable --activate
 
-# PNPM for npm dependency mgmt
-# Fixed PNPM version for Dashlane
-# Remove then reinstall to upgrade
-# rm -rf $PNPM_HOME
-curl -fsSL https://get.pnpm.io/install.sh | sh -
-# Also upgrade pnpm version
-# pnpm add -g pnpm
-
-# Shell tab-completion for pnpm
-pnpm install-completion bash
-pnpm install-completion zsh
-
 # Install Alacritty GPU terminal emulator
 brew install --cask alacritty
 # Install kitty GPU terminal emulator

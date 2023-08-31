@@ -1,12 +1,10 @@
 [core]
-	excludesfile = /Users/bcushing/.gitignore_global
+	excludesfile = /home/bradcush/.gitignore_global
 [user]
 	name = Bradley Cushing
 	email = bradleycushing@gmail.com
-	# Singing key for macOS
-	signingkey = 9E1C2A90260664D0
 	# Singing key for Arch Linux
-  # signingkey = 0DC07BB23793C014
+	signingkey = 0DC07BB23793C014
 [commit]
 	gpgsign = true
 [tag]

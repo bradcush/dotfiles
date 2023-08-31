@@ -7,12 +7,18 @@ ln -s "$DOTFILES_PATH"/.bash_profile ~/.bash_profile
 ln -s "$DOTFILES_PATH"/.bashrc ~/.bashrc
 ln -s "$DOTFILES_PATH"/.fzf.bash ~/.fzf.bash
 ln -s "$DOTFILES_PATH"/.fzf.zsh ~/.fzf.zsh
-ln -s "$DOTFILES_PATH"/.gitconfig ~/.gitconfig
 ln -s "$DOTFILES_PATH"/.profile ~/.profile
 ln -s "$DOTFILES_PATH"/.tmux.conf ~/.tmux.conf
 ln -s "$DOTFILES_PATH"/.zprofile ~/.zprofile
 ln -s "$DOTFILES_PATH"/.zshenv ~/.zshenv
 ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
+
+# Git configuration symlinks
+if [[ $OSTYPE == "linux-gnu" ]]; then
+  ln -s "$DOTFILES_PATH"/.gitconfig-arch ~/.gitconfig
+else
+  ln -s "$DOTFILES_PATH"/.gitconfig-macos ~/.gitconfig
+fi
 
 # Create directories before symlinks
 mkdir -p ~/.config/alacritty

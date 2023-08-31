@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES_PATH="${HOME}/Documents/repos/dotfiles"
+DOTFILES_PATH="$HOME/Documents/repos/dotfiles"
 
 # Root level dotfile symlinks
 ln -s "$DOTFILES_PATH"/.bash_profile ~/.bash_profile
@@ -16,11 +16,10 @@ ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
 
 # Create directories before symlinks
 mkdir -p ~/.config/alacritty
-mkdir -p ~/.config/awesome
 mkdir -p ~/.config/bat
 mkdir -p ~/.config/efm-langserver
 mkdir -p ~/.config/nvim
-mkdir -p ~/Library/Arduino15
+# mkdir -p ~/Library/Arduino15
 
 # nvim config symlinks
 ln -s "$DOTFILES_PATH"/.config/efm-langserver/config.yaml ~/.config/efm-langserver/config.yaml
@@ -41,16 +40,21 @@ ln -s "$DOTFILES_PATH"/.config/nvim/startify.vim ~/.config/nvim/startify.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/test.vim ~/.config/nvim/test.vim
 
 # Miscellaneous configuration symlinks
-ln -s "$DOTFILES_PATH"/.config/awesome/rc.lua ~/.config/awesome/rc.lua
 ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s "$DOTFILES_PATH"/.config/bat/themes/ ~/.config/bat/
-ln -s "$DOTFILES_PATH"/.config/chromium-flags.conf ~/.config/chromium-flags.conf
 ln -s "$DOTFILES_PATH"/.config/starship.toml ~/.config/starship.toml
 ln -s "$DOTFILES_PATH"/.gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
-ln -s "$DOTFILES_PATH"/.lua-format ~/.lua-format
-ln -s "$DOTFILES_PATH"/.ssh/config ~/.ssh/config
-# Specifically for the X Window System
-ln -s "$DOTFILES_PATH"/.xinitrc ~/.xinitrc
-
-# Library specific file symlinks
 ln -s "$DOTFILES_PATH"/Library/Arduino15/arduino-cli.yaml ~/Library/Arduino15/arduino-cli.yaml
+ln -s "$DOTFILES_PATH"/.lua-format ~/.lua-format
+
+if [[ $OSTYPE == 'linux-gnu' ]]; then
+  # Create directories before symlinks
+  mkdir -p ~/.config/awesome
+
+  # Symlink specific dotfiles for Arch Linux
+  ln -s "$DOTFILES_PATH"/.config/awesome/rc.lua ~/.config/awesome/rc.lua
+  ln -s "$DOTFILES_PATH"/.config/chromium-flags.conf ~/.config/chromium-flags.conf
+  ln -s "$DOTFILES_PATH"/.ssh/config ~/.ssh/config
+  # Specifically for the X Window System
+  ln -s "$DOTFILES_PATH"/.xinitrc ~/.xinitrc
+fi

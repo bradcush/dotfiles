@@ -1,12 +1,15 @@
 #!/bin/bash
 
+# Stop if not running interactively
+[[ $- != *i* ]] && return
+
+# Defaults from Arch
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
 # Source shared configuration
-source /Users/bradleycushing/Documents/repos/dotfiles/scripts/shell.sh
-[ -f /Users/bradleycushing/.fzf.bash ] && source /Users/bradleycushing/.fzf.bash
+source $HOME/Documents/repos/dotfiles/scripts/shell.sh
 
 # Init starship shell prompt
 eval "$(starship init bash)"
-
-# Source pnpm tabtab for packages
-# [ -f /Users/bradleycushing/.config/tabtab/bash/__tabtab.bash ] \
-#   && source /Users/bradleycushing/.config/tabtab/bash/__tabtab.bash

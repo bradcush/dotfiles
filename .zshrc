@@ -1,14 +1,16 @@
 #!/bin/zsh
 
+# Source shared configuration
+source $HOME/Documents/repos/dotfiles/scripts/shell.sh
+
 # Set fzf installation directory path
 export FZF_BASE=/usr/local/bin/fzf
 
-# Source shared configuration
-source ~/Documents/repos/dotfiles/scripts/shell.sh
-[ -f /Users/bradleycushing/.fzf.zsh ] && source /Users/bradleycushing/.fzf.zsh
+# Source fzf configuration
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # zsh-autosuggestions setup
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh-autocomplete setup
 # source /Users/bradleycushing/Documents/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -30,15 +32,18 @@ bindkey -M menuselect 'l' vi-forward-char
 eval "$(starship init zsh)"
 
 # zsh-syntax-highlighting setup must be sourced last
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Source pnpm tabtab for packages
-[[ -f /Users/bradleycushing/.config/tabtab/zsh/__tabtab.zsh ]] \
-  && source /Users/bradleycushing/.config/tabtab/zsh/__tabtab.zsh
+# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Bun auto-completion for zsh
-[ -s "/Users/bradleycushing/.bun/_bun" ] && source "/Users/bradleycushing/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Add Bun to path
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+if [[ $OSTYPE == "linux-gnu" ]]; then
+  # Setup keychain with ssh and gpg keys
+  # GPG key still needs to be entered every time
+  eval $(keychain --eval --quiet --agents ssh,gpg --noask \
+    id_ed25519_arch_github_personal 0DC07BB23793C014)
+fi

@@ -15,9 +15,9 @@ Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
 Plug 'github/copilot.vim' " GitHub copilot integration
 Plug 'folke/trouble.nvim' " Pretty lists for LSP features
 
-Plug 'nvim-lua/plenary.nvim' " Helpful Lua utilities for Neovim
-Plug 'bradcush/nvim-deeps' " Neovim LLM assistant
 " Temporary plugin development for nvim-deeps
+" Plug 'nvim-lua/plenary.nvim' " Helpful Lua utilities for Neovim
+" Plug 'bradcush/nvim-deeps' " Neovim LLM assistant
 " Plug '~/Documents/repos/nvim-deeps' " Neovim LLM assistant
 
 " Fill gaps in syntax highlighting support
@@ -165,7 +165,7 @@ augroup END
 " Important before any other mappings as general
 " mappings like the leader key are set
 source $HOME/.config/nvim/mappings.vim
-source $HOME/.config/nvim/arduino.vim
+" source $HOME/.config/nvim/arduino.vim
 source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fugitive.vim
@@ -178,5 +178,6 @@ source $HOME/.config/nvim/signify.vim
 source $HOME/.config/nvim/test.vim
 
 " Neovim specific configurations
+" source $HOME/.config/nvim/deeps.lua
 luafile $HOME/.config/nvim/globals.lua
 luafile $HOME/.config/nvim/lsp.lua

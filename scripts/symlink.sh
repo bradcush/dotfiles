@@ -29,8 +29,9 @@ mkdir -p ~/.config/nvim
 
 # nvim config symlinks
 ln -s "$DOTFILES_PATH"/.config/efm-langserver/config.yaml ~/.config/efm-langserver/config.yaml
-ln -s "$DOTFILES_PATH"/.config/nvim/arduino.vim ~/.config/nvim/arduino.vim
+# ln -s "$DOTFILES_PATH"/.config/nvim/arduino.vim ~/.config/nvim/arduino.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/completion.vim ~/.config/nvim/completion.vim
+ln -s "$DOTFILES_PATH"/.config/nvim/deeps.lua ~/.config/nvim/deeps.lua
 ln -s "$DOTFILES_PATH"/.config/nvim/editorconfig.vim ~/.config/nvim/editorconfig.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/fugitive.vim ~/.config/nvim/fugitive.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/fzf.vim ~/.config/nvim/fzf.vim
@@ -50,7 +51,7 @@ ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacr
 ln -s "$DOTFILES_PATH"/.config/bat/themes/ ~/.config/bat/
 ln -s "$DOTFILES_PATH"/.config/starship.toml ~/.config/starship.toml
 ln -s "$DOTFILES_PATH"/.gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
-ln -s "$DOTFILES_PATH"/Library/Arduino15/arduino-cli.yaml ~/Library/Arduino15/arduino-cli.yaml
+# ln -s "$DOTFILES_PATH"/Library/Arduino15/arduino-cli.yaml ~/Library/Arduino15/arduino-cli.yaml
 ln -s "$DOTFILES_PATH"/.lua-format ~/.lua-format
 
 if [[ $OSTYPE == 'linux-gnu' ]]; then

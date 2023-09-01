@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Reference common install script
+. "$HOME/Documents/repos/dotfiles/scripts/install.sh"
+
 # Install first packages
 pacman -S neovim
 pacman -S iwctl
@@ -51,38 +54,38 @@ sudo pacman -S sof-firmware
 # Checkout zoom.us for download
 sudo pacman -U zoom_x86_64.pkg.tar.xz
 
-# Superfluous packages
+# Configurable cross-shell prompt
 sudo pacman -S starship
+
+# Terminal multiplexer
 sudo pacman -S tmux
+
 # Additional tools for builing
 # Things like make and gcc
 sudo pacman -S base-devel
+
+# A command-line fuzzy finder
 sudo pacman -S fzf
+
+# Ag for use with fzf
 sudo pacman -S ripgrep
+
+# bat replaces cat
 sudo pacman -S bat
+
+# Go for compiling hexokinase and building
+# other software like efm-langserver
 sudo pacman -S go
 
 # Required for installing bun
 sudo pacman -S unzip
-# Bun to run, test, transpile, and bundle
-curl -fsSL https://bun.sh/install | bash
 
-# Globally install eslint/prettier as we to
-# not rely on one location for monorepos
-# Favoring eslint_d over eslint as it launches daemon
-# that kills subsequent startup times after first
-npm install -g eslint_d
-npm install -g prettier
-npm install -g bash-language-server
-npm install -g pyright
-npm install -g typescript typescript-language-server
-npm install -g vim-language-server
-# Language servers for html, css, and json
-npm install -g vscode-langservers-extracted
-npm install -g yaml-language-server
-npm install -g markdownlint-cli
 # Other language servers
 sudo pacman -S shfmt
+sudo pacman -S shellcheck
+# We should use npm for both systems
+npm install -g markdownlint-cli
+
 # Arch specific language server install
 # go install github.com/mattn/efm-langserver@latest
 # See AUR installation instead for simplicity
@@ -101,14 +104,19 @@ git clone git@github.com:Dashlane/dashlane-cli.git
 
 # TLDR man pages Node.js client
 npm install -g tldr
+
 # Simple X display locker
 sudo pacman -S slock
+
 # Managing ssh and gpg keys
 sudo pacman -S keychain
+
 # Command-line clipboard
 sudo pacman -S xclip
+
 # Viewing route for packets
 sudo pacman -S traceroute
+
 # Display directories as trees
 sudo pacman -S tree
 

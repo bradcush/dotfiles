@@ -37,13 +37,13 @@ export BAT_THEME="base16"
 
 # One dark colorscheme for fzf
 # https://github.com/fnune/base16-fzf
-. $HOME/Documents/repos/base16-fzf/bash/base16-onedark.config
+. "$HOME/Documents/repos/base16-fzf/bash/base16-onedark.config"
 
 # For clangd and other llvm related binaries
 # export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # GPG requires setting tty
-export GPG_TTY=$(tty)
+export GPG_TTY="$TTY"
 
 # Source env script for adding the
 # cargo binary to path for Rust

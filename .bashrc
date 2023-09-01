@@ -9,7 +9,7 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Source shared configuration
-source $HOME/Documents/repos/dotfiles/scripts/shell.sh
+source "$HOME/Documents/repos/dotfiles/scripts/shell.sh"
 
 # Init starship shell prompt
 eval "$(starship init bash)"

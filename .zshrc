@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Source shared configuration
-source $HOME/Documents/repos/dotfiles/scripts/shell.sh
+source "$HOME/Documents/repos/dotfiles/scripts/shell.sh"
 
 # Set fzf installation directory path
 export FZF_BASE=/usr/local/bin/fzf
@@ -16,10 +16,10 @@ else
 fi
 
 # zsh-autosuggestions setup
-source $ZSH_PLUGINS_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$ZSH_PLUGINS_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # zsh-syntax-highlighting setup must be sourced last
-source $ZSH_PLUGINS_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$ZSH_PLUGINS_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # zsh-autocomplete setup
 # source /Users/bradleycushing/Documents/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh

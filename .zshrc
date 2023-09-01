@@ -9,8 +9,17 @@ export FZF_BASE=/usr/local/bin/fzf
 # Source fzf configuration
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
+if [[ $OSTYPE == 'linux-gnu' ]]; then
+  ZSH_PLUGINS_PATH="/usr/share/zsh/plugins"
+else
+  ZSH_PLUGINS_PATH="/opt/homebrew/share"
+fi
+
 # zsh-autosuggestions setup
-# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_PLUGINS_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-syntax-highlighting setup must be sourced last
+source $ZSH_PLUGINS_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zsh-autocomplete setup
 # source /Users/bradleycushing/Documents/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -30,9 +39,6 @@ bindkey -M menuselect 'l' vi-forward-char
 
 # Init starship shell prompt
 eval "$(starship init zsh)"
-
-# zsh-syntax-highlighting setup must be sourced last
-# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Bun auto-completion for zsh
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

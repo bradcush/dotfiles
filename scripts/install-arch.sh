@@ -114,3 +114,9 @@ sudo pacman -S tree
 
 # IRC client installed with live
 sudo pacman -S irssi
+
+# Install zsh-autosuggestions
+sudo pacman -S zsh-autosuggestions
+
+# Install zsh-syntax-highlighting
+sudo pacman -S zsh-syntax-highlighting

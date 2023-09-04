@@ -21,6 +21,24 @@ scripts are meant to be run on for operating system.
 - Tmux
 - Z shell
 
+### Conditional checks
+
+Shell scripts and shell configuration files are meant to be run on both macOS
+and Arch Linux operating systems. Depending on the script you will see
+conditional checking for either operating system.
+
+``` sh
+# Checking macOS
+if [[ $OSTYPE == "darwin"* ]]; then
+    // macOS configuration
+fi
+
+# Checking Arch Linux
+if [[ $OSTYPE == "linux-gnu" ]]; then
+    // Arch Linux configuration
+fi
+```
+
 ## Install
 
 Install all dependencies for Neovim and general command-line tools. Arch Linux
@@ -69,8 +87,8 @@ Both `bash` and `zsh` are supported with all shared configuration declared in
 `scripts/shell.sh`. The shared config is sourced in the `.bashrc` and `.zshrc`
 files respectively. Configuration specific to fzf is contained in `.fzf.bash`
 and `.fzf.zsh` and sourced in their respective shell configs. Additional
-profile and environment related files for both shells is tracked also
-regardless of if they are empty or contain addition configuration.
+profile and environment related files for both shells are also tracked
+regardless of if they are empty or contain additional configuration.
 
 ## License
 

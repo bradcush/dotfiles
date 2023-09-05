@@ -34,8 +34,15 @@ xnoremap <leader>p "_dP
 nnoremap Y y$
 
 " Copy to universal clipboard
-nnoremap <leader>y "*y
-nmap <leader>Y "*Y
+" differs for operating systems
+if has('macunix')
+  nnoremap <leader>y "*y
+  nmap <leader>Y "*Y
+else
+  " Expecting linux system
+  nnoremap <leader>y "+y
+  nmap <leader>Y "+Y
+endif
 
 " Cursor to beginning of command-line because
 " the default CTRL-B is taken over by tmux

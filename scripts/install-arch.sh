@@ -89,9 +89,10 @@ npm install -g markdownlint-cli
 # Arch specific language server install
 # go install github.com/mattn/efm-langserver@latest
 # See AUR installation instead for simplicity
-# git clone https://aur.archlinux.org/efm-langserver.git
+git clone https://aur.archlinux.org/efm-langserver.git
 # makepkg --syncdeps --rmdeps --clean
 # sudo pacman -U efm-langserver-0.0.48-1-x86_64.pkg.tar.zst
+
 sudo pacman -S lua-language-server
 sudo pacman -S luarocks
 # Required for installing luaformatter

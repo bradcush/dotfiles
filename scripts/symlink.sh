@@ -13,13 +13,6 @@ ln -s "$DOTFILES_PATH"/.zprofile ~/.zprofile
 ln -s "$DOTFILES_PATH"/.zshenv ~/.zshenv
 ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
 
-# Git configuration symlinks
-if [[ $OSTYPE == "linux-gnu" ]]; then
-  ln -s "$DOTFILES_PATH"/.gitconfig-arch ~/.gitconfig
-else
-  ln -s "$DOTFILES_PATH"/.gitconfig-macos ~/.gitconfig
-fi
-
 # Create directories before symlinks
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/bat
@@ -54,14 +47,21 @@ ln -s "$DOTFILES_PATH"/.gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 # ln -s "$DOTFILES_PATH"/Library/Arduino15/arduino-cli.yaml ~/Library/Arduino15/arduino-cli.yaml
 ln -s "$DOTFILES_PATH"/.lua-format ~/.lua-format
 
+if [[ $OSTYPE == "darwin"* ]]; then
+  # Symlink specific dotfiles for macOS
+  ln -s "$DOTFILES_PATH"/.gitconfig-arch ~/.gitconfig
+  ln -s "$DOTFILES_PATH"/.ssh/config-macos ~/.ssh/config
+fi
+
 if [[ $OSTYPE == 'linux-gnu' ]]; then
   # Create directories before symlinks
   mkdir -p ~/.config/awesome
 
   # Symlink specific dotfiles for Arch Linux
+  ln -s "$DOTFILES_PATH"/.gitconfig-macos ~/.gitconfig
   ln -s "$DOTFILES_PATH"/.config/awesome/rc.lua ~/.config/awesome/rc.lua
   ln -s "$DOTFILES_PATH"/.config/chromium-flags.conf ~/.config/chromium-flags.conf
-  ln -s "$DOTFILES_PATH"/.ssh/config ~/.ssh/config
+  ln -s "$DOTFILES_PATH"/.ssh/config-arch ~/.ssh/config
   # Specifically for the X Window System
   ln -s "$DOTFILES_PATH"/.xinitrc ~/.xinitrc
 fi

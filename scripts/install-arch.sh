@@ -132,3 +132,6 @@ sudo pacman -S zsh-syntax-highlighting
 
 # Slack desktop application
 git clone https://aur.archlinux.org/slack-desktop.git
+
+# Anki application
+git clone https://aur.archlinux.org/anki.git

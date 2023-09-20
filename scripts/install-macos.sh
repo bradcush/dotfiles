@@ -134,3 +134,7 @@ brew install wget
 # GPG Suite used intead for keychain
 # https://gpgtools.org
 brew install gpg
+
+# Functional programming languages
+# Steel Bank Common Lisp
+brew install sbcl

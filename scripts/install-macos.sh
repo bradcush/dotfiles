@@ -76,6 +76,7 @@ brew install --HEAD pyenv-virtualenv
 # Language servers and formatters used
 # with Neovim LSP and efm-langserver
 brew install efm-langserver
+brew install haskell-language-server
 brew install lua-language-server
 brew install pandoc
 brew install markdownlint-cli
@@ -138,3 +139,6 @@ brew install gpg
 # Functional programming languages
 # Steel Bank Common Lisp
 brew install sbcl
+
+# Glasgow Haskell compiler
+brew install ghc

@@ -188,6 +188,9 @@ nvim_lsp['arduino_language_server'].setup({
     }
 })
 
+-- Setup HLS for related filetypes
+nvim_lsp['hls'].setup({filetypes = {'haskell', 'lhaskell', 'cabal'}})
+
 -- Trouble pretty lists setup
 require('trouble').setup {
     icons = false,

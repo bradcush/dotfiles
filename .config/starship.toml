@@ -17,6 +17,10 @@ disabled = true
 disabled = true
 [dotnet]
 disabled = true
+[haskell]
+disabled = true
+[julia]
+disabled = true
 [lua]
 disabled = true
 [nodejs]

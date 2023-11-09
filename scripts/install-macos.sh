@@ -142,3 +142,6 @@ brew install sbcl
 
 # Glasgow Haskell compiler
 brew install ghc
+
+# The Julia Programming Language
+brew install julia

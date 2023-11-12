@@ -62,6 +62,7 @@ local servers = {
     'cssls',
     'html',
     'jsonls',
+    'julials',
     'pyright',
     'rust_analyzer',
     'vimls',

@@ -4,7 +4,7 @@
 	name = Bradley Cushing
 	email = bradleycushing@gmail.com
 	# Singing key for macOS
-	# signingkey = 9E1C2A90260664D0
+	signingkey = 9E1C2A90260664D0
 [commit]
 	gpgsign = true
 [tag]

@@ -25,6 +25,10 @@ disabled = true
 disabled = true
 [nodejs]
 disabled = true
+# Prolog has pl file extensions
+# which are mistaken for perl
+[perl]
+disabled = true
 [python]
 disabled = true
 [ruby]

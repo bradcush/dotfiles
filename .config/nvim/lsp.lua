@@ -60,6 +60,7 @@ local servers = {
     'bashls',
     'clangd',
     'cssls',
+    'gopls',
     'html',
     'jsonls',
     'julials',

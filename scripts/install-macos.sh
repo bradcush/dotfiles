@@ -150,3 +150,6 @@ brew install julia
 julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.add("LanguageServer")'
 # In order to have LanguageServer.jl pick up installed packages or dependencies
 # julia --project=/path/to/my/project -e 'using Pkg; Pkg.instantiate()'
+
+# SWI Prolog
+brew install swi-prolog

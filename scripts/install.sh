@@ -52,3 +52,6 @@ npm install -g tldr
 PATH_DIR="$HOME/bin" && mkdir -p "$PATH_DIR"
 curl https://cht.sh/:cht.sh >"$PATH_DIR/cht.sh"
 chmod +x "$PATH_DIR/cht.sh"
+
+# gittuf security wrapper for git
+git clone git@github.com:gittuf/gittuf.git

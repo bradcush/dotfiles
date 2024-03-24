@@ -55,3 +55,6 @@ chmod +x "$PATH_DIR/cht.sh"
 
 # gittuf security wrapper for git
 git clone git@github.com:gittuf/gittuf.git
+
+# For creating SMOM using SBOMit specs
+go get github.com/testifysec/protobomit

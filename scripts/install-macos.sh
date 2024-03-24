@@ -151,6 +151,9 @@ julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.add("Lan
 # In order to have LanguageServer.jl pick up installed packages or dependencies
 # julia --project=/path/to/my/project -e 'using Pkg; Pkg.instantiate()'
 
+# Attestations using in-toto
+brew install witness
+
 # Command-line JSON processor
 brew install jq
 

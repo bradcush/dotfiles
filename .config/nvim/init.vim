@@ -30,6 +30,7 @@ Plug 'stevearc/vim-arduino' " Compile, upload, and debug arduino sketches
 Plug 'JuliaEditorSupport/julia-vim' " LaTeX-to-Unicode for Julia
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' } " Markdown preview in the browser
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } " Lively previewing LaTeX PDF output
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig files for settings
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' } " Inline color code preview
 Plug 'heavenshell/vim-jsdoc', { 'do': 'make install' } " JSDoc integration w/ autocompletion
@@ -150,6 +151,9 @@ hi CopilotSuggestion guifg=#545862
 
 " Highlight code snippets in markdown
 let g:markdown_fenced_languages = ['typescript']
+
+" Use preview for LaTeX previewing
+let g:livepreview_previewer = 'open -a Preview'
 
 " Split windows
 set splitbelow splitright " New split windows to the bottom/right

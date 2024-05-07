@@ -65,6 +65,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # pyenv for managing python versions
 # Set both version with 3 first
 # pyenv global 3.11.3 2.7.18
+# Create virtual environments
+# pyenv virtualenv <name>
 brew install pyenv
 
 # For python remote-plugins support

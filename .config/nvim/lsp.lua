@@ -118,32 +118,14 @@ nvim_lsp['lua_ls'].setup {
     }
 }
 
--- Custom configuration for latex for
--- building, linting, and formatting
-local aux_directory = './auxiliary';
-local output_flag = '-outdir=' .. aux_directory;
+-- Custom configuration for latex for linting and formatting
+-- Supports building but using "vim-latex-live-preview" preferred
 nvim_lsp['texlab'].setup {
     on_attach = on_attach,
     settings = {
         texlab = {
-            -- Current working directory instead
-            -- of the current file location
-            rootDirectory = '.',
-            -- Built files in one directory
-            auxDirectory = aux_directory,
-            build = {
-                args = {
-                    '-pdf',
-                    '-interaction=nonstopmode',
-                    output_flag,
-                    '-synctex=1',
-                    '%f'
-                },
-                executable = 'latexmk',
-                forwardSearchAfter = false,
-                onSave = true
-            },
             chktex = {onEdit = true, onOpenAndSave = true},
+            latexFormatter = 'latexindent',
             latexindent = {modifyLineBreaks = true}
         }
     }

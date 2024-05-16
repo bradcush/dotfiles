@@ -11,7 +11,8 @@ Operating system specifics like paths are conditionally set per script. Most
 scripts are meant to be run on for operating system.
 
 - Alacritty
-- Awesome (Linux)
+- DWM (Linux)
+- DMENU
 - Bash
 - Bat
 - FZF

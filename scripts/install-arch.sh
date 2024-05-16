@@ -23,7 +23,19 @@ sudo pacman -S xorg-server
 # sudo pacman -S xf86-video-intel
 # Setup both .xinitrc and .xserverrc
 sudo pacman -S xorg-init
-sudo pacman -S awesome
+
+# DWM and dmenu for simpler windows
+git clone https://aur.archlinux.org/dwm.git
+sudo pacman -S dmenu
+# Cheatsheet until memorized
+# [Mod]+p to run a command with dmenu
+# [Mod]+j and [Mod]+k to cycle apps in a tag
+# [Mod]+m switch to monocle mode
+# [Mod]+f switch to floating mode
+# [Shift]+[Mod]+<tag> to move window to tag
+# [Shift]+[Mod]+q to shutdown dwm cleanly
+# [Shift]+[Mod]+c to quit a window
+
 # Using this font everywhere
 sudo pacman -S ttf-hack-nerd
 # startx manually for now
@@ -88,6 +100,7 @@ npm install -g markdownlint-cli
 
 # Arch specific language server install
 # go install github.com/mattn/efm-langserver@latest
+# https://wiki.archlinux.org/title/Arch_User_Repository
 # See AUR installation instead for simplicity
 git clone https://aur.archlinux.org/efm-langserver.git
 # makepkg --syncdeps --rmdeps --clean

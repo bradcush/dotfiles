@@ -54,12 +54,8 @@ if [[ $OSTYPE == "darwin"* ]]; then
 fi
 
 if [[ $OSTYPE == 'linux-gnu' ]]; then
-  # Create directories before symlinks
-  mkdir -p ~/.config/awesome
-
   # Symlink specific dotfiles for Arch Linux
   ln -s "$DOTFILES_PATH"/.gitconfig-macos ~/.gitconfig
-  ln -s "$DOTFILES_PATH"/.config/awesome/rc.lua ~/.config/awesome/rc.lua
   ln -s "$DOTFILES_PATH"/.config/chromium-flags.conf ~/.config/chromium-flags.conf
   ln -s "$DOTFILES_PATH"/.ssh/config-arch ~/.ssh/config
   # Specifically for the X Window System

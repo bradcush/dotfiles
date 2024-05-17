@@ -62,6 +62,7 @@ local servers = {
     'cssls',
     'gopls',
     'html',
+    'jdtls',
     'jsonls',
     'julials',
     'pyright',
@@ -188,4 +189,3 @@ require('trouble').setup {
     },
     use_diagnostic_signs = true
 }
-

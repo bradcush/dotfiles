@@ -105,6 +105,8 @@ npm install -g markdownlint-cli
 git clone https://aur.archlinux.org/efm-langserver.git
 # makepkg --syncdeps --rmdeps --clean
 # sudo pacman -U efm-langserver-0.0.48-1-x86_64.pkg.tar.zst
+# sudo pacman -Rs efm-langserver
+git clone https://aur.archlinux.org/jdtls.git
 
 sudo pacman -S lua-language-server
 sudo pacman -S luarocks

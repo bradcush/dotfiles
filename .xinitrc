@@ -22,7 +22,8 @@ if [ -f "$usermodmap" ]; then
   xmodmap "$usermodmap"
 fi
 
-# Custom configuration
+# Custom configuration mapping capslock to escape. Sometimes the binding
+# is lost during a session and we need to manually rerun this command.
 setxkbmap -option caps:escape
 
 # Change keyboard repeat

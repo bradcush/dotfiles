@@ -54,8 +54,9 @@ sudo pacman -S xdg-desktop-portal
 # Screen resolution mgmt
 sudo pacman -S xorg-xrandr
 sudo pacman -S neofetch
-sudo pacman -S archlinux-wallpaper
-sudo pacman -S ukui-wallpapers
+
+# Set wallpaper
+sudo pacman -S feh
 
 # Audio drivers setup
 # Requires restart and unmute

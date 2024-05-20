@@ -116,8 +116,8 @@ sudo pacman -S cmake
 # Installation requires sudo due to install
 luarocks install --server=https://luarocks.org/dev luaformatter
 
-# Experimental Dashlane CLI
-git clone git@github.com:Dashlane/dashlane-cli.git
+# Dashlane CLI for password management
+https://dashlane.github.io/dashlane-cli/install
 
 # TLDR man pages Node.js client
 npm install -g tldr

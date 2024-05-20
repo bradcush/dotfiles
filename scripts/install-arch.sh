@@ -111,7 +111,7 @@ git clone https://aur.archlinux.org/jdtls.git
 
 sudo pacman -S lua-language-server
 sudo pacman -S luarocks
-# Required for installing luaformatter
+# Required for luaformatter
 sudo pacman -S cmake
 # Installation requires sudo due to install
 luarocks install --server=https://luarocks.org/dev luaformatter
@@ -137,7 +137,8 @@ sudo pacman -S traceroute
 # Display directories as trees
 sudo pacman -S tree
 
-# IRC client installed with live
+# IRC client in the terminal installed
+# by default with the live environment
 sudo pacman -S irssi
 
 # Install zsh-autosuggestions

@@ -11,7 +11,15 @@ Plug 'dstein64/vim-startuptime' " Startup event timing information
 Plug 'takac/vim-hardtime' " Preventing bad habits against philosophy
 
 Plug 'neovim/nvim-lspconfig' " Common configurations for built-in LSP
-Plug 'hrsh7th/nvim-compe' " Auto-completion recommended by built-in LSP
+Plug 'mfussenegger/nvim-dap' " Debug Adapter Protocol support
+Plug 'hrsh7th/cmp-nvim-lsp' " LSP completion source for nvim-cmp
+Plug 'hrsh7th/cmp-buffer' " Buffer completion source for nvim-cmp
+Plug 'hrsh7th/cmp-path' " Path completion source for nvim-cmp
+Plug 'hrsh7th/cmp-calc' " Calc completion source for nvim-cmp
+Plug 'hrsh7th/cmp-cmdline' " Command line completion source for nvim-cmp
+Plug 'hrsh7th/nvim-cmp' " Completion plugin for Neovim
+Plug 'hrsh7th/cmp-vsnip' " Vsnip completion source for nvim-cmp
+Plug 'hrsh7th/vim-vsnip' " Snippet engine for nvim-cmp
 Plug 'github/copilot.vim' " GitHub copilot integration
 Plug 'folke/trouble.nvim' " Pretty lists for LSP features
 
@@ -172,7 +180,6 @@ augroup END
 " mappings like the leader key are set
 source $HOME/.config/nvim/mappings.vim
 " source $HOME/.config/nvim/arduino.vim
-source $HOME/.config/nvim/completion.vim
 source $HOME/.config/nvim/editorconfig.vim
 source $HOME/.config/nvim/fugitive.vim
 source $HOME/.config/nvim/fzf.vim
@@ -184,6 +191,7 @@ source $HOME/.config/nvim/signify.vim
 source $HOME/.config/nvim/test.vim
 
 " Neovim specific configurations
+source $HOME/.config/nvim/dap.lua
 " source $HOME/.config/nvim/deeps.lua
 luafile $HOME/.config/nvim/globals.lua
 luafile $HOME/.config/nvim/lsp.lua

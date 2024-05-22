@@ -1,4 +1,61 @@
-local nvim_lsp = require('lspconfig')
+local cmp = require('cmp')
+
+cmp.setup({
+    snippet = {
+        -- REQUIRED - you must specify a snippet engine
+        expand = function(args)
+            vim.fn['vsnip#anonymous'](args.body) -- For `vsnip` users
+            -- vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
+        end
+    },
+    window = {
+        -- Polished design for completion menus
+        -- completion = cmp.config.window.bordered(),
+        -- documentation = cmp.config.window.bordered()
+    },
+    -- Menu navigation mappings
+    mapping = cmp.mapping.preset.insert({
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.abort(),
+        -- Require explicit selection of item
+        ['<CR>'] = cmp.mapping.confirm({select = false}),
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            else
+                fallback()
+            end
+        end, {'i', 's'}),
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            else
+                fallback()
+            end
+        end, {'i', 's'})
+    }),
+    sources = cmp.config.sources({
+        {name = 'nvim_lsp'},
+        {name = 'vsnip'} -- For vsnip users
+    }, {{name = 'buffer'}, {name = 'path'}, {name = 'calc'}})
+})
+
+-- Use buffer source for `/` and `?` (if you enabled
+-- `native_menu`, this won't work anymore).
+cmp.setup.cmdline({'/', '?'}, {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {{name = 'buffer'}}
+})
+
+-- Use cmdline & path source for ':' (if you enabled
+-- `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({{name = 'path'}}, {{name = 'cmdline'}}),
+    matching = {disallow_symbol_nonprefix_matching = false}
+})
 
 -- Mappings for diagnostics
 local opts = {noremap = true, silent = true}
@@ -54,6 +111,10 @@ for _, group in ipairs(vim.fn.getcompletion('@lsp', 'highlight')) do
     vim.api.nvim_set_hl(0, group, {})
 end
 
+local nvim_lsp = require('lspconfig')
+-- Capabilities for language server setup
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- Use a loop to conveniently setup defined servers and map
 -- buffer local keybindings when the language server attaches
 local servers = {
@@ -71,7 +132,7 @@ local servers = {
     'yamlls'
 }
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {on_attach = on_attach}
+    nvim_lsp[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
 
 -- Overriding how diagnostics are published

@@ -15,9 +15,13 @@ disabled = true
 # language versions
 [bun]
 disabled = true
+[c]
+disabled = true
 [dotnet]
 disabled = true
 [haskell]
+disabled = true
+[java]
 disabled = true
 [julia]
 disabled = true

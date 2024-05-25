@@ -152,3 +152,28 @@ git clone https://aur.archlinux.org/slack-desktop.git
 
 # Anki application
 git clone https://aur.archlinux.org/anki.git
+
+# Useful for passing passwords but should be used
+# carefully as keys are often the best choice
+sudo pacman -S sshpass
+
+# Command-line screenshot
+sudo pacman -S scrot
+
+# Note taking
+sudo pacman -S obsidian
+
+# LLVM toolchain
+# https://wiki.archlinux.org/title/LLVM
+sudo pacman -S clang lld lldb llvm libc++ libclc polly
+
+# Bluetooth for keyboard
+sudo pacman -S bluez bluez-utils
+sudo pacman -S usbutils
+
+# Information about input devices
+sudo pacman -S xorg-xinput
+
+# GNU Octave replaces MATLAB
+# You can use the GUI or CLI octave-cli
+sudo pacman -S octave

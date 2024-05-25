@@ -4,9 +4,11 @@
 . "$HOME/Documents/repos/dotfiles/scripts/install.sh"
 
 # Install first packages
-pacman -S neovim
 pacman -S iwctl
 pacman -S zsh
+# Neovim package is currently latest stable release, use
+# AUR package neovim-git for latest development version
+pacman -S neovim
 
 # New user with default group
 # sudo w/o assigning other groups
@@ -27,14 +29,6 @@ sudo pacman -S xorg-init
 # DWM and dmenu for simpler windows
 git clone https://aur.archlinux.org/dwm.git
 sudo pacman -S dmenu
-# Cheatsheet until memorized
-# [Mod]+p to run a command with dmenu
-# [Mod]+j and [Mod]+k to cycle apps in a tag
-# [Mod]+m switch to monocle mode
-# [Mod]+f switch to floating mode
-# [Shift]+[Mod]+<tag> to move window to tag
-# [Shift]+[Mod]+q to shutdown dwm cleanly
-# [Shift]+[Mod]+c to quit a window
 
 # Using this font everywhere
 sudo pacman -S ttf-hack-nerd
@@ -63,9 +57,8 @@ sudo pacman -S feh
 sudo pacman -S alsa-utils
 sudo pacman -S sof-firmware
 
-# After downloading installer
-# Checkout zoom.us for download
-sudo pacman -U zoom_x86_64.pkg.tar.xz
+# ZOOM for video conferencing
+git clone https://aur.archlinux.org/zoom.git
 
 # Configurable cross-shell prompt
 sudo pacman -S starship
@@ -147,10 +140,7 @@ sudo pacman -S zsh-autosuggestions
 # Install zsh-syntax-highlighting
 sudo pacman -S zsh-syntax-highlighting
 
-# Slack desktop application
-git clone https://aur.archlinux.org/slack-desktop.git
-
-# Anki application
+# Anki flashcards application
 git clone https://aur.archlinux.org/anki.git
 
 # Useful for passing passwords but should be used

@@ -60,4 +60,5 @@ if [[ $OSTYPE == 'linux-gnu' ]]; then
   ln -s "$DOTFILES_PATH"/.ssh/config-arch ~/.ssh/config
   # Specifically for the X Window System
   ln -s "$DOTFILES_PATH"/.xinitrc ~/.xinitrc
+  ln -s "$DOTFILES_PATH"/usr/bin/startdwm /usr/bin/startdwm
 fi

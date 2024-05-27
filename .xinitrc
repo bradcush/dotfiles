@@ -25,9 +25,15 @@ fi
 # Custom configuration mapping capslock to escape. Sometimes the binding
 # is lost during a session and we need to manually rerun this command.
 setxkbmap -option caps:escape
+# Custom specific to bluetooth keyboard
+# This could change so check xinput -list for id
+setxkbmap -device 17 -option caps:escape
 
 # Change keyboard repeat
 xset r rate 200 25
+
+# Disable mouse acceleration
+xinput --set-prop 18 'libinput Accel Speed' -1
 
 # Start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ]; then

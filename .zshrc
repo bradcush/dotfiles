@@ -53,3 +53,10 @@ if [[ $OSTYPE == "linux-gnu" ]]; then
   eval $(keychain --eval --quiet --agents ssh,gpg --noask \
     id_ed25519_arch_github_personal 0DC07BB23793C014)
 fi
+
+# zsh history is weak by default so we allow more
+# entries, save it, and share it accross sessions
+HISTFILE=~/.zsh_history
+HISTSIZE=99999
+SAVEHIST=$HISTSIZE
+setopt SHARE_HISTORY

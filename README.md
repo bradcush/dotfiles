@@ -91,6 +91,13 @@ and `.fzf.zsh` and sourced in their respective shell configs. Additional
 profile and environment related files for both shells are also tracked
 regardless of if they are empty or contain additional configuration.
 
+## Network
+
+Connecting to the NYU school network requires a configuration file to be
+specified. You'll need to have root access to copy the configuration file to
+`/var/lib/iwd/nyu.8021x`. This repository contains the configuration file
+without the password which should be set to 600 so only root has access.
+
 ## License
 
 [dotfiles MIT License](LICENSE)

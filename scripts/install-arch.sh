@@ -45,6 +45,10 @@ sudo pacman -S chromium
 # Dark mode can then be set
 sudo pacman -S xdg-desktop-portal
 
+# Setting dark themes
+sudo pacman -S gnome-themes-extra
+git clone https://aur.archlinux.org/adwaita-qt-git.git
+
 # Screen resolution mgmt
 sudo pacman -S xorg-xrandr
 sudo pacman -S neofetch

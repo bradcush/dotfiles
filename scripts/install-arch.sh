@@ -171,3 +171,6 @@ sudo pacman -S xorg-xinput
 # GNU Octave replaces MATLAB
 # You can use the GUI or CLI octave-cli
 sudo pacman -S octave
+
+# Tracing system calls
+sudo pacman -S strace

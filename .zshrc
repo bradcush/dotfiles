@@ -59,6 +59,7 @@ fi
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=$HISTSIZE
+setopt HIST_IGNORE_ALL_DUPS
 setopt SHARE_HISTORY
 
 # Enable dark theming

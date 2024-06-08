@@ -22,8 +22,6 @@ Plug 'hrsh7th/cmp-vsnip' " Vsnip completion source for nvim-cmp
 Plug 'hrsh7th/vim-vsnip' " Snippet engine for nvim-cmp
 Plug 'github/copilot.vim' " GitHub copilot integration
 Plug 'folke/trouble.nvim' " Pretty lists for LSP features
-" Using Treesitter to easily install languages needed for defaults
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Treesitter management
 
 " Temporary plugin development for nvim-deeps
 " Plug 'nvim-lua/plenary.nvim' " Helpful Lua utilities for Neovim
@@ -131,7 +129,7 @@ set listchars=space:.,trail:~,precedes:< " Represent specific listchars
 autocmd BufEnter * :syntax sync fromstart
 " Disable treesitter syntax highlighting for any buffer
 " There might be a better way to set this globally
-autocmd BufEnter * :lua vim.treesitter.stop()
+autocmd FileType * :lua vim.treesitter.stop()
 
 " Highlighting
 " Invisible characters

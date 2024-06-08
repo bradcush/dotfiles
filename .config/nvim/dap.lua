@@ -37,6 +37,7 @@ vim.keymap.set('n', '<leader>ko', function() require('dap').step_over() end)
 vim.keymap.set('n', '<leader>kO', function() require('dap').step_out() end)
 vim.keymap.set('n', '<leader>kb', function() require('dap').toggle_breakpoint() end)
 vim.keymap.set('n', '<leader>kB', function() require('dap').set_breakpoint() end)
+vim.keymap.set('n', '<leader>kd', function() require('dap').clear_breakpoints() end)
 vim.keymap.set('n', '<leader>kr', function() require('dap').repl.open() end)
 vim.keymap.set('n', '<leader>kl', function() require('dap').run_last() end)
 vim.keymap.set({'n', 'v'}, '<leader>kh', function() require('dap.ui.widgets').hover() end)
@@ -44,7 +45,6 @@ vim.keymap.set({'n', 'v'}, '<leader>kp', function() require('dap.ui.widgets').pr
 vim.keymap.set('n', '<leader>ke', function() require('dap').close() end)
 -- LuaFormatter on
 
---
 vim.keymap.set('n', '<leader>kf', function()
     local widgets = require('dap.ui.widgets')
     widgets.centered_float(widgets.frames)

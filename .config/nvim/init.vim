@@ -20,6 +20,7 @@ Plug 'hrsh7th/cmp-cmdline' " Command line completion source for nvim-cmp
 Plug 'hrsh7th/nvim-cmp' " Completion plugin for Neovim
 Plug 'hrsh7th/cmp-vsnip' " Vsnip completion source for nvim-cmp
 Plug 'hrsh7th/vim-vsnip' " Snippet engine for nvim-cmp
+Plug 'onsails/lspkind-nvim' " Icons for neovim built-in LSP
 Plug 'github/copilot.vim' " GitHub copilot integration
 Plug 'folke/trouble.nvim' " Pretty lists for LSP features
 

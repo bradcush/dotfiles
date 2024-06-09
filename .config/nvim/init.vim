@@ -139,7 +139,7 @@ autocmd FileType * :lua vim.treesitter.stop()
 hi Comment gui=italic
 " Floating window styles
 hi FloatBorder guifg=#545862
-" hi NormalFloat guibg=#282c34
+hi NormalFloat guibg=#3e4451
 " Diagnostic information colors
 " Specified for default and virtual text
 hi DiagnosticFloatingError guifg=#be5046
@@ -199,3 +199,8 @@ source $HOME/.config/nvim/dap.lua
 " source $HOME/.config/nvim/deeps.lua
 luafile $HOME/.config/nvim/globals.lua
 luafile $HOME/.config/nvim/lsp.lua
+
+" Toggle copilot on and off
+nnoremap <leader>ce :Copilot enable<cr>
+nnoremap <leader>cd :Copilot disable<cr>
+let g:copilot_enabled = v:false

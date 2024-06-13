@@ -86,12 +86,12 @@ local on_attach = function(client, bufnr)
         -- finish update before save. Timeout left to be the default 1000
         -- milliseconds for now. All files specified instead of current
         -- buffer due to autocmd being removed after new buffer created.
-        vim.api.nvim_exec([[
+        vim.api.nvim_exec2([[
             augroup formatting
                 autocmd!
                 autocmd BufWritePre * lua vim.lsp.buf.format()
             augroup END
-        ]], true)
+        ]], {output = true})
     end
 end
 

@@ -1,6 +1,10 @@
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
+    formatting = {format = lspkind.cmp_format()},
+    -- Disable docs view by default
+    view = {docs = {auto_open = false}},
     snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
@@ -169,7 +173,8 @@ nvim_lsp['lua_ls'].setup {
                 library = vim.api.nvim_get_runtime_file('', true),
                 checkThirdParty = false
             },
-            telemetry = {enable = false}
+            telemetry = {enable = false},
+            hint = {enable = true}
         }
     }
 }

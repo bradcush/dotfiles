@@ -99,6 +99,15 @@ local on_attach = function(client, bufnr)
     end
 end
 
+-- Toggle inlay hints mapping
+if vim.lsp.inlay_hint then
+    local enable_func = function()
+        local enable = not vim.lsp.inlay_hint.is_enabled({});
+        vim.lsp.inlay_hint.enable(enable)
+    end
+    vim.keymap.set('n', '<leader>ih', enable_func)
+end
+
 -- Disable formatting (eg. gqq) by language server
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(args) vim.bo[args.buf].formatexpr = nil end

@@ -77,7 +77,8 @@ sudo pacman -S base-devel
 # A command-line fuzzy finder
 sudo pacman -S fzf
 
-# Ag for use with fzf
+# Rg and Ag for use with fzf
+sudo pacman -S the_silver_searcher
 sudo pacman -S ripgrep
 
 # bat replaces cat

@@ -175,3 +175,6 @@ sudo pacman -S octave
 
 # Tracing system calls
 sudo pacman -S strace
+
+# Basic calculator utility
+sudo pacman -S bc

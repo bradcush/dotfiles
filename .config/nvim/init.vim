@@ -179,6 +179,9 @@ augroup highlight_yank
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
 augroup END
 
+" Disable Perl provider and warning
+let g:loaded_perl_provider = 0
+
 " Vim specific configurations
 " Important before any other mappings as general
 " mappings like the leader key are set

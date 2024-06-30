@@ -63,7 +63,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # pyenv for managing python versions
-# Set both version with 3 first
+# Set both versions with 3 first
 # pyenv global 3.11.3 2.7.18
 # Create virtual environments
 # pyenv virtualenv <name>

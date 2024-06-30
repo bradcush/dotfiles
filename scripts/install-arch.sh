@@ -172,6 +172,9 @@ sudo pacman -S xorg-xinput
 # GNU Octave replaces MATLAB
 # You can use the GUI or CLI octave-cli
 sudo pacman -S octave
+# Using symbolic for solving equations
+# Install in Octave and load in ~/.octaverc
+# https://gnu-octave.github.io/packages/symbolic/
 
 # Tracing system calls
 sudo pacman -S strace

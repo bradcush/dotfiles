@@ -98,6 +98,13 @@ specified. You'll need to have root access to copy the configuration file to
 `/var/lib/iwd/nyu.8021x`. This repository contains the configuration file
 without the password which should be set to 600 so only root has access.
 
+## DWM
+
+The best way to keep track of changes to DWM `config.h` is using patches just
+like what's recommended for extending DWM for the community. This repository
+keeps track of a patch `config.h.patch` which can be applied to the `config.h`
+file tracked by the DWM repository.
+
 ## License
 
 [dotfiles MIT License](LICENSE)

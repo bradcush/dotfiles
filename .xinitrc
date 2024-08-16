@@ -32,8 +32,8 @@ setxkbmap -device 17 -option caps:escape
 # Change keyboard repeat
 xset r rate 200 25
 
-# Disable mouse acceleration
-xinput --set-prop "Lenovo Bluetooth Mouse" "libinput Accel Speed" -1
+# Disable mouse acceleration manually if needed
+# xinput --set-prop "Lenovo Bluetooth Mouse" "libinput Accel Speed" -1
 
 # Start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ]; then

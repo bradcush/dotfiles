@@ -40,7 +40,7 @@ ln -s "$DOTFILES_PATH"/.config/nvim/startify.vim ~/.config/nvim/startify.vim
 ln -s "$DOTFILES_PATH"/.config/nvim/test.vim ~/.config/nvim/test.vim
 
 # Miscellaneous configuration symlinks
-ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s "$DOTFILES_PATH"/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 ln -s "$DOTFILES_PATH"/.config/bat/themes/ ~/.config/bat/
 ln -s "$DOTFILES_PATH"/.config/starship.toml ~/.config/starship.toml
 ln -s "$DOTFILES_PATH"/.gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
@@ -62,4 +62,5 @@ if [[ $OSTYPE == 'linux-gnu' ]]; then
   ln -s "$DOTFILES_PATH"/.xinitrc ~/.xinitrc
   ln -s "$DOTFILES_PATH"/.fehbg ~/.fehbg
   ln -s "$DOTFILES_PATH"/usr/bin/startdwm /usr/bin/startdwm
+  ln -s "$DOTFILES_PATH"/usr/share/X11/xorg.conf.d/50-mouse.conf /usr/share/X11/xorg.conf.d/50-mouse.conf
 fi

@@ -79,7 +79,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', '<leader>ds', vim.lsp.buf.document_symbol, bufopts)
+    vim.keymap.set('n', '<leader>bs', vim.lsp.buf.document_symbol, bufopts)
     -- No need to block anything when formatting manually
     local async_format = function() vim.lsp.buf.format {async = true} end
     vim.keymap.set('n', '<leader>fm', async_format, bufopts)

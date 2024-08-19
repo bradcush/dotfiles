@@ -11,20 +11,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-# Add pyenv executable to PATH and
-# enable shims by adding the following
-# to ~/.profile and ~/.zprofile:
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
-# Init for pyenv Python version manager
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# Hide virtual environment in prompt
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
 # Launch nvim instead of vim
 VIM_EDITOR="nvim"
 alias vim='$VIM_EDITOR'

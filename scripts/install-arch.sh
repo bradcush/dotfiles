@@ -182,16 +182,6 @@ sudo pacman -S strace
 # Basic calculator utility
 sudo pacman -S bc
 
-# pyenv for managing python versions
-# Set both versions with 3 first
-# pyenv global 3.12.4 2.7.18
-# Don't worry about GUI with tkinter
-# Create virtual environments
-# pyenv virtualenv <name>
-sudo pacman -S pyenv
-# Sticking with what I use elsewhere
-git clone https://aur.archlinux.org/pyenv-virtualenv.git
-
 # For python remote-plugins support
 # Included pynvim as dependency
 # pip3 install neovim

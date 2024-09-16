@@ -13,6 +13,8 @@ disabled = true
 
 # Disable showing some
 # language versions
+[aws]
+disabled = true
 [bun]
 disabled = true
 [c]

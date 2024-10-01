@@ -185,3 +185,6 @@ sudo pacman -S bc
 # For python remote-plugins support
 # Included pynvim as dependency
 # pip3 install neovim
+
+# AWS CLI
+sudo pacman -S aws-cli

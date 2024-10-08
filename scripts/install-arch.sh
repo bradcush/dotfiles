@@ -188,3 +188,6 @@ sudo pacman -S bc
 
 # AWS CLI
 sudo pacman -S aws-cli
+
+# Create ZIP archives
+sudo pacman -S zip

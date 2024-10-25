@@ -191,3 +191,7 @@ sudo pacman -S aws-cli
 
 # Create ZIP archives
 sudo pacman -S zip
+
+# Required for password protected ZIP
+# archives which zip didn't support
+sudo pacman -S p7zip

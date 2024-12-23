@@ -63,4 +63,5 @@ if [[ $OSTYPE == 'linux-gnu' ]]; then
   ln -s "$DOTFILES_PATH"/.fehbg ~/.fehbg
   ln -s "$DOTFILES_PATH"/usr/bin/startdwm /usr/bin/startdwm
   ln -s "$DOTFILES_PATH"/usr/share/X11/xorg.conf.d/50-mouse.conf /usr/share/X11/xorg.conf.d/50-mouse.conf
+  ln -s "$DOTFILES_PATH"/usr/share/X11/xorg.conf.d/00-keyboard.conf /usr/share/X11/xorg.conf.d/00-keyboard.conf
 fi

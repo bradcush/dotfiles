@@ -176,7 +176,7 @@ let g:netrw_liststyle = 4 "Show contents of current folder
 " Highlight yanked contents
 augroup highlight_yank
     autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank()
 augroup END
 
 " Disable Perl provider and warning

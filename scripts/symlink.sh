@@ -3,12 +3,12 @@
 DOTFILES_PATH="$HOME/Documents/repos/dotfiles"
 
 # Root level dotfile symlinks
-ln -s "$DOTFILES_PATH"/.bash_profile ~/.bash_profile
-ln -s "$DOTFILES_PATH"/.bashrc ~/.bashrc
+ln -s "$DOTFILES_PATH"/home/bradcush/.bash_profile ~/.bash_profile
+ln -s "$DOTFILES_PATH"/home/bradcush/.bashrc ~/.bashrc
 ln -s "$DOTFILES_PATH"/.fzf.bash ~/.fzf.bash
 ln -s "$DOTFILES_PATH"/.fzf.zsh ~/.fzf.zsh
-ln -s "$DOTFILES_PATH"/.profile ~/.profile
-ln -s "$DOTFILES_PATH"/.tmux.conf ~/.tmux.conf
+ln -s "$DOTFILES_PATH"/home/bradcush/.profile ~/.profile
+ln -s "$DOTFILES_PATH"/home/bradcush/.tmux.conf ~/.tmux.conf
 ln -s "$DOTFILES_PATH"/.zprofile ~/.zprofile
 ln -s "$DOTFILES_PATH"/.zshenv ~/.zshenv
 ln -s "$DOTFILES_PATH"/.zshrc ~/.zshrc
@@ -59,8 +59,8 @@ if [[ $OSTYPE == 'linux-gnu' ]]; then
   ln -s "$DOTFILES_PATH"/.config/chromium-flags.conf ~/.config/chromium-flags.conf
   ln -s "$DOTFILES_PATH"/.ssh/config-arch ~/.ssh/config
   # Specifically for the X Window System
-  ln -s "$DOTFILES_PATH"/.xinitrc ~/.xinitrc
-  ln -s "$DOTFILES_PATH"/.fehbg ~/.fehbg
+  ln -s "$DOTFILES_PATH"/home/bradcush/.xinitrc ~/.xinitrc
+  ln -s "$DOTFILES_PATH"/home/bradcush/.fehbg ~/.fehbg
   ln -s "$DOTFILES_PATH"/usr/bin/startdwm /usr/bin/startdwm
   ln -s "$DOTFILES_PATH"/usr/share/X11/xorg.conf.d/50-mouse.conf /usr/share/X11/xorg.conf.d/50-mouse.conf
   ln -s "$DOTFILES_PATH"/usr/share/X11/xorg.conf.d/00-keyboard.conf /usr/share/X11/xorg.conf.d/00-keyboard.conf

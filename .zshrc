@@ -50,7 +50,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 if [[ $OSTYPE == "linux-gnu" ]]; then
   # Setup keychain with ssh and gpg keys
   # GPG key still needs to be entered every time
-  eval $(keychain --eval --quiet --agents ssh,gpg --noask \
+  eval $(keychain --eval --quiet --noask \
     id_ed25519_arch_github_personal 0DC07BB23793C014)
 fi
 

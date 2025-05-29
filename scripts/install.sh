@@ -31,6 +31,8 @@ git clone git@github.com:fnune/base16-fzf.git
 # that kills subsequent startup times after first
 npm install -g eslint_d
 npm install -g prettier
+# Seems like bash-language-server isn't needed
+# and might be included in Neovim by default
 npm install -g bash-language-server
 npm install -g pyright
 npm install -g typescript typescript-language-server

@@ -46,6 +46,9 @@ cmp.setup({
     }, {{name = 'buffer'}, {name = 'path'}, {name = 'calc'}})
 })
 
+-- Increase the contrast of menu selections
+vim.api.nvim_set_hl(0, 'PmenuSel', {bg = '#545862', fg = 'NONE'})
+
 -- Use buffer source for `/` and `?` (if you enabled
 -- `native_menu`, this won't work anymore).
 cmp.setup.cmdline({'/', '?'}, {

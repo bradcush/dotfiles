@@ -67,8 +67,10 @@ cmp.setup.cmdline(':', {
 -- Mappings for diagnostics
 local opts = {noremap = true, silent = true}
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, opts)
-local workspace_diagnostics = '<cmd>TroubleToggle workspace_diagnostics<cr>'
-vim.keymap.set('n', '<leader>dw', workspace_diagnostics, opts)
+-- local workspace_diagnostics = '<cmd>TroubleToggle workspace_diagnostics<cr>'
+-- vim.keymap.set('n', '<leader>dw', workspace_diagnostics, opts)
+local open_float_diagnostics = '<cmd>lua vim.diagnostic.open_float()<CR>'
+vim.keymap.set('n', '<leader>do', open_float_diagnostics, opts)
 
 local on_attach = function(client, bufnr)
     -- ~/.cache/nvim/lsp.log for debug logs

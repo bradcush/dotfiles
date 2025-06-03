@@ -171,7 +171,7 @@ end
 
 -- Ignore formatting for js and ts because it conflicts
 -- with eslint and prettier which is preferred
-nvim_lsp['tsserver'].setup {on_attach = on_attach_without_formatting}
+nvim_lsp['ts_ls'].setup {on_attach = on_attach_without_formatting}
 
 -- Lua language server custom setup
 nvim_lsp['lua_ls'].setup {

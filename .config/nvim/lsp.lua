@@ -221,7 +221,9 @@ nvim_lsp['texlab'].setup {
     on_attach = on_attach,
     settings = {
         texlab = {
+            build = {args = {'%f'}, executable = 'tectonic', onSave = true},
             chktex = {onEdit = true, onOpenAndSave = true},
+            -- Automatic formatting currently broken
             latexFormatter = 'latexindent',
             latexindent = {modifyLineBreaks = true}
         }

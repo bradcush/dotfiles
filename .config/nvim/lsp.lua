@@ -74,7 +74,7 @@ vim.keymap.set('n', '<leader>do', open_float_diagnostics, opts)
 
 local on_attach = function(client, bufnr)
     -- ~/.cache/nvim/lsp.log for debug logs
-    -- vim.lsp.set_log_level('debug')
+    vim.lsp.set_log_level('debug')
 
     -- Mappings specific to buffers
     local bufopts = {noremap = true, silent = true, buffer = bufnr}

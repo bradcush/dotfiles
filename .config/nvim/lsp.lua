@@ -148,20 +148,42 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Overriding how diagnostics are published
-vim.lsp.handlers['textDocument/publishDiagnostics'] =
-    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-        -- Instead of normal mode
-        update_in_insert = true
-    })
+vim.diagnostic.config({
+    float = true,
+    severity_sort = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = 'E',
+            [vim.diagnostic.severity.WARN] = 'W',
+            [vim.diagnostic.severity.HINT] = 'H',
+            [vim.diagnostic.severity.INFO] = 'I'
+        },
+        -- texthl = {
+        --     [vim.diagnostic.severity.ERROR] = 'DiagnosticSignError',
+        --     [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarn',
+        --     [vim.diagnostic.severity.HINT] = 'DiagnosticSignHint',
+        --     [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfo'
+        -- },
+        numhl = {
+            [vim.diagnostic.severity.ERROR] = 'DiagnosticSignError',
+            [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarn',
+            [vim.diagnostic.severity.HINT] = 'DiagnosticSignHint',
+            [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfo'
+        }
+    },
+    -- Instead of normal mode
+    update_in_insert = true,
+    virtual_text = true
+})
 
 -- Change diagnostics icon and highlight group
 -- Setting explicit defaults for icon at the moment
 -- local signs = {Error = ' ', Warn = ' ', Hint = ' ', Info = ' '}
-local signs = {Error = 'E ', Warn = 'W ', Hint = 'H ', Info = 'I '}
-for type, icon in pairs(signs) do
-    local hl = 'DiagnosticSign' .. type
-    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
-end
+-- local signs = {Error = 'E ', Warn = 'W ', Hint = 'H ', Info = 'I '}
+-- for type, icon in pairs(signs) do
+--     local hl = 'DiagnosticSign' .. type
+--     vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
+-- end
 
 -- Disable default formatting to allow something custom
 local on_attach_without_formatting = function(client, bufnr)
@@ -254,7 +276,7 @@ nvim_lsp['hls'].setup({
 })
 
 -- Trouble pretty lists setup
-require('trouble').setup {
+require('trouble').setup({
     icons = false,
     padding = false,
     signs = {
@@ -262,4 +284,4 @@ require('trouble').setup {
         other = 'O'
     },
     use_diagnostic_signs = true
-}
+})

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-feh --no-fehbg --bg-scale '/home/bradcush/Documents/repos/dotfiles/1920x1200-green.jpg'
+feh --no-fehbg --bg-scale '/home/bradcush/Documents/repos/dotfiles/miscellaneous/1920x1200-green.jpg'

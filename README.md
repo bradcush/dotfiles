@@ -1,14 +1,10 @@
 # dotfiles
 
-macOS and Arch Linux dotfiles, install, and configuration. The hypothesis for
-organization of this repository is that tools for operating systems are
-configured similarly enough that it makes sense to share most things.
+Arch Linux dotfiles, install, and configuration. The approach for organization
+of this repository is that we intend to use a single operating system and
+organize dotfiles relative to their actual linked path. system.
 
 ## Configuration
-
-Applications and utilities are used on both systems unless otherwise noted.
-Operating system specifics like paths are conditionally set per script. Most
-scripts are meant to be run on for operating system.
 
 - Alacritty
 - DWM (Linux)
@@ -22,24 +18,6 @@ scripts are meant to be run on for operating system.
 - Tmux
 - Z shell
 
-### Conditional checks
-
-Shell scripts and shell configuration files are meant to be run on both macOS
-and Arch Linux operating systems. Depending on the script you will see
-conditional checking for either operating system.
-
-``` sh
-# Checking macOS
-if [[ $OSTYPE == "darwin"* ]]; then
-    // macOS configuration
-fi
-
-# Checking Arch Linux
-if [[ $OSTYPE == "linux-gnu" ]]; then
-    // Arch Linux configuration
-fi
-```
-
 ## Install
 
 Install all dependencies for Neovim and general command-line tools. Arch Linux
@@ -50,8 +28,7 @@ Dependency requirements and order can change over time which may or may not
 require manual attention for a given dependency during or after install.
 
 ``` sh
-make install-arch # Arch Linux systems
-make install-macos # macOS systems
+make install
 ```
 
 ## Symlink
@@ -80,6 +57,7 @@ make nyu
 make presentations
 make problems
 make scratch
+make ssl
 ```
 
 ## Shell

@@ -28,7 +28,7 @@ let g:startify_lists = [
 " Commonly used commands
 let g:startify_commands = [
     \ ':so $VIMRUNTIME/syntax/hitest.vim',
-    \ ':e ~/Documents/repos/dotfiles/.config/nvim/init.vim',
+    \ ':e ~/Documents/repos/dotfiles/home/bradcush/.config/nvim/init.vim',
     \ ':set spell spelllang=en_us spelloptions=camel',
     \ ':! open ~/Documents/repo' ]
 

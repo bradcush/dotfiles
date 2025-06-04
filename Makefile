@@ -1,12 +1,7 @@
-# Install arch dependencies
-.PHONY: install-arch
-install-arch:
-	@./scripts/install-arch.sh
-
-# Install macOS dependencies
-install-macos:
-.PHONY: install-macos
-	@./scripts/install-macos.sh
+# Install dependencies
+install:
+.PHONY: install
+	@./scripts/install.sh
 
 # Create symlinks for dotfiles
 .PHONY: symlink

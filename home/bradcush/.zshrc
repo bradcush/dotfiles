@@ -9,11 +9,7 @@ export FZF_BASE=/usr/local/bin/fzf
 # Source fzf configuration
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
-if [[ $OSTYPE == 'linux-gnu' ]]; then
-  ZSH_PLUGINS_PATH="/usr/share/zsh/plugins"
-else
-  ZSH_PLUGINS_PATH="/opt/homebrew/share"
-fi
+ZSH_PLUGINS_PATH="/usr/share/zsh/plugins"
 
 # zsh-autosuggestions setup
 source "$ZSH_PLUGINS_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh"
@@ -47,12 +43,10 @@ eval "$(starship init zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-if [[ $OSTYPE == "linux-gnu" ]]; then
-  # Setup keychain with ssh and gpg keys
-  # GPG key still needs to be entered every time
-  eval $(keychain --eval --quiet --noask \
-    id_ed25519_arch_github_personal 0DC07BB23793C014)
-fi
+# Setup keychain with ssh and gpg keys
+# GPG key only needs to be entered one time
+eval $(keychain --eval --quiet --noask \
+  id_ed25519_arch_github_personal 0DC07BB23793C014)
 
 # zsh history is weak by default so we allow more
 # entries, save it, and share it accross sessions

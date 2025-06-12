@@ -30,6 +30,9 @@ git clone git@github.com:fnune/base16-fzf.git
 # Favoring eslint_d over eslint as it launches daemon
 # that kills subsequent startup times after first
 npm install -g eslint_d
+# efm-langserver setup using this formatter
+# It's now needed as a separate package
+npm install -g eslint-formatter-visualstudio
 npm install -g prettier
 # Seems like bash-language-server isn't needed
 # and might be included in Neovim by default

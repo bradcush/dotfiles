@@ -73,7 +73,7 @@ local open_float_diagnostics = '<cmd>lua vim.diagnostic.open_float()<CR>'
 vim.keymap.set('n', '<leader>do', open_float_diagnostics, opts)
 
 local on_attach = function(client, bufnr)
-    -- ~/.cache/nvim/lsp.log for debug logs
+    -- ~/.local/nvim/lsp.log for debug logs
     vim.lsp.set_log_level('debug')
 
     -- Mappings specific to buffers

@@ -72,7 +72,7 @@ vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, opts)
 local open_float_diagnostics = '<cmd>lua vim.diagnostic.open_float()<CR>'
 vim.keymap.set('n', '<leader>do', open_float_diagnostics, opts)
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
     -- ~/.local/nvim/lsp.log for debug logs
     vim.lsp.set_log_level('debug')
 
@@ -89,19 +89,27 @@ local on_attach = function(client, bufnr)
     local async_format = function() vim.lsp.buf.format {async = true} end
     vim.keymap.set('n', '<leader>fm', async_format, bufopts)
 
-    -- Set some key bindings conditional on server capabilities
-    if client.server_capabilities.documentFormattingProvider then
-        -- Auto-format document prior to saving should be synchronous to
-        -- finish update before save. Timeout left to be the default 1000
-        -- milliseconds for now. All files specified instead of current
-        -- buffer due to autocmd being removed after new buffer created.
-        vim.api.nvim_exec2([[
-            augroup formatting
-                autocmd!
-                autocmd BufWritePre * lua vim.lsp.buf.format()
-            augroup END
-        ]], {output = true})
-    end
+    -- Auto-format document prior to saving should be synchronous to finish
+    -- update before save. Timeout left to be 10000 milliseconds for now.
+    local group = 'formatting'
+    vim.api.nvim_create_augroup(group, {clear = false})
+    vim.api.nvim_clear_autocmds({group = group, buffer = bufnr})
+    vim.api.nvim_create_autocmd('BufWritePre', {
+        buffer = bufnr,
+        group = group,
+        callback = function()
+            vim.lsp.buf.format {
+                async = false,
+                timeout_ms = 10000,
+                filter = function(local_client)
+                    -- Ignore formatting for js and ts because it conflicts
+                    -- with eslint and prettier which is preferred
+                    local ignore_list = {'ts_ls', 'lua_ls'}
+                    return ignore_list[local_client.name] == nil
+                end
+            }
+        end
+    })
 end
 
 -- Toggle inlay hints mapping
@@ -140,6 +148,7 @@ local servers = {
     'julials',
     'pyright',
     'rust_analyzer',
+    'ts_ls',
     'vimls',
     'yamlls'
 }
@@ -185,19 +194,9 @@ vim.diagnostic.config({
 --     vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
 -- end
 
--- Disable default formatting to allow something custom
-local on_attach_without_formatting = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = false
-    on_attach(client, bufnr)
-end
-
--- Ignore formatting for js and ts because it conflicts
--- with eslint and prettier which is preferred
-nvim_lsp['ts_ls'].setup {on_attach = on_attach_without_formatting}
-
 -- Lua language server custom setup
 nvim_lsp['lua_ls'].setup {
-    on_attach = on_attach_without_formatting,
+    on_attach = on_attach,
     settings = {
         Lua = {
             runtime = {version = 'LuaJIT'},

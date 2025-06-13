@@ -201,7 +201,9 @@ nvim_lsp['lua_ls'].setup {
         Lua = {
             runtime = {version = 'LuaJIT'},
             diagnostics = {
-                globals = {'awesome', 'client', 'root', 'screen', 'vim'}
+                globals = {'awesome', 'client', 'root', 'screen', 'vim'},
+                -- Without it warnings can be noisy
+                disable = {'missing-fields'}
             },
             -- Make the server aware of Neovim runtime files
             workspace = {

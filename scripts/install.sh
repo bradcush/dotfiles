@@ -94,6 +94,9 @@ sudo pacman -S dmenu
 
 # Using this font everywhere
 sudo pacman -S ttf-hack-nerd
+# Needed to resolve many miscellaneous characters
+# https://en.wikipedia.org/wiki/Miscellaneous_Symbols
+sudo pacman -S ttf-dejavu
 # startx manually for now
 
 # Other packages

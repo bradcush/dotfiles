@@ -3,10 +3,10 @@ install:
 .PHONY: install
 	@./scripts/install.sh
 
-# Create symlinks for dotfiles
-.PHONY: symlink
-symlink:
-	@./scripts/symlink.sh
+# Connect display
+.PHONY: display
+display:
+	@./scripts/display.sh
 
 # Start arduino session
 .PHONY: arduino

@@ -159,7 +159,7 @@ sudo pacman -S unzip
 # Other language servers
 sudo pacman -S shfmt
 sudo pacman -S shellcheck
-# We should use npm for both systems
+sudo pacman -S pandoc
 npm install -g markdownlint-cli
 
 # Arch specific language server install
@@ -282,3 +282,7 @@ sudo pacman -S tectonic
 
 # Better alternative to top
 sudo pacman -S bashtop
+
+# For following the MoonMath Manual
+# Specified maxima-sbcl during install
+sudo pacman -S sagemath

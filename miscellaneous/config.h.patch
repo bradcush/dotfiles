@@ -1,5 +1,5 @@
 diff --git a/config.h b/config.h
-index 061ad66..85b72bf 100644
+index 061ad66..5238ccd 100644
 --- a/config.h
 +++ b/config.h
 @@ -10,8 +10,8 @@ static const char dmenufont[]       = "monospace:size=10";
@@ -13,6 +13,15 @@ index 061ad66..85b72bf 100644
  static const char *colors[][3]      = {
  	/*               fg         bg         border   */
  	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
+ };
+ 
+ /* tagging */
+-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
++static const char *tags[] = { "1", "2", "3" };
+ 
+ static const Rule rules[] = {
+ 	/* xprop(1):
 @@ -45,7 +45,7 @@ static const Layout layouts[] = {
  };
  

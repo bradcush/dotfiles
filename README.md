@@ -7,7 +7,7 @@ organize dotfiles relative to their actual linked path. system.
 ## Configuration
 
 - Alacritty
-- DWM (Linux)
+- DWM
 - DMENU
 - Bash
 - Bat

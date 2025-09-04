@@ -286,3 +286,6 @@ sudo pacman -S bashtop
 # For following the MoonMath Manual
 # Specified maxima-sbcl during install
 sudo pacman -S sagemath
+
+# Docker for containers
+sudo pacman -S docker

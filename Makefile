@@ -38,11 +38,6 @@ dotfiles:
 mark:
 	@./scripts/sessions/mark.sh
 
-# Start nyu session
-.PHONY: nyu
-nyu:
-	@./scripts/sessions/nyu.sh
-
 # Start presentations session
 .PHONY: presentations
 presentations:

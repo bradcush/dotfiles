@@ -50,7 +50,6 @@ make datalgo
 make deeps
 make dotfiles
 make mark
-make nyu
 make presentations
 make problems
 make scratch

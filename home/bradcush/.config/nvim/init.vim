@@ -37,6 +37,7 @@ Plug 'cespare/vim-toml' " Syntax highlights for toml configs
 Plug 'neovimhaskell/haskell-vim' " Syntax highlights for Haskell
 Plug 'stevearc/vim-arduino' " Compile, upload, and debug arduino sketches
 Plug 'JuliaEditorSupport/julia-vim' " LaTeX-to-Unicode for Julia
+Plug 'noir-lang/noir-nvim' " LSP support for Noir (Aztec)
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' } " Markdown preview in the browser
 Plug 'editorconfig/editorconfig-vim' " Read editorconfig files for settings

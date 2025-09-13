@@ -10,13 +10,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Yarn for npm dependency mgmt
-# Global symlinks using /opt/homebrew/bin
 # yarn global bin shows binary path
 # https://yarnpkg.com/getting-started/install
-# Shipped with Node.js >= 16.10
-corepack enable
-# Update global yarn version
-corepack prepare yarn@stable --activate
+npm install -g corepack
 
 # For JS remote-plugins support
 npm install -g neovim

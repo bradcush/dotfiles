@@ -148,6 +148,7 @@ local servers = {
     'julials',
     'pyright',
     'rust_analyzer',
+    'solc',
     'ts_ls',
     'vimls',
     'yamlls'
@@ -246,6 +247,7 @@ nvim_lsp['efm'].setup {
         'markdown',
         'python',
         'sh',
+        'solidity',
         'typescript',
         'typescriptreact',
         'typescript.tsx'

@@ -52,6 +52,17 @@ tools:
     format-command: 'shfmt -ci -s -bn -i 2'
     format-stdin: true
 
+  solhint: &solhint
+    lint-stdin: true
+    lint-ignore-exit-code: true
+    lint-command: 'solhint --formatter unix stdin'
+    lint-formats:
+      - '%*[ ]%l:%c%*[ ]%trror%*[ ]%m'
+      - '%*[ ]%l:%c%*[ ]%tarning%*[ ]%m'
+      - '%f:%l:%c: %m [%trror/%r]'
+      - '%f:%l:%c: %m [%tarning/%r]'
+    lint-source: 'solhint'
+
 languages:
   javascript:
     - <<: *eslint
@@ -81,6 +92,10 @@ languages:
   sh:
     # - <<: *sh-shellcheck
     - <<: *sh-shfmt
+
+  solidity:
+    - <<: *prettier
+    - <<: *solhint
 
   typescript:
     - <<: *eslint

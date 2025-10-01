@@ -285,3 +285,10 @@ sudo pacman -S sagemath
 
 # Docker for containers
 sudo pacman -S docker
+
+# Solidity (programming) prebuilt binary
+# Safer as coming from AUR with small PKGBUILD
+git clone https://aur.archlinux.org/solidity-bin.git
+
+# Solidity linting
+npm install -g solhint

@@ -148,7 +148,7 @@ local servers = {
     'julials',
     'pyright',
     'rust_analyzer',
-    'solc',
+    'solidity_ls_nomicfoundation',
     'ts_ls',
     'vimls',
     'yamlls'

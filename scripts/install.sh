@@ -292,3 +292,6 @@ git clone https://aur.archlinux.org/solidity-bin.git
 
 # Solidity linting
 npm install -g solhint
+
+# LSP from Nomic Foundation for Hardhat
+npm install -g @nomicfoundation/solidity-language-server

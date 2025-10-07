@@ -104,8 +104,9 @@ local on_attach = function(_, bufnr)
                 filter = function(local_client)
                     -- Ignore formatting for js and ts because it conflicts
                     -- with eslint and prettier which is preferred
-                    local ignore_list = {'ts_ls', 'lua_ls'}
-                    return ignore_list[local_client.name] == nil
+                    local is_ts = local_client.name == 'ts_ls'
+                    local is_lua = local_client.name == 'lua_ls'
+                    return (not is_ts) and (not is_lua)
                 end
             }
         end

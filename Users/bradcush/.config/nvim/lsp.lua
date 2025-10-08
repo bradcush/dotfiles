@@ -74,7 +74,7 @@ vim.keymap.set('n', '<leader>do', open_float_diagnostics, opts)
 
 local on_attach = function(_, bufnr)
     -- ~/.local/nvim/lsp.log for debug logs
-    vim.lsp.set_log_level('debug')
+    vim.lsp.log.set_level('debug')
 
     -- Mappings specific to buffers
     local bufopts = {noremap = true, silent = true, buffer = bufnr}
@@ -104,8 +104,9 @@ local on_attach = function(_, bufnr)
                 filter = function(local_client)
                     -- Ignore formatting for js and ts because it conflicts
                     -- with eslint and prettier which is preferred
-                    local ignore_list = {'ts_ls', 'lua_ls'}
-                    return ignore_list[local_client.name] == nil
+                    local is_lua = local_client.name == 'lua_ls'
+                    local is_ts = local_client.name == 'ts_ls'
+                    return (not is_lua) and (not is_ts)
                 end
             }
         end
@@ -131,7 +132,7 @@ for _, group in ipairs(vim.fn.getcompletion('@lsp', 'highlight')) do
     vim.api.nvim_set_hl(0, group, {})
 end
 
-local nvim_lsp = require('lspconfig')
+-- local nvim_lsp = require('lspconfig')
 -- Capabilities for language server setup
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -154,7 +155,8 @@ local servers = {
     'yamlls'
 }
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {on_attach = on_attach, capabilities = capabilities}
+    vim.lsp.config(lsp, {on_attach = on_attach, capabilities = capabilities})
+    vim.lsp.enable(lsp)
 end
 
 -- Overriding how diagnostics are published
@@ -196,7 +198,7 @@ vim.diagnostic.config({
 -- end
 
 -- Lua language server custom setup
-nvim_lsp['lua_ls'].setup {
+vim.lsp.config('lua_ls', {
     on_attach = on_attach,
     settings = {
         Lua = {
@@ -215,11 +217,12 @@ nvim_lsp['lua_ls'].setup {
             hint = {enable = true}
         }
     }
-}
+})
+vim.lsp.enable('lua_ls')
 
 -- Custom configuration for latex for linting and formatting
 -- Supports building but using "vim-latex-live-preview" preferred
-nvim_lsp['texlab'].setup {
+vim.lsp.config('texlab', {
     on_attach = on_attach,
     settings = {
         texlab = {
@@ -230,10 +233,11 @@ nvim_lsp['texlab'].setup {
             latexindent = {modifyLineBreaks = true}
         }
     }
-}
+})
+vim.lsp.enable('texlab')
 
 -- Custom language server setup
-nvim_lsp['efm'].setup {
+vim.lsp.config('efm', {
     on_attach = on_attach,
     init_options = {documentFormatting = true},
     -- Listing filetypes explicitly as to not conflict with
@@ -252,12 +256,13 @@ nvim_lsp['efm'].setup {
         'typescriptreact',
         'typescript.tsx'
     }
-}
+})
+vim.lsp.enable('efm')
 
 -- Set paths for arduino language server command
 local arduino_binary = '/Users/bcushing/go/bin/arduino-language-server'
 local arduino_config = '/Users/bcushing/Library/Arduino15/arduino-cli.yaml'
-nvim_lsp['arduino_language_server'].setup({
+vim.lsp.config('arduino_language_server', {
     on_attach = on_attach,
     -- Some flags like clangd and cli should be optional according to
     -- documentation but are required to run the language server. The Fully
@@ -273,12 +278,14 @@ nvim_lsp['arduino_language_server'].setup({
         'arduino-cli'
     }
 })
+vim.lsp.enable('arduino_language_server')
 
 -- Setup HLS for related filetypes
-nvim_lsp['hls'].setup({
+vim.lsp.config('hls', {
     on_attach = on_attach,
     filetypes = {'haskell', 'lhaskell', 'cabal'}
 })
+vim.lsp.enable('hls')
 
 -- Trouble pretty lists setup
 require('trouble').setup({

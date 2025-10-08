@@ -6,7 +6,7 @@ root-markers:
 
 tools:
   eslint: &eslint
-    lint-command: 'eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-command: "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}"
     lint-ignore-exit-code: true
     lint-stdin: true
     lint-formats:
@@ -15,29 +15,29 @@ tools:
     format-stdin: true
 
   markdown-markdownlint: &markdown-markdownlint
-    lint-command: 'markdownlint -s'
+    lint-command: "markdownlint -s"
     lint-stdin: true
     lint-formats:
-      - '%f:%l %m'
-      - '%f:%l:%c %m'
-      - '%f: %l: %m'
+      - "%f:%l %m"
+      - "%f:%l:%c %m"
+      - "%f: %l: %m"
 
   lua-lua-format: &lua-lua-format
-    format-command: 'lua-format -i'
+    format-command: "lua-format -i"
     format-stdin: true
 
   markdown-pandoc: &markdown-pandoc
-    format-command: 'pandoc -f markdown -t gfm+smart --tab-stop=2 --wrap=preserve'
+    format-command: "pandoc -f markdown -t gfm+smart --tab-stop=2 --wrap=preserve"
     format-stdin: true
 
   prettier: &prettier
     # Important that global version used for prettier is aligned
     # with the version specified in the given local project
-    format-command: 'prettier --stdin-filepath ${INPUT}'
+    format-command: "prettier --stdin-filepath ${INPUT}"
     format-stdin: true
 
   python-black: &python-black
-    format-command: 'black --quiet -'
+    format-command: "black --quiet -"
     format-stdin: true
 
   # sh-shellcheck: &sh-shellcheck
@@ -49,19 +49,19 @@ tools:
   #     - '%f:%l:%c: %tote: %m'
 
   sh-shfmt: &sh-shfmt
-    format-command: 'shfmt -ci -s -bn -i 2'
+    format-command: "shfmt -ci -s -bn -i 2"
     format-stdin: true
 
   solhint: &solhint
     lint-stdin: true
     lint-ignore-exit-code: true
-    lint-command: 'solhint --formatter unix stdin'
+    lint-command: "solhint --formatter unix stdin"
     lint-formats:
-      - '%*[ ]%l:%c%*[ ]%trror%*[ ]%m'
-      - '%*[ ]%l:%c%*[ ]%tarning%*[ ]%m'
-      - '%f:%l:%c: %m [%trror/%r]'
-      - '%f:%l:%c: %m [%tarning/%r]'
-    lint-source: 'solhint'
+      - "%*[ ]%l:%c%*[ ]%trror%*[ ]%m"
+      - "%*[ ]%l:%c%*[ ]%tarning%*[ ]%m"
+      - "%f:%l:%c: %m [%trror/%r]"
+      - "%f:%l:%c: %m [%tarning/%r]"
+    lint-source: "solhint"
 
 languages:
   javascript:

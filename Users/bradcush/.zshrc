@@ -9,16 +9,13 @@ export FZF_BASE=/usr/local/bin/fzf
 # Source fzf configuration
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
-ZSH_PLUGINS_PATH="/usr/share/zsh/plugins"
+ZSH_PLUGINS_PATH="/opt/homebrew/share"
 
 # zsh-autosuggestions setup
 source "$ZSH_PLUGINS_PATH/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # zsh-syntax-highlighting setup must be sourced last
 source "$ZSH_PLUGINS_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-# zsh-autocomplete setup
-# source /Users/bradleycushing/Documents/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Completion configuration
 autoload -Uz compinit # Mark compinit function
@@ -37,16 +34,16 @@ bindkey -M menuselect 'l' vi-forward-char
 eval "$(starship init zsh)"
 
 # Bun auto-completion for zsh
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+# [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Add Bun to path
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Setup keychain with ssh and gpg keys
 # GPG key only needs to be entered one time
-eval $(keychain --eval --quiet --noask \
-  id_ed25519_arch_github_personal 0DC07BB23793C014)
+# eval $(keychain --eval --quiet --noask \
+#   id_ed25519_arch_github_personal 0DC07BB23793C014)
 
 # zsh history is weak by default so we allow more
 # entries, save it, and share it accross sessions
@@ -55,8 +52,3 @@ HISTSIZE=99999
 SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_ALL_DUPS
 setopt SHARE_HISTORY
-
-# Enable dark theming
-export GTK_THEME="Adwaita:dark"
-export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
-export QT_STYLE_OVERRIDE="Adwaita-Dark"

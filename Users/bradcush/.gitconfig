@@ -1,9 +1,9 @@
 [core]
-	excludesfile = /home/bradcush/.gitignore_global
+	excludesfile = /Users/bradcush/.gitignore_global
 [user]
 	name = Bradley Cushing
-	email = bradleycushing@gmail.com
-	signingkey = 0DC07BB23793C014
+	email = bradley@cerby.com
+	signingkey = E904834333376902
 [commit]
 	gpgsign = true
 [tag]

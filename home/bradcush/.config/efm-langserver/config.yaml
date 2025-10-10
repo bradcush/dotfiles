@@ -94,7 +94,7 @@ languages:
     - <<: *sh-shfmt
 
   solidity:
-    - <<: *prettier
+    # - <<: *prettier
     - <<: *solhint
 
   typescript:

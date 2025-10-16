@@ -52,3 +52,6 @@ HISTSIZE=99999
 SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_ALL_DUPS
 setopt SHARE_HISTORY
+
+# GPG pinentry through tty
+export GPG_TTY=$(tty)

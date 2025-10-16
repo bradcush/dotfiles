@@ -74,7 +74,9 @@ npm install -g corepack
 # Favoring eslint_d over eslint as it launches daemon
 # that kills subsequent startup times after first
 npm install -g eslint_d
-npm install -g prettier
+# npm install -g prettier
+# Prettier version used by Cerby
+npm install -g prettier@2.8.3
 npm install -g typescript typescript-language-server
 npm install -g vim-language-server
 

@@ -158,6 +158,9 @@ sudo pacman -S shellcheck
 sudo pacman -S pandoc
 npm install -g markdownlint-cli
 
+# Add rust-analyzer explicitly
+rustup component add rust-analyzer
+
 # Arch specific language server install
 # go install github.com/mattn/efm-langserver@latest
 # https://wiki.archlinux.org/title/Arch_User_Repository

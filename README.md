@@ -49,11 +49,13 @@ make bradcush
 make datalgo
 make deeps
 make dotfiles
+make eth
 make mark
 make presentations
 make problems
 make scratch
 make ssl
+make zecli
 ```
 
 ## Shell

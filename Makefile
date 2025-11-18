@@ -33,6 +33,11 @@ deeps:
 dotfiles:
 	@./scripts/sessions/dotfiles.sh
 
+# Start eth session
+.PHONY: eth
+eth:
+	@./scripts/sessions/eth.sh
+
 # Start mark session
 .PHONY: mark
 mark:
@@ -57,3 +62,8 @@ scratch:
 .PHONY: ssl
 ssl:
 	@./scripts/sessions/ssl.sh
+
+# Start zecli session
+.PHONY: zecli
+zecli:
+	@./scripts/sessions/zecli.sh

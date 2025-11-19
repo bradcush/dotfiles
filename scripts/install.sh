@@ -298,3 +298,6 @@ npm install -g solhint
 
 # LSP from Nomic Foundation for Hardhat
 npm install -g @nomicfoundation/solidity-language-server
+
+# Codex CLI for testing
+npm install -g @openai/codex

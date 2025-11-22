@@ -148,7 +148,6 @@ local servers = {
     'jsonls',
     'julials',
     'pyright',
-    'rust_analyzer',
     'solidity_ls_nomicfoundation',
     'ts_ls',
     'vimls',
@@ -157,6 +156,33 @@ local servers = {
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
+
+-- Rust LSP with all features,
+-- set custom config/enable
+vim.lsp.config('rust_analyzer', {
+    settings = {
+        ['rust-analyzer'] = {
+            cargo = {
+                -- For all projects
+                features = 'all'
+            }
+        }
+    }
+})
+vim.lsp.enable('rust_analyzer');
+
+-- Attach when when using config/enable
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if not client then
+            return
+        end
+        if client.name == 'rust_analyzer' then
+            on_attach(args.buf)
+        end
+    end
+})
 
 -- Overriding how diagnostics are published
 vim.diagnostic.config({

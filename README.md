@@ -55,6 +55,7 @@ make presentations
 make problems
 make scratch
 make ssl
+make zcash
 make zecli
 ```
 

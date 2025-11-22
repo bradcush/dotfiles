@@ -63,6 +63,11 @@ scratch:
 ssl:
 	@./scripts/sessions/ssl.sh
 
+# Start zcash session
+.PHONY: zcash
+zcash:
+	@./scripts/sessions/zcash.sh
+
 # Start zecli session
 .PHONY: zecli
 zecli:

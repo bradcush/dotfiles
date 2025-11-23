@@ -33,7 +33,7 @@ export GPG_TTY="$TTY"
 
 # Source env script for adding the
 # cargo binary to path for Rust
-# . /Users/bradleycushing/.cargo/env
+. "$HOME/.cargo/env"
 
 # Add Golang binaries to path
 export PATH="$HOME/go/bin:$PATH"

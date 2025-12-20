@@ -162,10 +162,14 @@ end
 vim.lsp.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {
+            -- Running cargo clean from time to time
+            -- can help restore the language server
             cargo = {
                 -- For all projects
                 features = 'all'
             }
+            -- More advanced warnings
+            -- check = 'clippy'
         }
     }
 })

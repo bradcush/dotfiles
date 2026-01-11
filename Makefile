@@ -58,11 +58,6 @@ problems:
 scratch:
 	@./scripts/sessions/scratch.sh
 
-# Start ssl session
-.PHONY: ssl
-ssl:
-	@./scripts/sessions/ssl.sh
-
 # Start zcash session
 .PHONY: zcash
 zcash:

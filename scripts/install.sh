@@ -299,6 +299,7 @@ npm install -g solhint
 # LSP from Nomic Foundation for Hardhat
 npm install -g @nomicfoundation/solidity-language-server
 
-# Codex CLI and Gemini to test
+# Claude Code, Codex CLI, and Gemini
+curl -fsSL https://claude.ai/install.sh | bash
 npm install -g @openai/codex
 npm install -g @google/gemini-cli

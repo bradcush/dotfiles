@@ -64,3 +64,6 @@ export QT_STYLE_OVERRIDE="Adwaita-Dark"
 # Nargo for Noir-Lang
 export NARGO_HOME="/home/bradcush/.nargo"
 export PATH="$PATH:$NARGO_HOME/bin"
+
+# Path for Claude Code binary
+export PATH="$HOME/.local/bin:$PATH"

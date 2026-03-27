@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Reference common install script
-. "$HOME/Documents/repos/dotfiles/scripts/install.sh"
-
 # Install Homebrew package manager of macOS
 # Homebrew Cask extends Homebrew and comes with it
 # Run brew update afterwards for latest formulae
@@ -27,10 +24,16 @@ brew install starship
 brew install fzf
 /opt/homebrew/opt/fzf/install
 
+# Neovim stable latest
+brew install neovim
 # Install Neovim development version
 # To upgrade HEAD run brew reinstall neovim
 # You can also brew upgrade neovim
-brew install --HEAD neovim
+# brew install --HEAD neovim
+
+# vim-plug installation separate from Neovim
+# sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+#   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Go for compiling hexokinase
 brew install go
@@ -51,7 +54,7 @@ luarocks install --server=https://luarocks.org/dev luaformatter
 brew install --cask rectangle
 
 # NVM for managing node versions
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
 # base16-fzf colorscheme repository
 # Expected to be cloned with other repositories
@@ -88,3 +91,18 @@ brew install zsh-syntax-highlighting
 
 # bat replaces cat
 brew install bat
+
+# Claude Code CLI native install
+curl -fsSL https://claude.ai/install.sh | bash
+
+# 1Password CLI
+brew install 1password-cli
+
+# curl Bun installation
+curl -fsSL https://bun.com/install | bash
+
+# Ruby version manager
+brew install rbenv
+
+# GitHub CLI, mostly for agents
+brew install gh

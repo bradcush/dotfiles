@@ -1,9 +1,14 @@
 [core]
-	excludesfile = /Users/bradcush/.gitignore_global
+	excludesfile = /Users/bradley.cushing/.gitignore_global
 [user]
 	name = Bradley Cushing
-	email = bradley@cerby.com
-	signingkey = E904834333376902
+	email = bradley.cushing@uniswap.org
+	signingkey = ~/.ssh/id_ed25519_macos_github_uniswap_signing.pub
+[gpg]
+	format = ssh
+[gpg "ssh"]
+  # Required for local verification
+	allowedSignersFile = ~/.ssh/allowed_signers
 [commit]
 	gpgsign = true
 [tag]

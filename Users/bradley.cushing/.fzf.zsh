@@ -12,4 +12,4 @@ SCRIPT_PATH="/opt/homebrew/opt/fzf/shell"
 # Key bindings for fzf
 source "$SCRIPT_PATH/key-bindings.zsh"
 
-# source <(fzf --zsh)
+source <(fzf --zsh)

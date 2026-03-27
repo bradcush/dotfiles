@@ -34,11 +34,11 @@ bindkey -M menuselect 'l' vi-forward-char
 eval "$(starship init zsh)"
 
 # Bun auto-completion for zsh
-# [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Add Bun to path
-# export BUN_INSTALL="$HOME/.bun"
-# export PATH="$BUN_INSTALL/bin:$PATH"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Setup keychain with ssh and gpg keys
 # GPG key only needs to be entered one time
@@ -55,3 +55,6 @@ setopt SHARE_HISTORY
 
 # GPG pinentry through tty
 export GPG_TTY=$(tty)
+
+# Added by fzf install
+export PATH="$HOME/.local/bin:$PATH"

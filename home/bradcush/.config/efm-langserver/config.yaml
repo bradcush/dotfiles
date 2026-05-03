@@ -27,7 +27,8 @@ tools:
     format-stdin: true
 
   markdown-pandoc: &markdown-pandoc
-    format-command: 'pandoc -f markdown -t gfm+smart --tab-stop=2 --wrap=preserve'
+    # commonmark_x for latex support, mostly GitHub friendly
+    format-command: 'pandoc -f markdown -t commonmark_x-raw_attribute --tab-stop=2 --wrap=preserve'
     format-stdin: true
 
   prettier: &prettier

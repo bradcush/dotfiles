@@ -106,3 +106,18 @@ brew install rbenv
 
 # GitHub CLI, mostly for agents
 brew install gh
+
+# Check for leaked secrets
+brew install git-scripts
+brew install trufflehog
+
+# Code security CLI tool
+brew install semgrep
+
+# Graphite PR (stacks) management
+brew install withgraphite/tap/graphite
+
+# Not being picked up locally
+# Needed to be on node@22.22.2 everywhere
+# Have same version globally and via bun run oxlint
+npm install -g oxlint

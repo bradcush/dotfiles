@@ -297,3 +297,7 @@ require('trouble').setup({
     },
     use_diagnostic_signs = true
 })
+
+-- Format/lint for Uniswap/universe
+vim.lsp.enable('oxfmt')
+vim.lsp.enable('oxlint')

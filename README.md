@@ -54,6 +54,7 @@ make presentations
 make problems
 make scratch
 make ssl
+make uniswap
 ```
 
 ## Shell

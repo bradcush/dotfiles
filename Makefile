@@ -57,3 +57,8 @@ scratch:
 .PHONY: ssl
 ssl:
 	@./scripts/sessions/ssl.sh
+
+# Start uniswap session
+.PHONY: uniswap
+uniswap:
+	@./scripts/sessions/uniswap.sh

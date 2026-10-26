@@ -45,6 +45,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # eval $(keychain --eval --quiet --noask \
 #   id_ed25519_arch_github_personal 0DC07BB23793C014)
 
+# You may need to add the command to your ~/.zshrc file
+# https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+# Redirect output to /dev/null so we don't log messages in shells
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519_macos_github_uniswap_signing 2>/dev/null
+
 # zsh history is weak by default so we allow more
 # entries, save it, and share it accross sessions
 HISTFILE=~/.zsh_history
@@ -58,3 +63,11 @@ export GPG_TTY=$(tty)
 
 # Added by fzf install
 export PATH="$HOME/.local/bin:$PATH"
+
+# Claude Code: default to max effort level
+# Overrides everything, don't use, can't change
+# export CLAUDE_CODE_EFFORT_LEVEL=max
+export CLAUDE_CODE_EFFORT_LEVEL=auto
+
+# bun completions
+[ -s "/Users/bradley.cushing/.bun/_bun" ] && source "/Users/bradley.cushing/.bun/_bun"

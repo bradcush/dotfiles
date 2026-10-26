@@ -9,6 +9,7 @@
 [gpg "ssh"]
   # Required for local verification
 	allowedSignersFile = ~/.ssh/allowed_signers
+	program = ssh-keygen
 [commit]
 	gpgsign = true
 [tag]

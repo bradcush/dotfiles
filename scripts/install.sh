@@ -47,6 +47,8 @@ brew install markdownlint-cli
 
 # LuaRocks package mgmt
 brew install luarocks
+# Requires cmake:
+# brew install cmake
 # Better Lua source code formatting
 luarocks install --server=https://luarocks.org/dev luaformatter
 
@@ -95,6 +97,9 @@ brew install bat
 # Claude Code CLI native install
 curl -fsSL https://claude.ai/install.sh | bash
 
+# OpenAI Codex CLI native install
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+
 # 1Password CLI
 brew install 1password-cli
 
@@ -114,8 +119,13 @@ brew install trufflehog
 # Code security CLI tool
 brew install semgrep
 
-# Graphite PR (stacks) management
-brew install withgraphite/tap/graphite
+# GitHub stacks management
+gh extension install github/gh-stack
+# Remember conflict resolutions across restack
+# git config rerere.enabled true
+# Usage:
+# gh stack checkout 42386
+# gh stack sync
 
 # Not being picked up locally
 # Needed to be on node@22.22.2 everywhere
@@ -130,3 +140,14 @@ curl -L https://foundry.paradigm.xyz | bash && foundryup
 # https://ai.cantina.xyz/docs/apex-cli
 # https://github.com/cantinasec/cantina-claude-mcp
 npm install -g @cantinasecurity/apex-cli
+
+# For Solidity
+npm install -g @nomicfoundation/slang
+npm install -g @nomicfoundation/solidity-language-server
+
+# Lean prover
+brew install elan-init
+
+# AWS CLI, needed for Uniswap management, Privy stuff
+# aws kms rotate-key-on-demand --key-id 167b1037-5bf8-4955-b52b-ab5e5659e1d7
+curl -fsSL https://awscli.amazonaws.com/v2/install.sh | bash

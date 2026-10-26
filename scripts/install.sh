@@ -121,3 +121,12 @@ brew install withgraphite/tap/graphite
 # Needed to be on node@22.22.2 everywhere
 # Have same version globally and via bun run oxlint
 npm install -g oxlint
+
+# Requires brew install libusb
+# Foundry smart contract development
+curl -L https://foundry.paradigm.xyz | bash && foundryup
+
+# Cantina.xyz CLI and MCPs
+# https://ai.cantina.xyz/docs/apex-cli
+# https://github.com/cantinasec/cantina-claude-mcp
+npm install -g @cantinasecurity/apex-cli
